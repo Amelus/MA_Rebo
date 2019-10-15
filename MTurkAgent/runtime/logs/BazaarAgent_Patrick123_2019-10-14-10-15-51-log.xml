@@ -1,0 +1,168 @@
+<entry timestamp="2019-10-14#10:15:51" user="FactoryBuiltAgent" level="NORMAL">CONFIGURING AGENT BazaarAgent_Patrick123</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><created>BazaarAgent_Patrick123</created></entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.stateMemory" level="NORMAL"><created>stateMemory</created></entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.client" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.client" level="NORMAL"><created>client</created></entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.client" level="NORMAL">Property read: socket_url =	http://bazaar.lti.cs.cmu.edu:80</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.ccActor" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.ccActor" level="NORMAL"><created>ccActor</created></entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.ccActor" level="NORMAL">Property read: typingScale =	null</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><created>inputCoordinator</created></entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL"><created>outputCoordinator</created></entry>
+<entry timestamp="2019-10-14#10:15:51" user="(client->inputCoordinator)" level="INFO">Connection initialized. Id=1571040951718</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.client" level="INFO">Outgoing connection added from client to inputCoordinator</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Inward connection added from inputCoordinator to client</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(inputCoordinator->inputCoordinator)" level="INFO">Connection initialized. Id=1571040951718</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(inputCoordinator->outputCoordinator)" level="INFO">Connection initialized. Id=1571040951718</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to outputCoordinator</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Inward connection added from outputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(outputCoordinator->client)" level="INFO">Connection initialized. Id=1571040951718</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Outgoing connection added from outputCoordinator to client</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.client" level="INFO">Inward connection added from client to outputCoordinator</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><initialized>BazaarAgent_Patrick123</initialized></entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Observer Added:stateMemory.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.client" level="INFO">Observer Added:client.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.ccActor" level="INFO">Observer Added:ccActor.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.edge</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.edge</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.edge</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.edge</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Observer Added:stateMemory.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.client" level="INFO">Observer Added:client.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="BazaarAgent_Patrick123.ccActor" level="INFO">Observer Added:ccActor.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.panel</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.panel</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.panel</entry>
+<entry timestamp="2019-10-14#10:15:51" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.panel</entry>
+<entry timestamp="2019-10-14#10:15:51" user="AgreeDisagreeActor" level="WARNING">agree condition: false</entry>
+<entry timestamp="2019-10-14#10:15:51" user="AskForExplanationActor" level="WARNING">accountable_talk condition: false</entry>
+<entry timestamp="2019-10-14#10:15:51" user="RevoiceActor" level="WARNING">revoice condition: false</entry>
+<entry timestamp="2019-10-14#10:15:51" user="SayMoreActor" level="WARNING">say_more condition: false</entry>
+<entry timestamp="2019-10-14#10:15:51" user="PlanExecutor" level="NORMAL"><configuration planfile="plans/plan_steps.xml"></entry>
+<entry timestamp="2019-10-14#10:15:53" user="PlanExecutor" level="NORMAL">Read 4 plan items and Removed 1</entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="0" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+</State></commit></entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><starting>Initializing each component</starting></entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.stateMemory" level="NORMAL"><initialized>stateMemory</initialized></entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><initialized>inputCoordinator</initialized></entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.client" level="NORMAL"><initialized>client</initialized></entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL"><initialized>outputCoordinator</initialized></entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.ccActor" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.ccActor" level="NORMAL"><initialized>ccActor</initialized></entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><starting>All components initialized</starting></entry>
+<entry timestamp="2019-10-14#10:15:53" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Observer Added:frame0. 3 Observers now.</entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-14#10:15:54" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: Pat is now PRESENT</processing></entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: Pat is now PRESENT</entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="0" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+</State></retrieve></entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2019-10-14#10:15:54" user="PlanExecutor" level="NORMAL">Plan: <stage name="initiate" timeout="500">set</stage></entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: Pat is now PRESENT]</entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-14#10:15:54" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-14#10:15:55" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-14#10:15:55" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-14#10:15:55" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-14#10:15:55" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-14#10:15:55" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: BazaarAgent is now PRESENT</processing></entry>
+<entry timestamp="2019-10-14#10:15:55" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: BazaarAgent is now PRESENT</entry>
+<entry timestamp="2019-10-14#10:15:55" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: BazaarAgent is now PRESENT]</entry>
+<entry timestamp="2019-10-14#10:15:55" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-14#10:15:55" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-14#10:15:55" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-14#10:15:58" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from Pat: help </processing></entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from Pat: help </entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2019-10-14#10:15:58" user="SocialController" level="NORMAL">ratio NaN, </entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Message from Pat: help HELP, Do Tutoring concept=CPU]</entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-14#10:15:58" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-14#10:18:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">DORMANT_GROUP_EVENT</dispatching></entry>
+<entry timestamp="2019-10-14#10:21:58" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate DORMANT_GROUP_EVENT from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="DORMANT_GROUP_EVENT" from="inputCoordinator"></queued></entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="DORMANT_GROUP_EVENT" from="inputCoordinator"><dormantGroup/></processing></entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: <dormantGroup/></entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [<dormantGroup/>]</entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-14#10:21:58" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="DORMANT_GROUP_EVENT" from="inputCoordinator"></processed></entry>

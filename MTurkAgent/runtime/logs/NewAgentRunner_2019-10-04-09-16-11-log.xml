@@ -1,0 +1,39 @@
+<entry timestamp="2019-10-04#09:16:11" user="NewAgentRunner" level="INFO">Logger initialized</entry>
+<entry timestamp="2019-10-04#09:16:11" user="NewAgentRunner" level="NORMAL">AgentOperator NewAgentRunner created</entry>
+<entry timestamp="2019-10-04#09:16:11" user="NewAgentRunner" level="NORMAL">Operation Created</entry>
+<entry timestamp="2019-10-04#09:16:11" user="NewAgentRunner" level="NORMAL">Classes: [class basilica2.side.listeners.LightSideMessageAnnotator, class basilica2.agents.listeners.PresenceWatcher, class basilica2.agents.listeners.MessageAnnotator, class basilica2.social.listeners.ActivityTracker, class basilica2.tutor.listeners.TutorialTriggerWatcher, class basilica2.tutor.listeners.TutorTurnWatcher, class basilica2.social.listeners.StrategyScoreComputer, class basilica2.social.listeners.RuleBasedTriggerComputer, class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.myagent.listeners.Register]</entry>
+<entry timestamp="2019-10-04#09:16:11" user="NewAgentRunner" level="NORMAL">Classes: [class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.agents.listeners.plan.PlanExecutor, class basilica2.tutor.listeners.TutorActor, class basilica2.myagent.listeners.PromptActor]</entry>
+<entry timestamp="2019-10-04#09:16:11" user="NewAgentRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2019-10-04#09:16:11" user="NewAgentRunner" level="NORMAL">Operation started</entry>
+<entry timestamp="2019-10-04#09:16:23" user="ConditionAgentUI" level="NORMAL">Conditions set to tutorial_trigger</entry>
+<entry timestamp="2019-10-04#09:16:24" user="ConditionAgentUI" level="NORMAL">Conditions set to say_more tutorial_trigger</entry>
+<entry timestamp="2019-10-04#09:16:30" user="NewAgentRunner" level="NORMAL">setting basilica2.agents.room_name to Patrick123</entry>
+<entry timestamp="2019-10-04#09:16:30" user="NewAgentRunner" level="NORMAL"><launching room=Patrick123/></entry>
+<entry timestamp="2019-10-04#09:16:30" user="AgentFactory" level="NORMAL">Making Agent from agent.xml</entry>
+<entry timestamp="2019-10-04#09:16:30" user="AgentFactory" level="NORMAL">File Read</entry>
+<entry timestamp="2019-10-04#09:16:31" user="AgentFactory" level="NORMAL">Agent Tag Read</entry>
+<entry timestamp="2019-10-04#09:16:31" user="AgentFactory" level="NORMAL">Components Tag Read</entry>
+<entry timestamp="2019-10-04#09:16:31" user="AgentFactory" level="NORMAL">Components read. N=5</entry>
+<entry timestamp="2019-10-04#09:16:31" user="AgentFactory" level="NORMAL">Agent build. BazaarAgent_Patrick123</entry>
+<entry timestamp="2019-10-04#09:16:31" user="NewAgentRunner" level="NORMAL">Adding agent BazaarAgent_Patrick123</entry>
+<entry timestamp="2019-10-04#09:16:31" user="NewAgentRunner" level="INFO">Added. 1 agents now working</entry>
+<entry timestamp="2019-10-04#09:16:31" user="NewAgentRunner" level="INFO">Initializing new agent</entry>
+<entry timestamp="2019-10-04#09:16:31" user="PromptStepHandler" level="NORMAL">default priority=0.75, wait 0.1 seconds after prompts, +3.3333333333333335 wps</entry>
+<entry timestamp="2019-10-04#09:16:31" user="NewAgentRunner" level="INFO">Starting new Agent</entry>
+<entry timestamp="2019-10-04#09:16:31" user="NewAgentRunner" level="NORMAL">notified UI of agent launch for BazaarAgent_Patrick123</entry>
+<entry timestamp="2019-10-04#09:16:31" user="NewAgentRunner" level="NORMAL">Agent added BazaarAgent_Patrick123</entry>
+<entry timestamp="2019-10-04#09:17:41" user="BazaarAgent_Patrick123 Wizard" level="INFO">displaying wizard UI for BazaarAgent_Patrick123</entry>
+<entry timestamp="2019-10-04#09:17:54" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2019-10-04#09:18:04" user="PlanExecutor" level="NORMAL">PLAN: activiating next stage: initiate</entry>
+<entry timestamp="2019-10-04#09:18:04" user="PlanExecutor" level="NORMAL">Firing Stage 'initiate'</entry>
+<entry timestamp="2019-10-04#09:18:04" user="Step" level="NORMAL">Handlers for Please use this space to discuss the relative merits and demerits of each plan from your assigned perspective in step 2. That was the step where you were asked to write an individual proposal and post it to the discussion forum. Work towards a consensus on which plan you think is the best as a group. Wherever possible, supplement plan suggestions, agreements and disagreements with reasons, and try to refer to or build upon your teammates' ideas. I will support you in the process.(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@f53f1ed]</entry>
+<entry timestamp="2019-10-04#09:18:04" user="PromptStepHandler" level="NORMAL">starting 25.3 second prompt delay</entry>
+<entry timestamp="2019-10-04#09:18:05" user="" level="NORMAL">accepted. Message from BazaarAgent: Please use this space to discuss the relative merits and demerits of each plan from your assigned perspective in step 2. That was the step where you were asked to write an individual proposal and post it to the discussion forum. Work towards a consensus on which plan you think is the best as a group. Wherever possible, supplement plan suggestions, agreements and disagreements with reasons, and try to refer to or build upon your teammates' ideas. I will support you in the process. Please use this space to discuss the relative merits and demerits of each plan from your assigned perspective in step 2. That was the step where you were asked to write an individual proposal and post it to the discussion forum. Work towards a consensus on which plan you think is the best as a group. Wherever possible, supplement plan suggestions, agreements and disagreements with reasons, and try to refer to or build upon your teammates' ideas. I will support you in the process..
+Starting blockout countdown... </entry>
+<entry timestamp="2019-10-04#09:18:17" user="" level="NORMAL">ACCEPTED! Message from BazaarAgent: (U1) Hi WIZARD</entry>
+<entry timestamp="2019-10-04#09:18:25" user="" level="NORMAL">ACCEPTED! Message from BazaarAgent: (U1) Hello WIZARD</entry>
+<entry timestamp="2019-10-04#09:18:30" user="PromptStepHandler" level="NORMAL">ending 25.3 second prompt delay</entry>
+<entry timestamp="2019-10-04#09:18:30" user="PlanExecutor" level="NORMAL">starting 600 second delay timer for Please use this space to discuss the relative merits and demerits of each plan from your assigned perspective in step 2. That was the step where you were asked to write an individual proposal and post it to the discussion forum. Work towards a consensus on which plan you think is the best as a group. Wherever possible, supplement plan suggestions, agreements and disagreements with reasons, and try to refer to or build upon your teammates' ideas. I will support you in the process.</entry>
+<entry timestamp="2019-10-04#09:18:33" user="" level="NORMAL">ACCEPTED! Message from BazaarAgent: (U1) My name is Pat WIZARD</entry>
+<entry timestamp="2019-10-04#09:18:45" user="" level="NORMAL">ACCEPTED! Message from BazaarAgent: hi WIZARD</entry>
+<entry timestamp="2019-10-04#09:18:53" user="" level="NORMAL">ACCEPTED! Message from BazaarAgent: (Oz) ggsg WIZARD</entry>

@@ -1,0 +1,9 @@
+<entry timestamp="2019-10-06#14:46:32" user="BaseAgentOperation" level="INFO">Logger initialized</entry>
+<entry timestamp="2019-10-06#14:46:32" user="BaseAgentOperation" level="NORMAL">AgentOperator BaseAgentOperation created</entry>
+<entry timestamp="2019-10-06#14:46:32" user="BaseAgentOperation" level="NORMAL">Operation Created</entry>
+<entry timestamp="2019-10-06#14:46:33" user="BaseAgentOperation" level="NORMAL">Starting operation</entry>
+<entry timestamp="2019-10-06#14:46:33" user="BaseAgentOperation" level="NORMAL">Operation started</entry>
+<entry timestamp="2019-10-06#14:46:36" user="ConditionAgentUI" level="NORMAL">Conditions set to </entry>
+<entry timestamp="2019-10-06#14:46:38" user="BaseAgentOperation" level="NORMAL">setting basilica2.agents.room_name to Test01</entry>
+<entry timestamp="2019-10-06#14:46:38" user="BaseAgentOperation" level="NORMAL"><launching room=Test01/></entry>
+<entry timestamp="2019-10-06#14:46:38" user="AgentFactory" level="NORMAL">Making Agent from null</entry>

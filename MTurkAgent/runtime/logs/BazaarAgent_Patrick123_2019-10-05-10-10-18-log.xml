@@ -1,0 +1,79 @@
+<entry timestamp="2019-10-05#10:10:18" user="FactoryBuiltAgent" level="NORMAL">CONFIGURING AGENT BazaarAgent_Patrick123</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><created>BazaarAgent_Patrick123</created></entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.stateMemory" level="NORMAL"><created>stateMemory</created></entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.client" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.client" level="NORMAL"><created>client</created></entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.client" level="NORMAL">Property read: socket_url =	http://bazaar.lti.cs.cmu.edu:80</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.ccActor" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.ccActor" level="NORMAL"><created>ccActor</created></entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.ccActor" level="NORMAL">Property read: typingScale =	null</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><created>inputCoordinator</created></entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL"><created>outputCoordinator</created></entry>
+<entry timestamp="2019-10-05#10:10:18" user="(client->inputCoordinator)" level="INFO">Connection initialized. Id=1570263018888</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.client" level="INFO">Outgoing connection added from client to inputCoordinator</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Inward connection added from inputCoordinator to client</entry>
+<entry timestamp="2019-10-05#10:10:18" user="(inputCoordinator->inputCoordinator)" level="INFO">Connection initialized. Id=1570263018900</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-05#10:10:18" user="(inputCoordinator->outputCoordinator)" level="INFO">Connection initialized. Id=1570263018911</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to outputCoordinator</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Inward connection added from outputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-05#10:10:18" user="(outputCoordinator->client)" level="INFO">Connection initialized. Id=1570263018921</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Outgoing connection added from outputCoordinator to client</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.client" level="INFO">Inward connection added from client to outputCoordinator</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><initialized>BazaarAgent_Patrick123</initialized></entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Observer Added:stateMemory.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.client" level="INFO">Observer Added:client.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.ccActor" level="INFO">Observer Added:ccActor.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:18" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.edge</entry>
+<entry timestamp="2019-10-05#10:10:18" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.edge</entry>
+<entry timestamp="2019-10-05#10:10:18" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.edge</entry>
+<entry timestamp="2019-10-05#10:10:18" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.edge</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Observer Added:stateMemory.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:18" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.client" level="INFO">Observer Added:client.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.ccActor" level="INFO">Observer Added:ccActor.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:19" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.panel</entry>
+<entry timestamp="2019-10-05#10:10:19" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.panel</entry>
+<entry timestamp="2019-10-05#10:10:19" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.panel</entry>
+<entry timestamp="2019-10-05#10:10:19" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.panel</entry>
+<entry timestamp="2019-10-05#10:10:19" user="AgreeDisagreeActor" level="WARNING">agree condition: false</entry>
+<entry timestamp="2019-10-05#10:10:19" user="AskForExplanationActor" level="WARNING">accountable_talk condition: false</entry>
+<entry timestamp="2019-10-05#10:10:19" user="RevoiceActor" level="WARNING">revoice condition: false</entry>
+<entry timestamp="2019-10-05#10:10:19" user="SayMoreActor" level="WARNING">say_more condition: false</entry>
+<entry timestamp="2019-10-05#10:10:19" user="PlanExecutor" level="NORMAL"><configuration planfile="plans/plan_steps.xml"></entry>
+<entry timestamp="2019-10-05#10:10:19" user="PlanExecutor" level="ERROR">PlanExecutor: Can't do that...java.io.IOException: Das System kann den angegebenen Pfad nicht finden</entry>
+<entry timestamp="2019-10-05#10:10:19" user="PlanExecutor" level="ERROR">Error while reading Status File (java.io.FileNotFoundException: planstatus\BazaarAgent_Patrick123.planstatus.txt (Das System kann den angegebenen Pfad nicht finden))</entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="0" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+</State></commit></entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><starting>Initializing each component</starting></entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.stateMemory" level="NORMAL"><initialized>stateMemory</initialized></entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><initialized>inputCoordinator</initialized></entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.client" level="NORMAL"><initialized>client</initialized></entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL"><initialized>outputCoordinator</initialized></entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.ccActor" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.ccActor" level="NORMAL"><initialized>ccActor</initialized></entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><starting>All components initialized</starting></entry>
+<entry timestamp="2019-10-05#10:10:19" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Observer Added:frame0. 3 Observers now.</entry>
+<entry timestamp="2019-10-05#10:10:20" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-05#10:10:20" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-05#10:10:20" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-05#10:10:20" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-05#10:10:21" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: BazaarAgent is now PRESENT</processing></entry>
+<entry timestamp="2019-10-05#10:10:21" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: BazaarAgent is now PRESENT</entry>
+<entry timestamp="2019-10-05#10:10:21" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: BazaarAgent is now PRESENT]</entry>
+<entry timestamp="2019-10-05#10:10:21" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-05#10:10:21" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-05#10:10:21" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
