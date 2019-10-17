@@ -1,5 +1,7 @@
 
 MTurkAgent/runtime/logs/
+MTurkAgent/runtime/behaviors/
+MTurkAgent/runtime/planstatus/
 
 .metadata/
 
