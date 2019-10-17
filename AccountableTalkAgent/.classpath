@@ -3,7 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/BaseAgent"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/SocialAgent"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Synonymizer"/>
 	<classpathentry kind="lib" path="/BasilicaCore/lib/OtherLibraries/JGraph/jgraph.jar"/>
 	<classpathentry kind="lib" path="/BasilicaCore/lib/OtherLibraries/Utilities.jar" sourcepath="/Users/dadamson/Laboratory/basilica/911-Libraries/Utilities/src"/>

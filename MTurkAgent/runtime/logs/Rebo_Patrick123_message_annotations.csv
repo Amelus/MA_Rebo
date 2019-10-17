@@ -1,0 +1,14 @@
+2019-10-15,18:44:50,0,Rebo,1571157891553,Will you like to discuss more on system unit?,TUTOR
+2019-10-15,18:45:01,0,Pat,1571157901542,yes,AFFIRMATIVE
+2019-10-15,18:45:01,0,Rebo,1571157901574,Let's get started.,TUTOR
+2019-10-15,18:45:01,0,Rebo,1571157903578,"The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the ""brain"" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on.",TUTOR
+2019-10-15,18:45:01,0,Rebo,1571157903582,Is microprocessor related to CPU or RAM?,TUTOR
+2019-10-15,18:48:01,0,Rebo,1571158081669,No! A microprocessor is a single-chip implementation of a CPU.,TUTOR
+2019-10-15,18:48:01,0,Rebo,1571158081673,Let's move on.,TUTOR
+2019-10-15,18:48:01,0,Rebo,1571158081677,Is the information stored in RAM erased when the computer is turned off?,TUTOR

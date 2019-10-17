@@ -31,26 +31,28 @@
  */
 package basilica2.agents.components;
 
-import de.fhg.ipsi.chatblocks2.awareness.DefaultAddOperation;
-import de.fhg.ipsi.chatblocks2.awareness.DefaultRemoveOperation;
-import de.fhg.ipsi.chatblocks2.awareness.IsTypingInfo;
-import de.fhg.ipsi.chatblocks2.model.IReference;
-import de.fhg.ipsi.chatblocks2.model.IReferenceableDocument;
-import de.fhg.ipsi.chatblocks2.model.IReferencingDocument;
-import de.fhg.ipsi.chatblocks2.model.messagebased.ChatMessage;
-import de.fhg.ipsi.chatblocks2.model.messagebased.ReferencingMessage;
-import de.fhg.ipsi.concertchat.framework.IPersistentSession;
-import de.fhg.ipsi.concertchat.framework.UserChannel;
-import edu.cmu.cs.lti.basilica2.core.Agent;
-import edu.cmu.cs.lti.basilica2.core.Component;
-import edu.cmu.cs.lti.basilica2.core.Event;
-import edu.cmu.cs.lti.project911.utils.time.TimeoutReceiver;
-import edu.cmu.cs.lti.project911.utils.time.Timer;
+import java.awt.Dimension;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import basilica2.agents.events.AcknowledgeMessageEvent;
 import basilica2.agents.events.MessageEvent;
 import basilica2.agents.events.PrivateMessageEvent;
 import basilica2.util.TimeoutAdapter;
+import de.fhg.ipsi.chatblocks2.awareness.DefaultAddOperation;
+import de.fhg.ipsi.chatblocks2.awareness.DefaultRemoveOperation;
+import de.fhg.ipsi.chatblocks2.awareness.IsTypingInfo;
+import de.fhg.ipsi.chatblocks2.model.IReferenceableDocument;
+import de.fhg.ipsi.chatblocks2.model.messagebased.ChatMessage;
+import de.fhg.ipsi.chatblocks2.model.messagebased.ReferencingMessage;
 import de.fhg.ipsi.concertchat.framework.IPersistentChannel;
+import de.fhg.ipsi.concertchat.framework.IPersistentSession;
+import de.fhg.ipsi.concertchat.framework.UserChannel;
 import de.fhg.ipsi.concertchat.model.ChannelReference;
 import de.fhg.ipsi.utils.ImageUtilities;
 import de.fhg.ipsi.whiteboard.Command;
@@ -60,15 +62,11 @@ import de.fhg.ipsi.whiteboard.OutlineProperties;
 import de.fhg.ipsi.whiteboard.operation.CreateCommand;
 import de.fhg.ipsi.whiteboard.piece.image.ImageCache;
 import de.fhg.ipsi.whiteboard.piece.image.ImageStuff;
+import edu.cmu.cs.lti.basilica2.core.Agent;
+import edu.cmu.cs.lti.basilica2.core.Component;
+import edu.cmu.cs.lti.basilica2.core.Event;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
-import java.awt.Dimension;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import edu.cmu.cs.lti.project911.utils.time.Timer;
 
 /**
  * 

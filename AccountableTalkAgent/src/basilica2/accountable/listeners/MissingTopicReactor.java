@@ -12,10 +12,8 @@ import basilica2.agents.events.priority.BlacklistSource;
 import basilica2.agents.events.priority.PriorityEvent;
 import basilica2.agents.events.priority.PriorityEvent.Callback;
 import basilica2.agents.listeners.BasilicaAdapter;
-import basilica2.social.events.DormantGroupEvent;
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Event;
-import edu.cmu.cs.lti.project911.utils.log.Logger;
 import edu.cmu.cs.lti.project911.utils.time.TimeoutReceiver;
 import edu.cmu.cs.lti.project911.utils.time.Timer;
 
@@ -60,36 +58,10 @@ public class MissingTopicReactor extends BasilicaAdapter
 	public void processEvent(InputCoordinator source, Event event)
 	{
 		this.source = source;
-		if(event instanceof DormantGroupEvent)
-		{
-			remind((DormantGroupEvent)event);
-		}
 		
 	}
 
 	
-	private void remind(DormantGroupEvent event)
-	{
-		log(Logger.LOG_NORMAL, "MissingTopicReactor considering a dormant group event");
-		
-		if(RollingWindow.sharedWindow().countEvents(feedbackWindow, "feedback") == 0)
-		{
-			for(String k : nudgePrompts.keySet())
-			{
-				if(!k.equals(NUDGE_PROMPT) && !k.equals(REMIND_PROMPT))
-				{
-					//log(Logger.LOG_NORMAL, k + "?");
-					if(RollingWindow.sharedWindow().countEvents(HISTORY_WINDOW, k) < 2 //not been mentioned much ever
-							&& getFeedbackCount(k) == 0) //never nudged for this before
-					{
-						log(Logger.LOG_NORMAL, k + " is a missing topic");
-						makeReminderProposal(k);
-					}
-				}
-			}
-		}
-		
-	}
 	
 	private void makeReminderProposal(String concept)
 	{
@@ -151,12 +123,6 @@ public class MissingTopicReactor extends BasilicaAdapter
 	}
 
 	@Override
-	public Class[] getListenerEventClasses()
-	{
-		return new Class[]{DormantGroupEvent.class};
-	}
-
-	@Override
 	public Class[] getPreprocessorEventClasses()
 	{ 
 		return new Class[]{};
@@ -167,6 +133,12 @@ public class MissingTopicReactor extends BasilicaAdapter
 	{
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public Class[] getListenerEventClasses() {
+		// TODO Auto-generated method stub
+		return new Class[]{};
 	}
 
 	

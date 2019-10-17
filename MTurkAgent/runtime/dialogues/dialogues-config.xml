@@ -93,9 +93,7 @@
     
     <dialog concept="CPU" scenario="scenario-cpu">
     	<trigger annotation="HELP"/>
-        <intro>
-               Will you like to discuss more on system unit?
-        </intro>
+        <intro>Will you like to discuss more on system unit?</intro>
         <accept annotation="AFFIRMATIVE">Let's get started.</accept>
         <cancel annotation="NEGATIVE">Okay - you can continue discussing other parts.</cancel>                
         

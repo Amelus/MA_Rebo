@@ -1,16 +1,5 @@
 package basilica2.agents.components;
 
-import basilica2.agents.listeners.BasilicaListener;
-import basilica2.agents.listeners.BasilicaPreProcessor;
-import basilica2.agents.data.RollingWindow;
-import basilica2.agents.events.EchoEvent;
-import basilica2.agents.events.MessageEvent;
-import basilica2.agents.events.PresenceEvent;
-import basilica2.agents.events.priority.PriorityEvent;
-import basilica2.agents.events.priority.PrioritySource;
-import basilica2.util.MessageEventLogger;
-import edu.cmu.cs.lti.basilica2.core.*;
-import edu.cmu.cs.lti.project911.utils.log.Logger;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -20,24 +9,31 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TimerTask;
-import java.util.logging.Level;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
-import javax.swing.table.TableColumnModel;
+
+import basilica2.agents.data.RollingWindow;
+import basilica2.agents.events.EchoEvent;
+import basilica2.agents.events.MessageEvent;
+import basilica2.agents.events.priority.PriorityEvent;
+import basilica2.agents.events.priority.PrioritySource;
+import basilica2.agents.listeners.BasilicaListener;
+import basilica2.agents.listeners.BasilicaPreProcessor;
+import basilica2.util.MessageEventLogger;
+import edu.cmu.cs.lti.basilica2.core.Agent;
+import edu.cmu.cs.lti.basilica2.core.Component;
+import edu.cmu.cs.lti.basilica2.core.Event;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 /**
  *

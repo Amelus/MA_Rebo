@@ -1,0 +1,460 @@
+<entry timestamp="2019-10-15#18:37:28" user="FactoryBuiltAgent" level="NORMAL">CONFIGURING AGENT BazaarAgent_Patrick123</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><created>BazaarAgent_Patrick123</created></entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.stateMemory" level="NORMAL"><created>stateMemory</created></entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.client" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.client" level="NORMAL"><created>client</created></entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.client" level="NORMAL">Property read: socket_url =	http://bazaar.lti.cs.cmu.edu:80</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.ccActor" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.ccActor" level="NORMAL"><created>ccActor</created></entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.ccActor" level="NORMAL">Property read: typingScale =	null</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><created>inputCoordinator</created></entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL"><created>outputCoordinator</created></entry>
+<entry timestamp="2019-10-15#18:37:28" user="(client->inputCoordinator)" level="INFO">Connection initialized. Id=1571157448161</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.client" level="INFO">Outgoing connection added from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Inward connection added from inputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(inputCoordinator->inputCoordinator)" level="INFO">Connection initialized. Id=1571157448172</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(inputCoordinator->outputCoordinator)" level="INFO">Connection initialized. Id=1571157448183</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to outputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Inward connection added from outputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(outputCoordinator->client)" level="INFO">Connection initialized. Id=1571157448193</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Outgoing connection added from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.client" level="INFO">Inward connection added from client to outputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><initialized>BazaarAgent_Patrick123</initialized></entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Observer Added:stateMemory.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.client" level="INFO">Observer Added:client.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.ccActor" level="INFO">Observer Added:ccActor.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.edge</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.edge</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.edge</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.edge</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Observer Added:stateMemory.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.client" level="INFO">Observer Added:client.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="BazaarAgent_Patrick123.ccActor" level="INFO">Observer Added:ccActor.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.panel</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.panel</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.panel</entry>
+<entry timestamp="2019-10-15#18:37:28" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.panel</entry>
+<entry timestamp="2019-10-15#18:37:28" user="AgreeDisagreeActor" level="WARNING">agree condition: false</entry>
+<entry timestamp="2019-10-15#18:37:28" user="AskForExplanationActor" level="WARNING">accountable_talk condition: false</entry>
+<entry timestamp="2019-10-15#18:37:28" user="RevoiceActor" level="WARNING">revoice condition: false</entry>
+<entry timestamp="2019-10-15#18:37:28" user="SayMoreActor" level="WARNING">say_more condition: false</entry>
+<entry timestamp="2019-10-15#18:37:28" user="PlanExecutor" level="NORMAL"><configuration planfile="plans/plan_steps.xml"></entry>
+<entry timestamp="2019-10-15#18:37:29" user="PlanExecutor" level="NORMAL">Read 1 plan items and Removed 1</entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="0" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+</State></commit></entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><starting>Initializing each component</starting></entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.stateMemory" level="NORMAL"><initialized>stateMemory</initialized></entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><initialized>inputCoordinator</initialized></entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.client" level="NORMAL"><initialized>client</initialized></entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL"><initialized>outputCoordinator</initialized></entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.ccActor" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.ccActor" level="NORMAL"><initialized>ccActor</initialized></entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.AGENT" level="NORMAL"><starting>All components initialized</starting></entry>
+<entry timestamp="2019-10-15#18:37:29" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Observer Added:frame0. 3 Observers now.</entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:30" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: Pat is now PRESENT</processing></entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: Pat is now PRESENT</entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="0" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+</State></retrieve></entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="Pat" name="Pat" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: Pat is now PRESENT]</entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:30" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:37:31" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:31" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:31" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:37:31" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:31" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: BazaarAgent is now PRESENT</processing></entry>
+<entry timestamp="2019-10-15#18:37:31" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: BazaarAgent is now PRESENT</entry>
+<entry timestamp="2019-10-15#18:37:31" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: BazaarAgent is now PRESENT]</entry>
+<entry timestamp="2019-10-15#18:37:31" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:31" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:31" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:37:34" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:34" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:34" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:37:34" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:34" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from Pat: help </processing></entry>
+<entry timestamp="2019-10-15#18:37:34" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from Pat: help </entry>
+<entry timestamp="2019-10-15#18:37:34" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Message from Pat: help HELP, Do Tutoring concept=CPU]</entry>
+<entry timestamp="2019-10-15#18:37:34" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:34" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:34" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Queue: [Message from BazaarAgent: Will you like to discuss more on system unit? TUTOR]</entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Message from BazaarAgent: Will you like to discuss more on system unit? TUTORbelief*priority: 1.0*0.75=0.75</entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:36" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from BazaarAgent: Will you like to discuss more on system unit? TUTOR</processing></entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:36" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from BazaarAgent: Will you like to discuss more on system unit? </processing></entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from BazaarAgent: Will you like to discuss more on system unit? </entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from BazaarAgent: Will you like to discuss more on system unit? ]</entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:36" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:39" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from Pat: yes </processing></entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from Pat: yes </entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Message from Pat: yes AFFIRMATIVE]</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">TUTORING_STARTED_EVENT</dispatching></entry>
+<entry timestamp="2019-10-15#18:37:39" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate TUTORING_STARTED_EVENT from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="TUTORING_STARTED_EVENT" from="inputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="TUTORING_STARTED_EVENT" from="inputCoordinator">TutoringStartedEvent: scenario=scenario-cpu, concept=CPU</processing></entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: TutoringStartedEvent: scenario=scenario-cpu, concept=CPU</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [TutoringStartedEvent: scenario=scenario-cpu, concept=CPU]</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">TUTOR_TURNS_EVENT</dispatching></entry>
+<entry timestamp="2019-10-15#18:37:39" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate TUTOR_TURNS_EVENT from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="TUTOR_TURNS_EVENT" from="inputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="TUTORING_STARTED_EVENT" from="inputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="TUTOR_TURNS_EVENT" from="inputCoordinator">Tutor Turns (2):
+{
+	The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on.
+	Is microprocessor related to CPU or RAM?
+}</processing></entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Tutor Turns (2):
+{
+	The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on.
+	Is microprocessor related to CPU or RAM?
+}</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Tutor Turns (2):
+{
+	The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on.
+	Is microprocessor related to CPU or RAM?
+}]</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="TUTOR_TURNS_EVENT" from="inputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Queue: [Message from BazaarAgent: Let's get started. TUTOR, Message from BazaarAgent: The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on.|Is microprocessor related to CPU or RAM? TUTOR]</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Message from BazaarAgent: Let's get started. TUTORbelief*priority: 0.9997499999999999*0.75=0.75</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Message from BazaarAgent: The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on.|Is microprocessor related to CPU or RAM? TUTORbelief*priority: 0.9997499999999999*0.75=0.75</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:40" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from BazaarAgent: Let's get started. TUTOR</processing></entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:40" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from BazaarAgent: Let's get started. </processing></entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from BazaarAgent: Let's get started. </entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from BazaarAgent: Let's get started. ]</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Queue: [Message from BazaarAgent: The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on.|Is microprocessor related to CPU or RAM? TUTOR]</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Message from BazaarAgent: The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on.|Is microprocessor related to CPU or RAM? TUTORbelief*priority: 0.9995000624999998*0.75=0.75</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:42" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:42" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from BazaarAgent: The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on. TUTOR</processing></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from BazaarAgent: Is microprocessor related to CPU or RAM? TUTOR</processing></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:42" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from BazaarAgent: The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on. </processing></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from BazaarAgent: The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on. </entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from BazaarAgent: The system unit is the core of a computer system. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on. ]</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:37:42" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from BazaarAgent: Is microprocessor related to CPU or RAM? </processing></entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from BazaarAgent: Is microprocessor related to CPU or RAM? </entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from BazaarAgent: Is microprocessor related to CPU or RAM? ]</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:37:42" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:38:39" user="TutorTurnWatcher" level="NORMAL"><timedout id="RESPONSE_TIMEOUT" /></entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">MOVE_ON_EVENT</dispatching></entry>
+<entry timestamp="2019-10-15#18:38:39" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate MOVE_ON_EVENT from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MOVE_ON_EVENT" from="inputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MOVE_ON_EVENT" from="inputCoordinator"><moveOn/></processing></entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: <moveOn/></entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [<moveOn/>]</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">TUTOR_TURNS_EVENT</dispatching></entry>
+<entry timestamp="2019-10-15#18:38:39" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate TUTOR_TURNS_EVENT from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="TUTOR_TURNS_EVENT" from="inputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MOVE_ON_EVENT" from="inputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="TUTOR_TURNS_EVENT" from="inputCoordinator">Tutor Turns (3):
+{
+	No! A microprocessor is a single-chip implementation of a CPU.
+	Let's move on.
+	Is the information stored in RAM erased when the computer is turned off?
+}</processing></entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Tutor Turns (3):
+{
+	No! A microprocessor is a single-chip implementation of a CPU.
+	Let's move on.
+	Is the information stored in RAM erased when the computer is turned off?
+}</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Tutor Turns (3):
+{
+	No! A microprocessor is a single-chip implementation of a CPU.
+	Let's move on.
+	Is the information stored in RAM erased when the computer is turned off?
+}]</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:38:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="TUTOR_TURNS_EVENT" from="inputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Queue: [Message from BazaarAgent: No! A microprocessor is a single-chip implementation of a CPU.|Let's move on.|Is the information stored in RAM erased when the computer is turned off? TUTOR]</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Message from BazaarAgent: No! A microprocessor is a single-chip implementation of a CPU.|Let's move on.|Is the information stored in RAM erased when the computer is turned off? TUTORbelief*priority: 0.9992501874843747*0.75=0.75</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:38:40" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:38:40" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:38:40" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from BazaarAgent: No! A microprocessor is a single-chip implementation of a CPU. TUTOR</processing></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from BazaarAgent: Let's move on. TUTOR</processing></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from BazaarAgent: Is the information stored in RAM erased when the computer is turned off? TUTOR</processing></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:38:40" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from BazaarAgent: No! A microprocessor is a single-chip implementation of a CPU. </processing></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from BazaarAgent: No! A microprocessor is a single-chip implementation of a CPU. </entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from BazaarAgent: No! A microprocessor is a single-chip implementation of a CPU. ]</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:38:40" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:38:40" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from BazaarAgent: Let's move on. </processing></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from BazaarAgent: Let's move on. </entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from BazaarAgent: Let's move on. ]</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from BazaarAgent: Is the information stored in RAM erased when the computer is turned off? </processing></entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from BazaarAgent: Is the information stored in RAM erased when the computer is turned off? </entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from BazaarAgent: Is the information stored in RAM erased when the computer is turned off? ]</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:38:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:39:35" user="TutorActor" level="NORMAL">Timeout for CPU:null</entry>
+<entry timestamp="2019-10-15#18:39:39" user="TutorTurnWatcher" level="NORMAL"><timedout id="RESPONSE_TIMEOUT" /></entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">MOVE_ON_EVENT</dispatching></entry>
+<entry timestamp="2019-10-15#18:39:39" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate MOVE_ON_EVENT from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MOVE_ON_EVENT" from="inputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MOVE_ON_EVENT" from="inputCoordinator"><moveOn/></processing></entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: <moveOn/></entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [<moveOn/>]</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">TUTOR_TURNS_EVENT</dispatching></entry>
+<entry timestamp="2019-10-15#18:39:39" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate TUTOR_TURNS_EVENT from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="TUTOR_TURNS_EVENT" from="inputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MOVE_ON_EVENT" from="inputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="TUTOR_TURNS_EVENT" from="inputCoordinator">Tutor Turns (2):
+{
+	No! The information stored in RAM is erased when the computer is turned off..
+	Okay - you can now continue discussing other parts.
+}</processing></entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Tutor Turns (2):
+{
+	No! The information stored in RAM is erased when the computer is turned off..
+	Okay - you can now continue discussing other parts.
+}</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Tutor Turns (2):
+{
+	No! The information stored in RAM is erased when the computer is turned off..
+	Okay - you can now continue discussing other parts.
+}]</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:39:39" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="TUTOR_TURNS_EVENT" from="inputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Queue: [Message from BazaarAgent: No! The information stored in RAM is erased when the computer is turned off..|Okay - you can now continue discussing other parts. TUTOR]</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Proposal Message from BazaarAgent: No! The information stored in RAM is erased when the computer is turned off..|Okay - you can now continue discussing other parts. TUTORbelief*priority: 0.9990003749375035*0.75=0.75</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">DONE_TUTORING_EVENT</dispatching></entry>
+<entry timestamp="2019-10-15#18:39:40" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate DONE_TUTORING_EVENT from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="DONE_TUTORING_EVENT" from="inputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:39:40" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:39:40" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="DONE_TUTORING_EVENT" from="inputCoordinator">Done Tutoring concept CPU</processing></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Done Tutoring concept CPU</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Done Tutoring concept CPU]</entry>
+<entry timestamp="2019-10-15#18:39:40" user="PlanExecutor" level="NORMAL">received step done event for DONE_TUTORING_EVENT</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="DONE_TUTORING_EVENT" from="inputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from BazaarAgent: No! The information stored in RAM is erased when the computer is turned off.. TUTOR</processing></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from BazaarAgent: Okay - you can now continue discussing other parts. TUTOR</processing></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:39:40" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from BazaarAgent: No! The information stored in RAM is erased when the computer is turned off.. </processing></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from BazaarAgent: No! The information stored in RAM is erased when the computer is turned off.. </entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from BazaarAgent: No! The information stored in RAM is erased when the computer is turned off.. ]</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2019-10-15#18:39:40" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from BazaarAgent: Okay - you can now continue discussing other parts. </processing></entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from BazaarAgent: Okay - you can now continue discussing other parts. </entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from BazaarAgent: Okay - you can now continue discussing other parts. ]</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2019-10-15#18:39:40" user="BazaarAgent_Patrick123.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>

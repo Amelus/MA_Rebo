@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan name="stress_test">
+    <stage name="initiate" type="other" delay="5">
+        <step type="dialogue" delay="150">CPU</step>
+    </stage>
+</plan>

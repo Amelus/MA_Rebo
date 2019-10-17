@@ -6,8 +6,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.jivesoftware.smack.packet.Message;
-
 import basilica2.agents.events.MessageEvent;
 import basilica2.agents.events.priority.AbstractPrioritySource;
 import basilica2.agents.events.priority.PriorityEvent;

@@ -37,11 +37,6 @@
  */
 package edu.cmu.cs.lti.basilica2.ui;
 
-import edu.cmu.cs.lti.basilica2.core.Agent;
-import edu.cmu.cs.lti.basilica2.core.Component;
-import edu.cmu.cs.lti.basilica2.core.Connection;
-import edu.cmu.cs.lti.basilica2.ui.graph.AgentGraph;
-import edu.cmu.cs.lti.basilica2.ui.graph.AgentGraphUser;
 import java.awt.Color;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
@@ -49,12 +44,18 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTabbedPane;
+
+import edu.cmu.cs.lti.basilica2.core.Agent;
+import edu.cmu.cs.lti.basilica2.core.Component;
+import edu.cmu.cs.lti.basilica2.core.Connection;
+import edu.cmu.cs.lti.basilica2.ui.graph.AgentGraph;
+import edu.cmu.cs.lti.basilica2.ui.graph.AgentGraphUser;
 
 /**
  *

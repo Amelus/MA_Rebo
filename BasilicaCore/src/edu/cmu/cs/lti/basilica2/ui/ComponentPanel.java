@@ -37,14 +37,15 @@
  */
 package edu.cmu.cs.lti.basilica2.ui;
 
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
 import edu.cmu.cs.lti.basilica2.observers.ComponentObserver;
 import edu.cmu.cs.lti.basilica2.observers.ObserverEvent;
 import edu.cmu.cs.lti.basilica2.ui.eventtable.EventTable;
 import edu.cmu.cs.lti.basilica2.ui.eventtable.EventTableModel;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
 /**
  *

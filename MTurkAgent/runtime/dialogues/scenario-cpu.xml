@@ -45,12 +45,12 @@
 		<!-- tutor concepts. -->
 		<concept label="introduction">
 			<phrase>The system unit is the core of a computer system. 
-               Usually it's a rectangular box placed on or underneath your desk. 
-               Inside this box are many electronic components that process information. 
-               The most important of these components is the central processing unit (CPU),
-               which acts as the "brain" of your computer. 
-               Another component is random access memory (RAM), 
-               which temporarily stores information that the CPU uses while the computer is on. 
+Usually it's a rectangular box placed on or underneath your desk. 
+Inside this box are many electronic components that process information. 
+The most important of these components is the central processing unit (CPU),
+which acts as the "brain" of your computer. 
+Another component is random access memory (RAM), 
+which temporarily stores information that the CPU uses while the computer is on. 
             </phrase>
 		</concept>
 

@@ -5,11 +5,10 @@
 package basilica2.agents.events.priority;
 
 import basilica2.agents.data.RollingWindow;
-import basilica2.agents.events.priority.PriorityEvent.Callback;
+import basilica2.util.Timer;
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
-import basilica2.util.Timer;
 
 /**
  * represents an event proposal. convenience methods offer common ways to 

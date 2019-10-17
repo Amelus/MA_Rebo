@@ -31,10 +31,6 @@
  */
 package basilica2.agents.listeners;
 
-import basilica2.agents.components.InputCoordinator;
-import basilica2.agents.events.MessageEvent;
-import edu.cmu.cs.lti.basilica2.core.Event;
-import edu.cmu.cs.lti.project911.utils.log.Logger;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -43,6 +39,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import basilica2.agents.components.InputCoordinator;
+import basilica2.agents.events.MessageEvent;
+import edu.cmu.cs.lti.basilica2.core.Event;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 /**
  * 
