@@ -31,18 +31,24 @@
  */
 package basilica2.tutor.events;
 
+import java.util.ArrayList;
+
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
 
 public class TutorTurnsEvent extends Event {
 
     public static String GENERIC_NAME = "TUTOR_TURNS_EVENT";
-    private String[] tutorTurns = null;
+    private ArrayList<String> tutorTurns = new ArrayList<String>();
     private boolean ackExpected = false;
 
     public TutorTurnsEvent(Component s, String[] ts) {
         super(s);
-        tutorTurns = ts;
+        for(String message: ts) {
+        	if(message.length() > 0) {
+        		tutorTurns.add(message);
+        	}
+        }
     }
 
     public boolean isAcknowledgementExpected() {
@@ -53,7 +59,7 @@ public class TutorTurnsEvent extends Event {
         ackExpected = a;
     }
 
-    public String[] getTutorTurns() {
+    public ArrayList<String> getTutorTurns() {
         return tutorTurns;
     }
 
@@ -64,9 +70,9 @@ public class TutorTurnsEvent extends Event {
 
     @Override
     public String toString() {
-        String ret = "Tutor Turns ("+tutorTurns.length+"):\n{\n";
-        for (int i = 0; i < tutorTurns.length; i++) {
-            ret += "\t" + tutorTurns[i] + "\n";
+        String ret = "Tutor Turns ("+ tutorTurns.size() +"):\n{\n";
+        for (int i = 0; i < tutorTurns.size(); i++) {
+            ret += "\t" + tutorTurns.get(i) + "\n";
         }
         ret += "}";
         return ret;

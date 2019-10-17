@@ -336,7 +336,7 @@ public class WebsocketChatClient extends Component implements ChatClient
 				ReadyEvent re = new ReadyEvent(WebsocketChatClient.this, state.equals("ready"), (String)args[0]);
 				WebsocketChatClient.this.broadcast(re);
 			}
-			else if(event.equals("dumphistory"))
+			else if(event.equals("dump_history"))
 			{
 				System.out.println("Ignoring historical messages.");
 			}

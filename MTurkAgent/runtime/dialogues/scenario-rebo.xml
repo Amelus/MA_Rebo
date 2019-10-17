@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scenario SYSTEM "TuTalkScenario.dtd">
+<scenario default-language="en" scenario-name="rebo-example">
+	<configuration>
+		
+		<!-- It *is* possible to hook up a LightSide classifier to TuTalk, 
+		such that the predicted labels are treated as concepts. 
+		but not today. -->
+			
+		<!-- 	
+		<module kind="model" name="animals"
+			classname="edu.cmu.cs.lti.tutalk.module.SidePredictor">
+			<param key="path" value="models/animals.ser" />
+		</module> 
+		-->
+
+	</configuration>
+
+	<!-- I'm not entirely sure what these are used for. -->
+	<transitions>
+		<transition ack-type="agree" floor-status="neutral">
+			<tphrase> yes </tphrase>
+			<tphrase> okay </tphrase>
+		</transition>
+	
+		<transition ack-type="none">
+			<tphrase> moving on... </tphrase>
+		</transition>
+	</transitions>
+	
+	<!-- 'Concepts' define things that students might say,
+	     AND things that the tutor might say back. 
+	     Tutor concepts should take the form of phrase lists.
+		 Student concepts can be phrase lists, 
+		 regular expressions, or lists of annotations,
+	     but only one of these at a time. -->
+		
+	<concepts>
+		<concept label="introduction">
+			<phrase>Hi</phrase>
+			<phrase>Hallo</phrase>
+			<phrase>Hey</phrase>
+		</concept>
+
+		<concept label="experience">
+			<phrase>Wie ist es dir bei dieser Aufgabe gegangen? Alles gut gelaufen?</phrase>
+			<phrase>Wie zufrieden bist du mit deinem Ergebniss?</phrase>
+			<phrase>Experience Test 3.Phrase</phrase>
+		</concept>
+		
+		<concept label="positiveExp">
+			<phrase>Toll zu hören! Was macht diese Aufgabe für dich intressant?</phrase>
+			<phrase>Was hat dir dabei am besten gefallen?</phrase>
+		</concept>
+
+		<concept label="negativeExp">
+			<phrase>Oje! Was war denn das Problem?</phrase>
+			<phrase>Was war denn das Problem?</phrase>
+			<phrase>Wobei hattest du die meisten Schwierigkeiten?</phrase>
+		</concept>
+
+		<concept label="neutralExp">
+			<phrase>Was würdest du sagen hast du durch diese Aufgabe gelernt?</phrase>
+			<phrase>Was konntest du von dieser Aufgabe mitnehmen?</phrase>
+			<phrase>Neutral Experience FollowUp 3.Phrase</phrase>
+		</concept>
+
+		<concept label="future">
+			<phrase>Welchen Tipp könntest du einem jüngeren Lehrling geben, der einen solchen Auftrag zum ersten Mal ausführt?</phrase>
+			<phrase>Was würdest du beim nächsten mal anders machen?</phrase>
+			<phrase>Auf was würdest du beim nächsten mal mehr achten?</phrase>
+		</concept>
+
+		<concept label="closing">
+			<phrase>Danke, dass du das mit mir besprochen hast!</phrase>
+			<phrase>Schönen Tag noch.</phrase>
+			<phrase>Bis zum nächsten mal.</phrase>
+		</concept>
+
+		<!-- these match against external (MessageAnnotator) annotations. -->
+		<concept label="pos" type="annotation">
+			<phrase>POSITIVE</phrase>
+		</concept>
+		
+		<concept label="neg" type="annotation">
+			<phrase>NEGATIVE</phrase>
+		</concept>
+		
+		<concept label="unanticipated-response">
+			<phrase>anything else</phrase>
+		</concept>
+	</concepts>
+
+	
+	<!-- This is the meat of the hierarchical dialogue - 
+		 one main goal with multiple steps, and subgoals that it may reference. -->
+	<script>
+		<goal name="start" difficulty="1">
+			<step>
+				<initiation>introduction</initiation>
+			</step>
+
+			<step>
+				<initiation>experience</initiation>
+				<response push="goalPos">pos</response>
+				<response push="goalNeg">neg</response>
+				<response push="goalNeutral">unanticipated-response</response>
+			</step>
+
+			<step>
+				<initiation>future</initiation>
+				<response>unanticipated-response</response>
+			</step>
+			
+			<step>
+				<initiation>closing</initiation>
+			</step>
+		</goal>
+
+		<goal name="goalPos" difficulty="1">
+			<step>
+				<initiation>positiveExp</initiation>
+				<response>unanticipated-response</response>
+			</step>
+		</goal>
+
+		<goal name="goalNeg" difficulty="1">
+			<step>
+				<initiation>negativeExp</initiation>
+				<response>unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="goalNeutral" difficulty="1">
+			<step>
+				<initiation>neutralExp</initiation>
+				<response>unanticipated-response</response>
+			</step>
+		</goal>
+	</script>
+
+</scenario>

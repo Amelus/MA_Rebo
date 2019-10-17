@@ -136,7 +136,9 @@ public class TuTalkAutomata {
         {
             for (Concept c : executionTrail) 
             {
-                tutorTurns.add(templater.renderTemplate(c.getText()));
+            	if(!c.getText().equalsIgnoreCase("")) {
+            		tutorTurns.add(templater.renderTemplate(c.getText()));
+            	}
             } 
         }
         return tutorTurns;
@@ -199,7 +201,9 @@ public class TuTalkAutomata {
         {
             for (Concept c : executionTrail) 
             {
-                tutorTurns.add(templater.renderTemplate(c.getText()));
+            	if(!c.getText().equalsIgnoreCase("")) {
+            		tutorTurns.add(templater.renderTemplate(c.getText()));
+            	}
             }
         }
 

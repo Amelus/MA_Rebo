@@ -1,0 +1,8 @@
+
+MTurkAgent/runtime/logs/
+
+.metadata/
+
+*.class
+
+*.dat
