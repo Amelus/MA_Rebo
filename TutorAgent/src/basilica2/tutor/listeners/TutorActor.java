@@ -663,11 +663,13 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private void sendTutorMessage(String... promptStrings)
 	{
 		String combo = join(promptStrings);
-
-		PriorityEvent pete = new PriorityEvent(source, new MessageEvent(source, getAgent().getUsername(), combo, "TUTOR"), tutorMessagePriority , prioritySource, 45);
-		//PriorityEvent pete = PriorityEvent.makeBlackoutEvent("TUTOR_DIALOG", new MessageEvent(source, getAgent().getUsername(), combo, "TUTOR"), 1.0, 45, 10);
-		//((BlacklistSource)pete.getSource()).addExceptions("TUTOR_DIALOG");
-		source.pushProposal(pete);
+		
+		if(!combo.equals("")) {
+			PriorityEvent pete = new PriorityEvent(source, new MessageEvent(source, getAgent().getUsername(), combo, "TUTOR"), tutorMessagePriority , prioritySource, 45);
+			//PriorityEvent pete = PriorityEvent.makeBlackoutEvent("TUTOR_DIALOG", new MessageEvent(source, getAgent().getUsername(), combo, "TUTOR"), 1.0, 45, 10);
+			//((BlacklistSource)pete.getSource()).addExceptions("TUTOR_DIALOG");
+			source.pushProposal(pete);
+		}
 		
 	}
 

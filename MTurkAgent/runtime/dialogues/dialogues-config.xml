@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dialogs>
     <dialog concept="REBO" scenario="scenario-rebo">
-        <intro>Rebo Start?</intro>
-        <accept annotation="AFFIRMATIVE">Let's get started.</accept>
-        <cancel annotation="NEGATIVE">Okay -.-</cancel>
+        <intro>Hey!</intro>
+        <accept annotation="GREETING"></accept>
     </dialog>
 </dialogs>
