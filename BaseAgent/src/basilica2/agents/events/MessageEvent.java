@@ -47,6 +47,7 @@ import java.util.List;
 import java.util.Map;
 
 import basilica2.agents.components.InputCoordinator;
+import basilica2.sentiment.analysis.MessageSentiment;
 
 /**
  * 
@@ -62,6 +63,7 @@ public class MessageEvent extends Event implements Serializable, Cloneable
 	protected boolean ackExpected = false;
 	protected long typingDuration;
 	protected Event referent; 
+	protected MessageSentiment sentiment;
 
 	public MessageEvent(Component source, String from, String message)
 	{
@@ -261,6 +263,18 @@ public class MessageEvent extends Event implements Serializable, Cloneable
 	public void setText(String t)
 	{
 		text = t;
+	}
+	
+	public MessageSentiment getMessageSentiment() {
+		
+		if(sentiment == null)
+			sentiment = new MessageSentiment();
+		
+		return sentiment;
+	}
+	
+	public void setMessageSentiment(MessageSentiment sentiment) {
+		this.sentiment = sentiment;
 	}
 
 }
