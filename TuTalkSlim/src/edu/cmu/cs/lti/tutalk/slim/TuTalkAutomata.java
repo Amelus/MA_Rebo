@@ -144,7 +144,7 @@ public class TuTalkAutomata {
         return tutorTurns;
     }
 
-    public List<EvaluatedConcept> evaluateTuteeTurn(String turn, Collection<String> annotations) 
+    public List<EvaluatedConcept> evaluateTuteeTurn(String turn, Collection<String> annotations, String sentiment) 
     {
         List<Concept> cs = new ArrayList<Concept>();
         List<Response> expected = currentState.getExpected();
@@ -153,7 +153,16 @@ public class TuTalkAutomata {
             cs.add(expected.get(i).getConcept());
         }
         cs.add(currentScenario.getConceptLibrary().getConcept("_dont_know_"));
+        
+        if(sentiment.length() > 0) {
+        	return evaluator.evaluateTurn(turn, cs, annotations, sentiment);
+        }
         return evaluator.evaluateTurn(turn, cs, annotations);
+    }
+    
+    public List<EvaluatedConcept> evaluateTuteeTurn(String turn, Collection<String> annotations) 
+    {
+    	return evaluateTuteeTurn(turn, new ArrayList<String>(), "");
     }
     
     public List<EvaluatedConcept> evaluateTuteeTurn(String turn) 

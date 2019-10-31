@@ -35,4 +35,16 @@ public class MessageSentiment {
 				break;
 		}
 	}
+	
+	public String toString() {
+		Sentiment tmp = getSentiment();
+		switch (tmp) {
+			case POSITIVE:
+				return "POSITIVE";
+			case NEGATIVE:
+				return "NEGATIVE";
+			default:
+				return "NEUTRAL";
+	}
+	}
 }

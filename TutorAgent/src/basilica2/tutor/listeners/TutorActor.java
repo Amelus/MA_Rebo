@@ -52,6 +52,7 @@ import basilica2.agents.events.priority.PriorityEvent;
 import basilica2.agents.events.priority.BlacklistSource;
 import basilica2.agents.events.priority.PriorityEvent.Callback;
 import basilica2.agents.listeners.BasilicaAdapter;
+import basilica2.sentiment.analysis.MessageSentiment;
 //import basilica2.social.data.TurnCounts;
 import basilica2.tutor.events.DoTutoringEvent;
 import basilica2.tutor.events.DoneTutoringEvent;
@@ -109,6 +110,9 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private String tutorialCondition = "tutorial";
 	private int numUser = 1;
 	
+	private MessageSentiment message_sentiment;
+	public boolean sentiment_dictionary_method_active = false;
+	
 	private boolean block = false;
 
 	// private List<Dialog> dialogsReadyQueue = new ArrayList<Dialog>();
@@ -150,6 +154,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		dialogueFolder = properties.getProperty("dialogue_folder",dialogueFolder);
 		startAnyways = properties.getProperty("start_anyways","false").equals("true");
 		tutorialCondition = properties.getProperty("tutorial_condition",tutorialCondition);
+		sentiment_dictionary_method_active = properties.getProperty("sentiment_dictionary_active", "false").equals("true");
 		
 		loadDialogConfiguration(dialogueConfigFile);
 		
@@ -267,6 +272,9 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		{
 			//check for concept match and start specific dialog - mostly used for affirmative to 'are you ready'
 			handleRequestDetectedEvent((MessageEvent) e);
+			if(sentiment_dictionary_method_active) {
+				message_sentiment = ((MessageEvent) e).getMessageSentiment();
+			}
 		}
 		else if (e instanceof StudentTurnsEvent)
 		{
@@ -423,7 +431,14 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 					{
 						studentTurn += turn + " | ";
 					}
-					List<EvaluatedConcept> matchingConcepts = currentAutomata.evaluateTuteeTurn(studentTurn, ste.getAnnotations());
+					
+					List<EvaluatedConcept> matchingConcepts;
+					if(sentiment_dictionary_method_active) {
+						matchingConcepts = currentAutomata.evaluateTuteeTurn(studentTurn, ste.getAnnotations(), message_sentiment.toString());
+					} else {
+						matchingConcepts = currentAutomata.evaluateTuteeTurn(studentTurn, ste.getAnnotations());
+					}
+					
 					if (matchingConcepts.size() != 0)
 					{
 						System.out.println(matchingConcepts.get(0).getClass().getSimpleName());

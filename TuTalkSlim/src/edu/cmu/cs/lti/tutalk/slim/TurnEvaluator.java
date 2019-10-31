@@ -87,4 +87,45 @@ public class TurnEvaluator
 
         return matched;
     }
+    
+    public List<EvaluatedConcept> evaluateTurn(String turn, List<Concept> validConcepts, Collection<String> annotations, String sentiment) 
+    {
+        List<EvaluatedConcept> matched = new ArrayList<EvaluatedConcept>();
+
+        if (turn.trim().length() == 0) 
+        {
+            return matched;
+        }
+
+        boolean unAnticipatedValid = false;
+        Concept unAnticipatedConcept = null;
+
+        for (Concept concept : validConcepts) 
+        {
+            double matchValue = concept.match(turn, annotations);
+
+			if(matchValue > MATCH_THRESHOLD)
+            {
+                matched.add(new EvaluatedConcept(concept, matchValue));
+            }
+			
+            if (concept.getLabel().equals("unanticipated-response")) 
+            {
+                unAnticipatedValid = true;
+                unAnticipatedConcept = concept;
+            }
+        }
+
+        if (unAnticipatedValid && matched.isEmpty()) 
+        {
+            matched.add(new EvaluatedConcept(unAnticipatedConcept, 1.0));
+        }
+        
+        Collections.sort(matched);
+        Collections.reverse(matched);
+        
+        System.out.println(matched);
+
+        return matched;
+    }
 }

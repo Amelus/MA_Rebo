@@ -119,23 +119,27 @@ public class SentimentAnalysisDictionaryMethod implements BasilicaPreProcessor{
 		MessageSentiment message_sentiment = event.getMessageSentiment();
 		String[] message = event.getText().toLowerCase().split(" ");
 		
-		double intensify = 0.0;
+		double intensify = 1.0;
 		
 	    for(String word : message) {
-	        if(!isStopWord(word)) {
+	        if(!isStopWord(word) && isInLexica(word)) {
 	        	Sentiment type = getWordSentiment(word);
+	        	if(type == null ) {
+	        		continue;
+	        	}
+	        	
 	        	double value = getPolarityValue(word);
 	        	
 	        	if(type == Sentiment.INTENSIFY) {
 	        		intensify = value;
-	        	} else if(intensify != 0.0) {
-	        		message_sentiment.addSentiment(value * intensify, type);
-	        		intensify = 0.0;
+	        		continue;
 	        	} else {
-	        		message_sentiment.addSentiment(value, type);
+	        		message_sentiment.addSentiment(value * intensify, type);
+	        		intensify = 1.0;
 	        	}
 	        }
 	    }
+	    event.setMessageSentiment(message_sentiment);
 	}
 	
 	private boolean isStopWord(String word) {
