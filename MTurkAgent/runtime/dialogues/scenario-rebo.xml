@@ -73,6 +73,17 @@
 			<phrase>Was hat dich bei der Aufgabe besonders gefordert?</phrase>
 		</concept>
 		
+		<concept label="positiveExp">
+			<phrase>Toll zu hören! Was macht diese Aufgabe für dich intressant?</phrase>
+			<phrase>Was hat dir dabei am besten gefallen?</phrase>
+		</concept>
+
+		<concept label="negativeExp">
+			<phrase>Oje! Was war denn das Problem?</phrase>
+			<phrase>Was war denn das Problem?</phrase>
+			<phrase>Wobei hattest du die meisten Schwierigkeiten?</phrase>
+		</concept>
+
 		<concept label="future">
 			<phrase>Worauf wirst du beim nächsten Mal besonders achten, wenn du einen ähnlichen Auftrag bekommst?</phrase>
 			<phrase>Wo kannst du das Erlernte noch einsetzen?</phrase>
@@ -113,8 +124,15 @@
 			<phrase>Bis bald!</phrase>
 			<phrase>Bis zum nächsten Mal!</phrase>
 		</concept>
-		
 		<!-- these match against external (MessageAnnotator) annotations. -->
+		<concept label="pos" type="annotation">
+			<phrase>POSITIVE</phrase>
+		</concept>
+		
+		<concept label="neg" type="annotation">
+			<phrase>NEGATIVE</phrase>
+		</concept>
+		
 		<concept label="unanticipated-response">
 			<phrase>anything else</phrase>
 		</concept>
@@ -127,6 +145,8 @@
 		<goal name="start" difficulty="1">
 			<step>
 				<initiation>judgement</initiation>
+				<response push="goalPos">pos</response>
+				<response push="goalNeg">neg</response>
 				<response>unanticipated-response</response>
 			</step>
 			
@@ -151,6 +171,20 @@
 			
 			<step>
 				<initiation>goodbye</initiation>
+			</step>
+		</goal>
+
+		<goal name="goalPos" difficulty="1">
+			<step>
+				<initiation>positiveExp</initiation>
+				<response>unanticipated-response</response>
+			</step>
+		</goal>
+
+		<goal name="goalNeg" difficulty="1">
+			<step>
+				<initiation>negativeExp</initiation>
+				<response>unanticipated-response</response>
 			</step>
 		</goal>
 	</script>
