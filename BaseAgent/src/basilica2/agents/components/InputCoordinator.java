@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -47,7 +48,7 @@ public class InputCoordinator extends Component
     Set<Event> preprocessedEvents = new HashSet<Event>();
     Set<PriorityEvent> proposals = new HashSet<PriorityEvent>();
     private OutputCoordinator outputCoordinator;
-    
+    private ArrayList<MessageEvent> multiLineMessageArray = new ArrayList<MessageEvent>();
     
     
     
@@ -152,37 +153,66 @@ public class InputCoordinator extends Component
         {
             event = new EchoEvent(this, (MessageEvent)event);
         }
-        //System.err.println(event.getName()+": "+event.toString());
-            
+        
+        handleMultiLineMessage(event);
+        
+        if(!multiLineMessageArray.isEmpty()) {
+        	return;
+        }
+        
         synchronized(this)
         {
-//            Class<? extends Event> eventClass = event.getClass();
-//            if(preprocessors.containsKey(eventClass))
-
-            preprocessedEvents.add(event);
-            for(Class<? extends Event> keyClass : preprocessors.keySet())
-            {
-            	if(keyClass.isInstance(event))
-            	{
-		            for(BasilicaPreProcessor prep : preprocessors.get(keyClass))
-		            {
-		            	//System.err.println("****\n\nprocessing "+event+" for "+prep.getClass().getSimpleName()+": ");
-		                prep.preProcessEvent(this, event);
-		                //System.err.println(preprocessedEvents+"\n\n****");
-		            }
-            	}
-            }
- 
-            //collect any annotations that the preprocessors have applied to this message, and log it.
-            if(event instanceof MessageEvent)
-        		MessageEventLogger.logMessageEvent((MessageEvent)event);
-            
+        	preProcessCurrentEvent(event);
             processAllEvents();
         }
         
         
     }
+    private void preProcessCurrentEvent(Event event) {
+    	preprocessedEvents.add(event);
+        for(Class<? extends Event> keyClass : preprocessors.keySet())
+        {
+        	if(keyClass.isInstance(event))
+        	{
+	            for(BasilicaPreProcessor prep : preprocessors.get(keyClass))
+	            {
+	            	prep.preProcessEvent(this, event);
+	            }
+        	}
+        }
 
+        //collect any annotations that the preprocessors have applied to this message, and log it.
+        if(event instanceof MessageEvent)
+    		MessageEventLogger.logMessageEvent((MessageEvent)event);
+    }
+    
+    private void handleMultiLineMessage(Event event) {
+    	if(event instanceof MessageEvent) {
+        	MessageEvent test = (MessageEvent)event;
+        	String message = test.getText().trim();
+        	if(checkMultiMessage(message)) {
+        		multiLineMessageArray.add(test);
+        	} else if(multiLineMessageArray.size() > 0){
+        		
+        		Iterator<MessageEvent> iter = multiLineMessageArray.iterator(); 
+        		String concatenatedMessage =  iter.next().getText();
+        		while (iter.hasNext()) {
+        			concatenatedMessage += " | " + iter.next().getText();
+        		}
+        		
+        		test.setText(concatenatedMessage + " | " + message);
+        		multiLineMessageArray.clear();
+        	}
+        }
+    }
+
+    private boolean checkMultiMessage(String text) {
+    	if(text.length() > 3) {
+    		return text.substring(text.length() - 3).contentEquals("...");
+    	}
+    	return false;
+    }
+    
 	public boolean isAgentName(String from)
 	{
 		return from.trim().contains(getAgent().getUsername().trim()) || from.contains("Tutor") || from.trim().contains(System.getProperty("loginHandle", "Tutor"));
