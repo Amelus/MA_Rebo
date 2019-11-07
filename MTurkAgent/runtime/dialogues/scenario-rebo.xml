@@ -61,7 +61,6 @@
 		
 		<concept label="learning">
 			<phrase>Welchen Tipp könntest du einem jüngeren Lehrling geben, der einen solchen Auftrag zum ersten Mal ausführt?</phrase>
-			<phrase>Welches Wissen konntest du heute anwende?</phrase>
 			<phrase>Wie gut hast du die Aufgabe verstanden?</phrase>
 			<phrase>Inwieweit konntest du dein theoretisches Wissen hier anwenden?</phrase>
 			<phrase>Was hast du für dich aus der Aufgabe gelernt?</phrase>
@@ -88,7 +87,7 @@
 			<phrase>Was gefällt dir an deinem Ergebnis und was nicht?</phrase>
 		</concept>
 		
-		<concept label="future">
+		<concept label="planing">
 			<phrase>Worauf wirst du beim nächsten Mal besonders achten, wenn du einen ähnlichen Auftrag bekommst?</phrase>
 			<phrase>Wo kannst du das Erlernte noch einsetzen?</phrase>
 			<phrase>Wofür kannst du das Erlernte sonst noch anwenden?</phrase>
@@ -98,9 +97,22 @@
 			<phrase>Welche Fähigkeiten, die du hier geübt hast, wirst du in der Zukunft wieder brauchen?</phrase>
 			<phrase>Was wirst du das nächste Mal anders machen? Warum?</phrase>
 			<phrase>Was würdest du beim  nächsten Mal wieder gleich machen? Warum?</phrase>
-			<phrase>Wenn du die gleiche Aufgabe morgen nochmals machen würdest, was wäre dann anders als heute?</phrase>
 			<phrase>Was wirst du beim nächsten Mal anders machen und was wirst du gleich machen, wenn du eine ähnliche Aufgabe zu erledigen hast?</phrase>
 			<phrase>Welches Wissen, das du hier angewendet hast, wirst du in Zukunft wieder verwenden?</phrase>
+		</concept>
+		
+		<concept label="planningRecognized">
+			<phrase>Das klingt nach einem Plan!</phrase>
+			<phrase>Klingt gut!</phrase>
+		</concept>
+		
+		<concept label="NegativePlanningResponse">
+			<phrase>War nicht vielleicht doch etwas Interessantes für dich dabei?</phrase>
+			<phrase>Klingt gut!</phrase>
+		</concept>
+		
+		<concept label="planningNoCategory">
+			<phrase>Wenn du die gleiche Aufgabe morgen nochmals machen würdest, was wäre dann anders als heute?</phrase>
 		</concept>
 
 		<concept label="closing">
@@ -137,6 +149,10 @@
 			<phrase>NEGATIVE</phrase>
 		</concept>
 		
+		<concept label="planning" type="annotation">
+			<phrase>PLANNING</phrase>
+		</concept>
+		
 		<concept label="unanticipated-response">
 			<phrase>anything else</phrase>
 		</concept>
@@ -165,8 +181,10 @@
 			</step>
 
 			<step>
-				<initiation>future</initiation>
-				<response>unanticipated-response</response>
+				<initiation>planing</initiation>
+				<response push="goalPlanning">planning</response>
+				<response push="goalPlanningNegativeResponse">neg</response>
+				<response push="planningNotCategorized">unanticipated-response</response>
 			</step>
 			
 			<step>
@@ -196,6 +214,27 @@
 		<goal name="goalNeutral" difficulty="1">
 			<step>
 				<initiation>neutralExp</initiation>
+				<response>unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="goalPlanning" difficulty="1">
+			<step>
+				<initiation>planningRecognized</initiation>
+				<response>unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="goalPlanningNegativeResponse" difficulty="1">
+			<step>
+				<initiation>NegativePlanningResponse</initiation>
+				<response push="planningNotCategorized">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="planningNotCategorized" difficulty="1">
+			<step>
+				<initiation>planningNoCategory</initiation>
 				<response>unanticipated-response</response>
 			</step>
 		</goal>
