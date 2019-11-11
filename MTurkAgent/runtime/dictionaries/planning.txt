@@ -4,6 +4,7 @@ abhärtung
 abklären
 ablassen
 abmachen
+abnehmen
 abrundung
 abschalten
 abschließen
@@ -27,10 +28,15 @@ anstrengungslos
 anständig
 antreiben
 antrieb
+anzudrücken
 arbeitsplatzsicherung
 arbeitssicherheit
 arbeitswille
 arbeitswillig
+auf das
+auf die
+auf jedenfall
+auf mein
 aufarbeiten
 aufmerksam
 aufmerksamkeit
@@ -66,15 +72,24 @@ beherrschen
 beherrschung
 behilflich
 behutsam
+beim
 beibehalten
 belastbarkeit
 bemühen
 berichtigen
 besser
+bevor
 bevorzugen
 bewährt
 blitzschnell
 clever
+das ich
+das mir
+darauf dass
+darauf das
+drauf, das
+drauf, dass
+darauf den
 detailliert
 detailreich
 deutlich
@@ -116,17 +131,25 @@ fehlerfreiheit
 fehlerlos
 fehlerlosigkeit
 feingefühl
+fest zu halten
+festzuhalten
 fingerspitzengefühl
 fleißig
 freude
 freudig
+früher
 funktionsfähigkeit
 funktionstüchtigkeit
+gedult
 geduld
 gedulden
 geduldig
 gelassenheit
 gemütlich
+genau
+genauer
+genau arbeiten
+genauer arbeiten
 genauigkeit
 genießen
 gescheit
@@ -181,6 +204,7 @@ lust
 mangelfrei
 mangelfreies
 meisterlich
+mehr zeit
 minutiös
 motivieren
 motiviert
@@ -192,7 +216,13 @@ mühelos
 mühen
 nachbessern
 nachbesserung
+nachkontrolieren
+nachkontrollieren
+nachmesse
+nachmessen
+nach messen
 natürlich
+nicht so viel
 normal
 normalisieren
 notwendige
@@ -209,6 +239,7 @@ ordentlicher
 originell
 origineller
 passend
+passieren
 perfekt
 perfektheit
 perfektion
@@ -250,23 +281,29 @@ respektiert
 respektvoll
 revanchieren
 revidieren
+richtig
 richtigkeit
 richtigstellen
 routine
 routiniert
 routinierter
 ruhe
+ruhig
+ruhiger
 sachgerecht
 sachkundig
 sauber
 schlauer
+schneller
 schnellstmöglich
 selbstbewusst
 selbstbewußt
 sicher
 sicherheit
+so gut wie möglich
 sorgfältig
 sorgfältiger
+sorgfälltigkeit
 stark
 stetig
 stolz
@@ -300,9 +337,13 @@ verbindlich
 verlässlich
 verlässlichkeit
 verläßlich
+vermeiden
 vielfältig
 vielseitig
 vielseitigkeit
+vorher
+vorsichtig
+vorsichtiger
 vorsorglich
 vorteil
 vorteilhaft
@@ -310,6 +351,8 @@ vortrefflich
 wagemut
 wagemutig
 wagen
+weil ich
+werde ich
 wettmachen
 wichtig
 wieder
@@ -331,6 +374,7 @@ zielgerichtet
 zielstrebig
 zielstrebiger
 zielstrebigkeit
+zuerst
 zufrieden
 zufrieden sein
 zufriedengeben
@@ -340,5 +384,6 @@ zusammennehmen
 zutrauen
 zuversicht
 zuversichtlich
+öfter
 überlegt
 überlegter
