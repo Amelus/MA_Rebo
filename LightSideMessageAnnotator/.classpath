@@ -6,14 +6,11 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/AccountableTalkAgent/src"/>
 	<classpathentry kind="lib" path="/BaseAgent/src"/>
 	<classpathentry kind="lib" path="/BasilicaCore/src"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/AccountableTalkAgent"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/BaseAgent"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/BasilicaCore"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/SocketIOClient"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Synonymizer"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TuTalkSlim"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TutorAgent"/>
 	<classpathentry kind="output" path="bin"/>

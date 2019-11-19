@@ -66,7 +66,7 @@ public class ConditionAgentUI extends BaseAgentUI
 
 		for (String condition : allConditions)
 		{
-			JCheckBox box = new JCheckBox(condition, false);
+			JCheckBox box = new JCheckBox(condition, true);
 			conditionBoxes.put(condition, box);
 			
 			checkBoxPanel.add(box);

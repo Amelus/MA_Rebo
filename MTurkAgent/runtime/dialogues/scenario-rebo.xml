@@ -108,7 +108,6 @@
 		
 		<concept label="NegativePlanningResponse">
 			<phrase>War nicht vielleicht doch etwas Interessantes für dich dabei?</phrase>
-			<phrase>Klingt gut!</phrase>
 		</concept>
 		
 		<concept label="planningNoCategory">
@@ -221,7 +220,6 @@
 		<goal name="goalPlanning" difficulty="1">
 			<step>
 				<initiation>planningRecognized</initiation>
-				<response>unanticipated-response</response>
 			</step>
 		</goal>
 		
