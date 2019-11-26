@@ -83,11 +83,20 @@
 			<phrase>Wobei hattest du die meisten Schwierigkeiten?</phrase>
 		</concept>
 		
-		<concept label="neutralExp">
-			<phrase>Was gefällt dir an deinem Ergebnis und was nicht?</phrase>
+		<concept label="negativExpAskFurther">
+			<phrase>Hat es trotzdem Spaß gemacht?</phrase>
 		</concept>
 		
-		<concept label="planing">
+		<concept label="neutralExp">
+			<phrase>Was gefällt dir an deinem Ergebnis und was nicht?</phrase>
+			<phrase>Wie gut erfüllt dein Ergebnis die gestellte Aufgabe?</phrase>
+		</concept>
+		
+		<concept label="SecondNeutralExp">
+			<phrase>Was hat dich an der Aufgabe interessiert?</phrase>
+		</concept>
+		
+		<concept label="planning">
 			<phrase>Worauf wirst du beim nächsten Mal besonders achten, wenn du einen ähnlichen Auftrag bekommst?</phrase>
 			<phrase>Wo kannst du das Erlernte noch einsetzen?</phrase>
 			<phrase>Wofür kannst du das Erlernte sonst noch anwenden?</phrase>
@@ -96,7 +105,7 @@
 			<phrase>Was wirst du das nächste Mal besser machen?</phrase>
 			<phrase>Welche Fähigkeiten, die du hier geübt hast, wirst du in der Zukunft wieder brauchen?</phrase>
 			<phrase>Was wirst du das nächste Mal anders machen? Warum?</phrase>
-			<phrase>Was würdest du beim  nächsten Mal wieder gleich machen? Warum?</phrase>
+			<phrase>Was würdest du beim nächsten Mal wieder gleich machen? Warum?</phrase>
 			<phrase>Was wirst du beim nächsten Mal anders machen und was wirst du gleich machen, wenn du eine ähnliche Aufgabe zu erledigen hast?</phrase>
 			<phrase>Welches Wissen, das du hier angewendet hast, wirst du in Zukunft wieder verwenden?</phrase>
 		</concept>
@@ -106,7 +115,7 @@
 			<phrase>Klingt gut!</phrase>
 		</concept>
 		
-		<concept label="NegativePlanningResponse">
+		<concept label="noPlanningRecognized">
 			<phrase>War nicht vielleicht doch etwas Interessantes für dich dabei?</phrase>
 		</concept>
 		
@@ -140,15 +149,15 @@
 			<phrase>Bis zum nächsten Mal!</phrase>
 		</concept>
 		<!-- these match against external (MessageAnnotator) annotations. -->
-		<concept label="pos" type="annotation">
+		<concept label="pos_annotation" type="annotation">
 			<phrase>POSITIVE</phrase>
 		</concept>
 		
-		<concept label="neg" type="annotation">
+		<concept label="neg_annotation" type="annotation">
 			<phrase>NEGATIVE</phrase>
 		</concept>
 		
-		<concept label="planning" type="annotation">
+		<concept label="planning_annotation" type="annotation">
 			<phrase>PLANNING</phrase>
 		</concept>
 		
@@ -164,8 +173,8 @@
 		<goal name="start" difficulty="1">
 			<step>
 				<initiation>judgement</initiation>
-				<response push="goalPos">pos</response>
-				<response push="goalNeg">neg</response>
+				<response push="goalPos">pos_annotation</response>
+				<response push="goalNeg">neg_annotation</response>
 				<response push="goalNeutral">unanticipated-response</response>
 			</step>
 			
@@ -180,9 +189,9 @@
 			</step>
 
 			<step>
-				<initiation>planing</initiation>
-				<response push="goalPlanning">planning</response>
-				<response push="goalPlanningNegativeResponse">neg</response>
+				<initiation>planning</initiation>
+				<response push="goalPlanning">planning_annotation</response>
+				<response push="goalPlanningNegativeResponse">neg_annotation</response>
 				<response push="planningNotCategorized">unanticipated-response</response>
 			</step>
 			
@@ -206,6 +215,13 @@
 		<goal name="goalNeg" difficulty="1">
 			<step>
 				<initiation>negativeExp</initiation>
+				<response push="goalNegAskFurther">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="goalNegAskFurther">
+			<step>
+				<initiation>negativExpAskFurther</initiation>
 				<response>unanticipated-response</response>
 			</step>
 		</goal>
@@ -213,6 +229,15 @@
 		<goal name="goalNeutral" difficulty="1">
 			<step>
 				<initiation>neutralExp</initiation>
+				<response push="goalPos">pos_annotation</response>
+				<response push="goalNeg">neg_annotation</response>
+				<response push="goalNeutralSecond">unanticipated-response</response>
+			</step>
+		</goal>
+
+		<goal name="goalNeutralSecond" difficulty="1">
+			<step>
+				<initiation>SecondNeutralExp</initiation>
 				<response>unanticipated-response</response>
 			</step>
 		</goal>
@@ -225,7 +250,7 @@
 		
 		<goal name="goalPlanningNegativeResponse" difficulty="1">
 			<step>
-				<initiation>NegativePlanningResponse</initiation>
+				<initiation>noPlanningRecognized</initiation>
 				<response push="planningNotCategorized">unanticipated-response</response>
 			</step>
 		</goal>

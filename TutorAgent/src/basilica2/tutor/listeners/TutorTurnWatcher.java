@@ -32,7 +32,7 @@ public class TutorTurnWatcher extends BasilicaAdapter implements TimeoutReceiver
 	public static String GENERIC_TYPE = "Cordinator";
 	private double tickSize = 0.1;
 	private int burst_ticks = 50; // Equals 5 second bursts
-	private int turn_response_timeout = 180;
+	private int turn_response_timeout = 600;
 	private List<String> studentTurns = null;
 	private List<String> contributors = null;
 	private List<String> annotations = null;

@@ -126,30 +126,28 @@ public class MessageAnnotator implements BasilicaPreProcessor
 
 	private List<String> matchDictionary(String text, List<String> dictionary)
 	{
-		String text2 = " " + text;
 		List<String> matchedTerms = new ArrayList<String>();
 		for (int j = 0; j < dictionary.size(); j++)
 		{
 			String entry = dictionary.get(j);
 			try
 			{
-				/*if (entry.startsWith("/") && entry.endsWith("/"))
-				{
-					String regex = ".*" + entry.substring(1, entry.length() - 1) + ".*";
-					if (text.matches(regex))
-					{
-						matchedTerms.add(entry);
-					}
-				}*/
-
-				String regex = "\\b" + entry + "\\b";
+				String regex = "";
+				
+				if (entry.startsWith("/") && entry.endsWith("/")) {
+					regex = ".*" + entry.substring(1, entry.length() - 1) + ".*";
+				}
+				else {
+					regex = "\\b" + entry + "\\b";
+				}
+				
                 java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(regex);
                 java.util.regex.Matcher matcher = pattern.matcher(text);
+                
                 if (matcher.find())
                 {
                     matchedTerms.add(entry);
                 }
-				
 			}
 			catch (Exception e)
 			{
