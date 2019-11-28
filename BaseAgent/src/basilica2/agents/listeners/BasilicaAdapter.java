@@ -5,28 +5,16 @@
  */
 package basilica2.agents.listeners;
 
-import basilica2.agents.components.InputCoordinator;
-import basilica2.agents.components.StateMemory;
-import basilica2.agents.data.PromptTable;
-import basilica2.agents.data.State;
-import basilica2.agents.events.MessageEvent;
-import basilica2.agents.events.priority.AbstractPrioritySource;
-import basilica2.agents.events.priority.PriorityEvent;
-import basilica2.agents.events.priority.PrioritySource;
-import basilica2.agents.listeners.BasilicaListener;
-import basilica2.agents.listeners.BasilicaPreProcessor;
-import edu.cmu.cs.lti.basilica2.core.Agent;
-import edu.cmu.cs.lti.basilica2.core.Event;
-import edu.cmu.cs.lti.project911.utils.log.Logger;
-import edu.cmu.cs.lti.project911.utils.time.TimeoutReceiver;
-import edu.cmu.cs.lti.project911.utils.time.Timer;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Properties;
+
+import basilica2.agents.components.InputCoordinator;
+import basilica2.agents.events.priority.AbstractPrioritySource;
+import basilica2.agents.events.priority.PrioritySource;
+import edu.cmu.cs.lti.basilica2.core.Agent;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 /**
  *

@@ -1,24 +1,13 @@
 package basilica2.agents.listeners.plan;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
-import edu.cmu.cs.lti.project911.utils.log.Logger;
-
-import basilica2.util.Timer;
 
 import basilica2.agents.components.InputCoordinator;
 import basilica2.agents.components.StateMemory;
-import basilica2.agents.data.PromptTable;
 import basilica2.agents.data.State;
-import basilica2.agents.events.MessageEvent;
-import basilica2.agents.events.priority.PriorityEvent;
-import basilica2.agents.listeners.BasilicaAdapter;
-import basilica2.agents.listeners.IntroductionsHandler;
-import basilica2.agents.listeners.BasilicaAdapter.ListenerListener;
-import basilica2.agents.listeners.plan.PlanExecutor.PlanSource;
+import basilica2.util.Timer;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 public class Step {
 

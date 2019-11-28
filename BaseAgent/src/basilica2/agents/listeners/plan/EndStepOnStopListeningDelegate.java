@@ -1,9 +1,9 @@
 package basilica2.agents.listeners.plan;
 
-import edu.cmu.cs.lti.project911.utils.log.Logger;
 import basilica2.agents.components.InputCoordinator;
 import basilica2.agents.listeners.BasilicaAdapter;
 import basilica2.agents.listeners.BasilicaAdapter.ListenerListener;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 public final class EndStepOnStopListeningDelegate implements ListenerListener
 {

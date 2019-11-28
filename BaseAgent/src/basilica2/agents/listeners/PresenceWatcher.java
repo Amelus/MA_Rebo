@@ -33,17 +33,14 @@ package basilica2.agents.listeners;
 
 import basilica2.agents.components.InputCoordinator;
 import basilica2.agents.components.StateMemory;
+import basilica2.agents.data.State;
+import basilica2.agents.events.LaunchEvent;
+import basilica2.agents.events.PresenceEvent;
 import edu.cmu.cs.lti.basilica2.core.Agent;
-import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
 import edu.cmu.cs.lti.project911.utils.time.TimeoutReceiver;
 import edu.cmu.cs.lti.project911.utils.time.Timer;
-import basilica2.agents.data.State;
-import basilica2.agents.events.LaunchEvent;
-import basilica2.agents.events.PresenceEvent;
-import java.util.Hashtable;
-import java.util.Map;
 
 /**
  * updates student presence information in StateMemory

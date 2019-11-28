@@ -10,7 +10,6 @@ import java.util.HashMap;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 
-import edu.cmu.cs.lti.project911.utils.log.Logger;
 import basilica2.agents.events.MessageEvent;
 
 public class MessageEventLogger

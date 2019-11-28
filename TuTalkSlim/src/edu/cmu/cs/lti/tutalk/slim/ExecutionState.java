@@ -31,13 +31,14 @@
  */
 package edu.cmu.cs.lti.tutalk.slim;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import edu.cmu.cs.lti.tutalk.script.Executable;
 import edu.cmu.cs.lti.tutalk.script.Goal;
 import edu.cmu.cs.lti.tutalk.script.Initiation;
 import edu.cmu.cs.lti.tutalk.script.Response;
 import edu.cmu.cs.lti.tutalk.script.Step;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *

@@ -31,22 +31,14 @@
  */
 package basilica2.agents.events;
 
-import de.fhg.ipsi.chatblocks2.model.IReferenceableDocument;
-import de.fhg.ipsi.chatblocks2.model.messagebased.ChatMessage;
-import edu.cmu.cs.lti.basilica2.core.Component;
-import edu.cmu.cs.lti.basilica2.core.Event;
-
-import java.awt.Point;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
-import basilica2.agents.components.InputCoordinator;
+import edu.cmu.cs.lti.basilica2.core.Component;
+import edu.cmu.cs.lti.basilica2.core.Event;
 
 /**
  * 

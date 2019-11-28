@@ -1,6 +1,5 @@
 package basilica2.agents.events;
 
-import basilica2.agents.components.InputCoordinator;
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
 

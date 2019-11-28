@@ -1,16 +1,15 @@
 package basilica2.agents.listeners;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
 import basilica2.agents.components.InputCoordinator;
 import basilica2.agents.events.MessageEvent;
 import basilica2.agents.events.TypingEvent;
 import edu.cmu.cs.lti.basilica2.core.Event;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.List;
 
 public class TypingTimer implements BasilicaPreProcessor
 {

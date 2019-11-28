@@ -31,6 +31,10 @@
  */
 package edu.cmu.cs.lti.tutalk.slim.test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 import edu.cmu.cs.lti.tutalk.script.Concept;
 import edu.cmu.cs.lti.tutalk.script.DictionaryConcept;
 import edu.cmu.cs.lti.tutalk.script.Response;
@@ -38,9 +42,6 @@ import edu.cmu.cs.lti.tutalk.script.Scenario;
 import edu.cmu.cs.lti.tutalk.slim.EvaluatedConcept;
 import edu.cmu.cs.lti.tutalk.slim.FuzzyTurnEvaluator;
 import edu.cmu.cs.lti.tutalk.slim.TuTalkAutomata;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 /**
  *

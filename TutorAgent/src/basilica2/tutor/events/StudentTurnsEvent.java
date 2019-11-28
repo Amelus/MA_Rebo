@@ -33,7 +33,6 @@ package basilica2.tutor.events;
 
 import java.util.List;
 
-import de.fhg.ipsi.utils.StringUtilities;
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
 

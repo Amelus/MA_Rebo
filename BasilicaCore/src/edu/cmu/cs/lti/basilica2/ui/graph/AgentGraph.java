@@ -31,9 +31,6 @@
  */
 package edu.cmu.cs.lti.basilica2.ui.graph;
 
-import edu.cmu.cs.lti.basilica2.core.Agent;
-import edu.cmu.cs.lti.basilica2.core.Component;
-import edu.cmu.cs.lti.basilica2.core.Connection;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Rectangle2D;
@@ -46,11 +43,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+
 import org.jgraph.JGraph;
 import org.jgraph.graph.DefaultGraphCell;
 import org.jgraph.graph.DefaultGraphModel;
 import org.jgraph.graph.GraphConstants;
 import org.jgraph.graph.GraphModel;
+
+import edu.cmu.cs.lti.basilica2.core.Agent;
+import edu.cmu.cs.lti.basilica2.core.Component;
+import edu.cmu.cs.lti.basilica2.core.Connection;
 
 /**
  *

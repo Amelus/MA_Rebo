@@ -31,10 +31,16 @@
  */
 package basilica2.agents.components;
 
-import basilica2.agents.components.ConcertChatActor;
-import de.fhg.ipsi.chatblocks2.awareness.AbstractAwarenessInfo;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.swing.SwingUtilities;
+import javax.swing.table.TableModel;
+
+import basilica2.agents.events.MessageEvent;
+import basilica2.agents.events.PresenceEvent;
+import basilica2.agents.events.TypingEvent;
 import de.fhg.ipsi.chatblocks2.awareness.AwarenessEvent;
-import de.fhg.ipsi.chatblocks2.awareness.DefaultAddOperation;
 import de.fhg.ipsi.chatblocks2.awareness.IAwarenessInfo;
 import de.fhg.ipsi.chatblocks2.awareness.IAwarenessListener;
 import de.fhg.ipsi.chatblocks2.model.IMessageType;
@@ -60,30 +66,7 @@ import de.fhg.ipsi.utils.StringUtilities;
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
-import basilica2.agents.events.MessageEvent;
-import basilica2.agents.events.PresenceEvent;
-import basilica2.agents.events.TypingEvent;
-import de.fhg.ipsi.concertchat.applications.whiteboard.*;
-import de.fhg.ipsi.concertchat.*;
-import de.fhg.ipsi.utils.ImageUtilities;
-import de.fhg.ipsi.whiteboard.Command;
-import de.fhg.ipsi.whiteboard.Graphic;
-import de.fhg.ipsi.whiteboard.OutlineProperties;
-import de.fhg.ipsi.whiteboard.operation.CreateCommand;
-import de.fhg.ipsi.whiteboard.piece.image.ImageCache;
-import de.fhg.ipsi.whiteboard.piece.image.ImageStuff;
-import de.fhg.ipsi.whiteboard.piece.text.TextStuff;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
-import java.awt.Dimension;
-import java.awt.Rectangle;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
-import javax.swing.SwingUtilities;
-import javax.swing.table.TableModel;
 
 /**
  * 

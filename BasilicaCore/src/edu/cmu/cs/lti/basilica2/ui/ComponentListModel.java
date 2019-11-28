@@ -31,9 +31,11 @@
  */
 package edu.cmu.cs.lti.basilica2.ui;
 
-import edu.cmu.cs.lti.basilica2.core.Component;
 import java.util.Map;
+
 import javax.swing.AbstractListModel;
+
+import edu.cmu.cs.lti.basilica2.core.Component;
 
 /**
  *

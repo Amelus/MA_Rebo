@@ -19,7 +19,6 @@ import basilica2.agents.events.MessageEvent;
 import basilica2.agents.events.priority.PriorityEvent;
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Event;
-import edu.cmu.cs.lti.project911.utils.log.Logger;
 import edu.cmu.cs.lti.project911.utils.time.TimeoutReceiver;
 import edu.cmu.cs.lti.project911.utils.time.Timer;
 

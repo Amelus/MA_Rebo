@@ -31,9 +31,9 @@
  */
 package basilica2.agents.components;
 
+import basilica2.agents.data.State;
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.generics.Memory;
-import basilica2.agents.data.State;
 
 /**
  *

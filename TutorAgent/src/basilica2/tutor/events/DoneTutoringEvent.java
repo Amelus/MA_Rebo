@@ -33,7 +33,6 @@ package basilica2.tutor.events;
 
 import basilica2.agents.events.StepDoneEvent;
 import edu.cmu.cs.lti.basilica2.core.Component;
-import edu.cmu.cs.lti.basilica2.core.Event;
 
 public class DoneTutoringEvent extends StepDoneEvent
 {

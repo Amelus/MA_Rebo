@@ -3,7 +3,8 @@
  * and open the template in the editor.
  */
 package basilica2.agents.events.priority;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * the arbiter of a single source of prioritizable proposals

@@ -2,7 +2,7 @@ package basilica2.util;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.image.*;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 

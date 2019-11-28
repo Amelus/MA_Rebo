@@ -2,13 +2,11 @@ package basilica2.agents.listeners.plan;
 
 import java.awt.Point;
 
-import edu.cmu.cs.lti.project911.utils.log.Logger;
-
-
 import basilica2.agents.components.InputCoordinator;
 import basilica2.agents.events.WhiteboardEvent;
 import basilica2.agents.events.priority.PriorityEvent;
 import basilica2.agents.events.priority.PrioritySource;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 public class WhiteboardStepHandler implements StepHandler
 {

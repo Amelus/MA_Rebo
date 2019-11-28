@@ -31,9 +31,6 @@
  */
 package edu.cmu.cs.lti.tutalk.script;
 
-import edu.cmu.cs.lti.tutalk.module.ModelConcept;
-import edu.cmu.cs.lti.tutalk.module.ModelConcept.Predictor;
-
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,6 +42,9 @@ import org.apache.xerces.parsers.DOMParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+
+import edu.cmu.cs.lti.tutalk.module.ModelConcept;
+import edu.cmu.cs.lti.tutalk.module.ModelConcept.Predictor;
 
 /**
  * 

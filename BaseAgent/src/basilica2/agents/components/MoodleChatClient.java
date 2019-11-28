@@ -4,19 +4,15 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import javax.swing.JOptionPane;
+
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 import basilica2.agents.events.EchoEvent;
 import basilica2.agents.events.MessageEvent;
 import basilica2.agents.events.PresenceEvent;
-
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
-
-import de.fhg.ipsi.utils.StringUtilities;
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;

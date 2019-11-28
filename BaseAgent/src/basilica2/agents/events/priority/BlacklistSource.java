@@ -1,8 +1,8 @@
 package basilica2.agents.events.priority;
 
-import java.util.*;
-
-import de.fhg.ipsi.utils.Log;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class BlacklistSource extends AbstractPrioritySource
 {

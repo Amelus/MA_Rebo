@@ -31,8 +31,9 @@
  */
 package edu.cmu.cs.lti.basilica2.core;
 
-import edu.cmu.cs.lti.project911.utils.IdGenerator;
 import java.io.Serializable;
+
+import edu.cmu.cs.lti.project911.utils.IdGenerator;
 
 /**
  *

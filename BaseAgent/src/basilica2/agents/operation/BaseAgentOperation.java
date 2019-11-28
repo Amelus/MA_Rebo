@@ -38,7 +38,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.lang.reflect.Constructor;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -54,7 +53,6 @@ import basilica2.agents.components.ChatClient;
 import basilica2.agents.components.ConcertChatActor;
 import basilica2.agents.components.ConcertChatListener;
 import basilica2.agents.components.InputCoordinator;
-import basilica2.agents.components.JabberClient;
 import basilica2.agents.components.StateMemory;
 import basilica2.agents.data.State;
 import edu.cmu.cs.lti.basilica2.core.Agent;
@@ -63,8 +61,8 @@ import edu.cmu.cs.lti.basilica2.factory.AgentFactory;
 import edu.cmu.cs.lti.basilica2.support.AgentOperation;
 import edu.cmu.cs.lti.basilica2.ui.AgentUI;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
-
-import joptsimple.*;
+import joptsimple.OptionParser;
+import joptsimple.OptionSet;
 
 /**
  * 

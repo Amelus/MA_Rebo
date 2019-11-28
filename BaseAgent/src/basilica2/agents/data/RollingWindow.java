@@ -6,10 +6,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+
+import basilica2.util.Timer;
 import edu.cmu.cs.lti.basilica2.core.Event;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
 import edu.cmu.cs.lti.project911.utils.time.TimeoutReceiver;
-import basilica2.util.Timer;
 
 
 public class RollingWindow implements TimeoutReceiver

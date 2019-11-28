@@ -31,7 +31,8 @@
  */
 package edu.cmu.cs.lti.basilica2.observers;
 
-import edu.cmu.cs.lti.basilica2.core.*;
+import edu.cmu.cs.lti.basilica2.core.Component;
+import edu.cmu.cs.lti.basilica2.core.Event;
 
 /**
  *

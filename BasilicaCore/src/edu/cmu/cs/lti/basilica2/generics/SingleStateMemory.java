@@ -31,14 +31,15 @@
  */
 package edu.cmu.cs.lti.basilica2.generics;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
 import edu.cmu.cs.lti.basilica2.observers.GenericObserverEvent;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 
 /**
  *

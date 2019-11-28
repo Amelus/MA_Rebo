@@ -31,11 +31,12 @@
  */
 package edu.cmu.cs.lti.basilica2.core;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import edu.cmu.cs.lti.basilica2.observers.ConnectionObserver;
 import edu.cmu.cs.lti.project911.utils.IdGenerator;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *

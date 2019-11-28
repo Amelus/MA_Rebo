@@ -31,13 +31,15 @@
  */
 package edu.cmu.cs.lti.basilica2.factory;
 
+import java.lang.reflect.Constructor;
+
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Connection;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
-import java.lang.reflect.Constructor;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
 
 /**
  *

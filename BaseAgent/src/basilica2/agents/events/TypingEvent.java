@@ -1,7 +1,5 @@
 package basilica2.agents.events;
 
-import java.util.Date;
-
 import edu.cmu.cs.lti.basilica2.core.Event;
 
 public class TypingEvent extends Event

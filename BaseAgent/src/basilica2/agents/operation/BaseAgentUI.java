@@ -38,7 +38,6 @@
 package basilica2.agents.operation;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.HashMap;

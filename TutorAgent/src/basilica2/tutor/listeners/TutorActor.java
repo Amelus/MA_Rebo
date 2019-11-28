@@ -31,9 +31,7 @@
  */
 package basilica2.tutor.listeners;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -48,8 +46,8 @@ import basilica2.agents.components.InputCoordinator;
 import basilica2.agents.events.MessageEvent;
 import basilica2.agents.events.PresenceEvent;
 import basilica2.agents.events.PromptEvent;
-import basilica2.agents.events.priority.PriorityEvent;
 import basilica2.agents.events.priority.BlacklistSource;
+import basilica2.agents.events.priority.PriorityEvent;
 import basilica2.agents.events.priority.PriorityEvent.Callback;
 import basilica2.agents.listeners.BasilicaAdapter;
 //import basilica2.social.data.TurnCounts;

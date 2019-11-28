@@ -32,6 +32,7 @@
 package edu.cmu.cs.lti.basilica2.ui.eventtable;
 
 import java.awt.Component;
+
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;

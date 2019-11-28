@@ -1,7 +1,5 @@
 package basilica2.tutor.listeners;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,11 +9,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import basilica2.agents.components.InputCoordinator;
-import basilica2.agents.events.LaunchEvent;
 import basilica2.agents.events.MessageEvent;
 import basilica2.agents.listeners.BasilicaAdapter;
 import basilica2.tutor.events.DoTutoringEvent;
-import basilica2.tutor.listeners.TutorActor.Dialog;
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Event;
 

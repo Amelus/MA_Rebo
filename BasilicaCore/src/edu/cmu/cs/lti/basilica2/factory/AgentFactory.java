@@ -31,13 +31,13 @@
  */
 package edu.cmu.cs.lti.basilica2.factory;
 
-import edu.cmu.cs.lti.basilica2.core.Agent;
-import edu.cmu.cs.lti.project911.utils.log.Logger;
-
 import org.apache.xerces.parsers.DOMParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+
+import edu.cmu.cs.lti.basilica2.core.Agent;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 /**
  *

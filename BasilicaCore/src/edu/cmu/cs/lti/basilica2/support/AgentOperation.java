@@ -31,14 +31,15 @@
  */
 package edu.cmu.cs.lti.basilica2.support;
 
-import edu.cmu.cs.lti.basilica2.core.Agent;
-import edu.cmu.cs.lti.basilica2.observers.AgentObserver;
-import edu.cmu.cs.lti.project911.utils.log.LogUser;
-import edu.cmu.cs.lti.project911.utils.log.Logger;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+
+import edu.cmu.cs.lti.basilica2.core.Agent;
+import edu.cmu.cs.lti.basilica2.observers.AgentObserver;
+import edu.cmu.cs.lti.project911.utils.log.LogUser;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 /**
  *

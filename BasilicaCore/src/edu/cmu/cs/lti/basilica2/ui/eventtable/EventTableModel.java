@@ -31,10 +31,12 @@
  */
 package edu.cmu.cs.lti.basilica2.ui.eventtable;
 
-import edu.cmu.cs.lti.basilica2.core.Event;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.swing.table.AbstractTableModel;
+
+import edu.cmu.cs.lti.basilica2.core.Event;
 
 /**
  *

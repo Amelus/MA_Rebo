@@ -31,19 +31,22 @@
  */
 package edu.cmu.cs.lti.basilica2.ui.graph;
 
+import java.awt.Color;
+import java.awt.geom.Rectangle2D;
+import java.util.Hashtable;
+import java.util.Map;
+
+import javax.swing.SwingUtilities;
+
+import org.jgraph.JGraph;
+import org.jgraph.graph.DefaultGraphCell;
+import org.jgraph.graph.GraphConstants;
+
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
 import edu.cmu.cs.lti.basilica2.observers.ComponentObserver;
 import edu.cmu.cs.lti.project911.utils.time.TimeoutReceiver;
 import edu.cmu.cs.lti.project911.utils.time.Timer;
-import java.awt.Color;
-import java.awt.geom.Rectangle2D;
-import java.util.Hashtable;
-import java.util.Map;
-import javax.swing.SwingUtilities;
-import org.jgraph.JGraph;
-import org.jgraph.graph.DefaultGraphCell;
-import org.jgraph.graph.GraphConstants;
 
 /**
  *

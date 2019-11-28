@@ -13,7 +13,6 @@ import java.util.Scanner;
 import basilica2.agents.components.InputCoordinator;
 import basilica2.agents.events.MessageEvent;
 import basilica2.agents.listeners.BasilicaAdapter;
-import basilica2.agents.listeners.BasilicaPreProcessor;
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Event;
 

@@ -1,14 +1,5 @@
 package basilica2.socketchat;
 
-/*import io.socket.IOAcknowledge;
-import io.socket.IOCallback;
-import io.socket.SocketIO;
-import io.socket.SocketIOException;
- */
-import io.socket.client.*;
-import io.socket.emitter.Emitter;
-
-import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.util.Iterator;
 import java.util.Timer;
@@ -32,6 +23,14 @@ import basilica2.agents.events.WhiteboardEvent;
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Component;
 import edu.cmu.cs.lti.basilica2.core.Event;
+/*import io.socket.IOAcknowledge;
+import io.socket.IOCallback;
+import io.socket.SocketIO;
+import io.socket.SocketIOException;
+ */
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 
 //TODO: MoodleChatClient.properties
 

@@ -31,11 +31,6 @@
  */
 package basilica2.agents.data;
 
-import basilica2.agents.events.MessageEvent;
-import edu.cmu.cs.lti.basilica2.core.Agent;
-import edu.cmu.cs.lti.basilica2.core.Component;
-import edu.cmu.cs.lti.basilica2.core.Event;
-import edu.cmu.cs.lti.project911.utils.log.Logger;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
@@ -46,6 +41,8 @@ import org.apache.xerces.parsers.DOMParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 /**
  * 

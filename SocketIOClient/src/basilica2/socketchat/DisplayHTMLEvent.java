@@ -1,7 +1,7 @@
 package basilica2.socketchat;
 
-import edu.cmu.cs.lti.basilica2.core.Component;
 import basilica2.agents.events.MessageEvent;
+import edu.cmu.cs.lti.basilica2.core.Component;
 
 public class DisplayHTMLEvent extends MessageEvent
 {

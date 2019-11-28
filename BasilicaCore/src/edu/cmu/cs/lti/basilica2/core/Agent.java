@@ -31,15 +31,16 @@
  */
 package edu.cmu.cs.lti.basilica2.core;
 
-import edu.cmu.cs.lti.basilica2.observers.AgentObserver;
-import edu.cmu.cs.lti.project911.utils.log.*;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import edu.cmu.cs.lti.basilica2.observers.AgentObserver;
+import edu.cmu.cs.lti.project911.utils.log.LogUser;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 /**
  * 

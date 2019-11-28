@@ -31,9 +31,10 @@
  */
 package edu.cmu.cs.lti.tutalk.script;
 
-import edu.cmu.cs.lti.tutalk.slim.ExecutionState;
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.cmu.cs.lti.tutalk.slim.ExecutionState;
 
 /**
  * 
