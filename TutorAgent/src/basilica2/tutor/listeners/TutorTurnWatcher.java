@@ -82,7 +82,6 @@ public class TutorTurnWatcher extends BasilicaAdapter implements TimeoutReceiver
 		}
 	}
 
-	// TODONE: hook up tick() to timer
 	protected void tick()
 	{
 		if (isCoordinating)

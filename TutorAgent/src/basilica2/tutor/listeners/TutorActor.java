@@ -75,19 +75,15 @@ import edu.cmu.cs.lti.tutalk.slim.TuTalkAutomata;
  */
 public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 {
-
-
 	private boolean isTutoring = false;
 	private boolean expectingResponse = false;
 	private boolean nullExpected = false;
 	private TuTalkAutomata currentAutomata = null;
 	private String currentConcept = null;
-	private List<String> lastTutorTurns = null;
 	private int noMatchingResponseCount = 0;
-	private List<String> answerers = null;
+	private List<String> answerers = new ArrayList<String>();
 	private Map<String, Dialog> pendingDialogs = new HashMap<String, Dialog>();
 	private Map<String, Dialog> proposedDialogs = new HashMap<String, Dialog>();
-	private String enlistedDialog = null;
 	private InputCoordinator source;
 	
 	private double tutorMessagePriority = 0.75;
@@ -96,8 +92,8 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private String dialogueFolder = "dialogs";
 	
 	private String dialogueConfigFile = "dialogues/dialogues-config.xml";
-	private int introduction_cue_timeout = 100;
-	private int introduction_cue_timeout2 = 80;
+	private int introduction_cue_timeout = 600;
+	private int introduction_cue_timeout2 = 600;
 	private int tutorTimeout = 120;
 	private String request_poke_prompt_text = "I am waiting for your response to start. Please ask for help if you are stuck.";
 	private String goahead_prompt_text = "Let's go ahead with this.";
@@ -106,10 +102,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private String moving_on_text = "Okay, let's move on.";
 	private String tutorialCondition = "tutorial";
 	private int numUser = 1;
-	
-	private boolean block = false;
 
-	// private List<Dialog> dialogsReadyQueue = new ArrayList<Dialog>();
 
 	class Dialog
 	{
@@ -177,7 +170,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 						String introText = null;
 						String cueText = null;
 						String cueAnnotation = null;
-						String cancelText = null;
+						String cancelText = "Dialog Abbruch durch Timeout";
 						String cancelAnnotation = null;
 						NodeList introNodes = dialogElement.getElementsByTagName("intro");
 						if ((introNodes != null) && (introNodes.getLength() != 0))
@@ -205,75 +198,37 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 					}
 				}
 			}
-			
-
 		}
-		catch (Exception ex)
-		{
+		catch (Exception ex) {
 			ex.printStackTrace();
 		}
 	}
 
 	protected void processEvent(Event e)
 	{
-//		if(!System.getProperty("basilica2.agents.condition").contains(tutorialCondition))
-//		{
-//			return;
-//		}
-		if(block)
-		{
-			/*try {
-			    Thread.sleep(15000);                 //1000 milliseconds is one second.
-			} catch(InterruptedException ex) {
-			    Thread.currentThread().interrupt();
-			}
-			System.out.println("OUT OF SLEEP!");*/
-			block = false;
-		}
 		if (e instanceof DoTutoringEvent)
 		{
-			//queue up the start of the tutoring engine.
-			
 			handleDoTutoringEvent((DoTutoringEvent) e);
-			//MessageEvent me = ((DoTutoringEvent) e).getMessageEvent();
-			//if(me != null)
-			//{
-			//	handleRequestDetectedEvent((MessageEvent) me);
-			//}
 		}
 		else if (e instanceof TutoringStartedEvent)
 		{
-			//start dialog engine
 			handleTutoringStartedEvent((TutoringStartedEvent) e);
 		}
 		else if (e instanceof PresenceEvent)
 		{
-			//start dialog engine
 			PresenceEvent event = (PresenceEvent) e;
 			numUser = event.getNumUsers();
 		}
-		else if (e instanceof PromptEvent)
-		{
-			PromptEvent event  = (PromptEvent) e;
-			if(event.from.equals("INTRODUCTION"))
-			{
-				block = true;
-				System.out.println("GO TO SLEEP!");
-			}
-		}
 		else if (e instanceof MessageEvent)
 		{
-			//check for concept match and start specific dialog - mostly used for affirmative to 'are you ready'
 			handleRequestDetectedEvent((MessageEvent) e);
 		}
 		else if (e instanceof StudentTurnsEvent)
 		{
-			//aggregated student input
 			handleStudentTurnsEvent((StudentTurnsEvent) e);
 		}
 		else if (e instanceof MoveOnEvent)
 		{
-			//someone's decided we should progress the dialog
 			handleMoveOnEvent((MoveOnEvent) e);
 		}
 	}
@@ -281,41 +236,31 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private void handleDoTutoringEvent(DoTutoringEvent dte)
 	{
 		Dialog d = proposedDialogs.get(dte.getConcept());
-		if (d != null)
+		if (d == null) {
+			return;
+		}
+		
+		if(isTutoring && !interruptForNewDialogues) {
+			log(Logger.LOG_WARNING, "Won't start dialogue "+dte.getConcept()+" while current dialog is running - ask again later!");
+			return;
+		}
+		
+		if(isTutoring)
 		{
-			if(isTutoring)
+			if (interruptForNewDialogues)
 			{
-				if (interruptForNewDialogues)
-				{
-					//TODONE: respond to start-tutoring command by ending current tutoring session
-					sendTutorMessage(moving_on_text);
-					DoneTutoringEvent doneEvent = new DoneTutoringEvent(source, currentConcept, true);
-					source.queueNewEvent(doneEvent);
-					prioritySource.setBlocking(false);
-					
-	//				TutorTurnsEvent tte = new TutorTurnsEvent(this, new String[] { moving_on_text });
-	//				this.dispatchEvent(myAgent.getComponent(tutoring_actor_name), tte);
-	//
-	//				DoneTutoringEvent dte2 = new DoneTutoringEvent(this, currentConcept, true);
-	//				this.broadcast(dte2);
-	
-					currentAutomata = null;
-					currentConcept = null;
-					isTutoring = false;
-	
-					// dialogsReadyQueue.add(d);
-					launchDialogOffer(d);
-				}
-				else
-				{
-					log(Logger.LOG_WARNING, "Won't start dialogue "+dte.getConcept()+" while current dialog is running - ask again later!");
-				}
-			}
-			else
-			{
-				launchDialogOffer(d);
+				sendTutorMessage(moving_on_text);
+				DoneTutoringEvent doneEvent = new DoneTutoringEvent(source, currentConcept, true);
+				source.queueNewEvent(doneEvent);
+				prioritySource.setBlocking(false);
+
+				currentAutomata = null;
+				currentConcept = null;
+				isTutoring = false;
 			}
 		}
+
+		launchDialogOffer(d);	
 	}
 
 	private synchronized void handleRequestDetectedEvent(MessageEvent e)
@@ -353,7 +298,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	public void handleTutoringStartedEvent(TutoringStartedEvent tse)
 	{
-		
 		if(currentConcept.equals(tse.getConcept()))
 		{
 			List<String> tutorTurns = currentAutomata.start();
@@ -368,96 +312,81 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	
 	public void startDialog(Dialog d)
 	{
-		enlistedDialog = null;
 		isTutoring = true;
 		
-		// Launch TuTalkSlim with FuzzyTurnEvaluator
 		currentConcept = d.conceptName;
 		currentAutomata = new TuTalkAutomata("tutor", "students");
 		currentAutomata.setEvaluator(new FuzzyTurnEvaluator());
 		currentAutomata.setScenario(Scenario.loadScenario(dialogueFolder  + File.separator + d.scenarioName + ".xml"));
-		answerers = new ArrayList<String>();
-		//TODONE: figure out what "requests" are and why we care
+		
 		TutoringStartedEvent tse = new TutoringStartedEvent(source, d.scenarioName, d.conceptName);
 		source.queueNewEvent(tse);
 	}
 
 	private void handleMoveOnEvent(MoveOnEvent mve)
 	{
-		if (expectingResponse)
+		if (checkEventShouldBeHandled())
 		{
-			if (currentAutomata != null)
+			expectingResponse = false;
+			noMatchingResponseCount = 0;
+			List<Response> expected = currentAutomata.getState().getExpected();
+			Response response = expected.get(expected.size() - 1); 
+			
+			if (!response.getConcept().getLabel().equalsIgnoreCase("unanticipated-response"))
 			{
-				expectingResponse = false;
-				noMatchingResponseCount = 0;
-				List<Response> expected = currentAutomata.getState().getExpected();
-				Response response = expected.get(expected.size() - 1); // Possibly
-																		// the
-																		// last
-																		// one
-																		// is
-																		// unanticipated-response
-				if (!response.getConcept().getLabel().equalsIgnoreCase("unanticipated-response"))
-				{
-					log(Logger.LOG_ERROR, "Moving on without an Unanticipated-Response Handler. Could be weird!");
-				}
-				List<String> tutorTurns = currentAutomata.progress(response.getConcept());
-				processTutorTurns(tutorTurns);
+				log(Logger.LOG_ERROR, "Moving on without an Unanticipated-Response Handler. Could be weird!");
 			}
+			List<String> tutorTurns = currentAutomata.progress(response.getConcept());
+			processTutorTurns(tutorTurns);
 		}
 	}
 
+	private boolean checkEventShouldBeHandled() {
+		return (expectingResponse && currentAutomata != null) ? true : false;
+	}
+	
+	private boolean checkStudentEventShouldBeHandled(List<String> studentTurn) {
+		return (checkEventShouldBeHandled() && !studentTurn.isEmpty()) ? true : false;
+	}
+	
 	private synchronized void handleStudentTurnsEvent(StudentTurnsEvent ste)
 	{
-		if (expectingResponse)
+		if (checkStudentEventShouldBeHandled(ste.getStudentTurns()))
 		{
-			if (currentAutomata != null)
+			String studentTurn = "";
+			for (String turn : ste.getStudentTurns())
 			{
-				// Evaluate each student turn or evaluate a concatenation!
-				if (!ste.getStudentTurns().isEmpty())
+				studentTurn += turn + " | ";
+			}
+			List<EvaluatedConcept> matchingConcepts = currentAutomata.evaluateTuteeTurn(studentTurn, ste.getAnnotations());
+			if (!matchingConcepts.isEmpty())
+			{
+				System.out.println(matchingConcepts.get(0).getClass().getSimpleName());
+				System.out.println(matchingConcepts.get(0).concept.getClass().getSimpleName());
+				Concept concept = matchingConcepts.get(0).concept;
+				if (concept.getLabel().equalsIgnoreCase("unanticipated-response"))
 				{
-					String studentTurn = "";
-					for (String turn : ste.getStudentTurns())
+					if (!nullExpected)
 					{
-						studentTurn += turn + " | ";
-					}
-					List<EvaluatedConcept> matchingConcepts = currentAutomata.evaluateTuteeTurn(studentTurn, ste.getAnnotations());
-					if (matchingConcepts.size() != 0)
-					{
-						System.out.println(matchingConcepts.get(0).getClass().getSimpleName());
-						System.out.println(matchingConcepts.get(0).concept.getClass().getSimpleName());
-						Concept concept = matchingConcepts.get(0).concept;
-						if (concept.getLabel().equalsIgnoreCase("unanticipated-response"))
-						{
-							if (!nullExpected)
-							{
-								// If expecting non-null response and didnt get
-								// it, poke for response
-								noMatchingResponseCount++;
-								
-								if (matchingConcepts.size() == 1 || noMatchingResponseCount >= numUser + 2) {
-									moveOn(concept);
-								} else if (noMatchingResponseCount <= numUser + 2) {
-									System.out.println("unanticipated");
-								}
-							}
-							else
-							{
-								// If expecting only null response and got it,
-								// process it and move on
-								moveOn(concept);
-							}
-						}
-						else
-						{
-							for (String contributor : ste.getContributors())
-							{
-								answerers.add(contributor);
-							}
+						noMatchingResponseCount++;
+						
+						if (matchingConcepts.size() == 1 || noMatchingResponseCount >= numUser + 2) {
 							moveOn(concept);
+						} else if (noMatchingResponseCount <= numUser + 2) {
+							System.out.println("unanticipated");
 						}
+						return;
 					}
 				}
+				else
+				{
+					for (String contributor : ste.getContributors())
+					{
+						answerers.add(contributor);
+					}
+				}
+				
+				moveOn(concept);
 			}
 		}
 	}
@@ -479,10 +408,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 				expectingResponse = true;
 				nullExpected = false;
 				noMatchingResponseCount = 0;
-				//TODONE: respond to 'acknowledge' event -- tutor message has been delivered.
-//				this.dispatchEvent(myAgent.getComponent(turn_taker_name), new TutorTurnsEvent(this, new String[0]));
 
-				// Only unanticipated-response expected
 				if (expected.size() == 1)
 				{
 					if (expected.get(0).getConcept().getLabel().equalsIgnoreCase("unanticipated-response"))
@@ -493,29 +419,15 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 			}
 			else
 			{
-//				TurnCounts tc = TurnCounts.getTurnCounts();
-//				if (answerers != null)
-//				{
-//					for (int i = 0; i < answerers.size(); i++)
-//					{
-//						tc.addAnswerer(answerers.get(i));
-//					}
-//				}
-//				TurnCounts.commitTurnCounts(tc);
-				answerers = null;
+				answerers = new ArrayList<String>();
 
-				//TODONE: notify all of terminated tutoring session if no more responses are expected.
 				DoneTutoringEvent dte = new DoneTutoringEvent(source, currentConcept);
 				prioritySource.setBlocking(false);
 				source.queueNewEvent(dte);
-//				this.broadcast(dte);
 
 				currentAutomata = null;
 				currentConcept = null;
 				isTutoring = false;
-				// if (dialogsReadyQueue.size() != 0) {
-				// launchDialog(dialogsReadyQueue.remove(0));
-				// }
 			}
 		}
 	}
@@ -523,51 +435,23 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	private void launchDialogOffer(Dialog d)
 	{
-		if (enlistedDialog != null)
-		{
-			//TODONE: gracefully clear previous dialog if need be (now handling "requests" internally)
-//			CancelRequestEvent cre = new CancelRequestEvent(this, enlistedDialog);
-//			this.dispatchEvent(myAgent.getComponent(request_detector_name), cre);
-			enlistedDialog = null;
-		}
-
-		// Prompt IntroText & CueText
-		//TODONE: launch intro & cue for dialog
 		prioritySource.setBlocking(true);
 		sendTutorMessage(d.introText);
-//		TutorTurnsEvent tte = new TutorTurnsEvent(this, new String[] {  });
-//		this.dispatchEvent(myAgent.getComponent(tutoring_actor_name), tte);
-
-		// Send out Enlist Request Event
-		//TODONE: register for concept 'requests'
-//		EnlistRequestEvent ere = new EnlistRequestEvent(this, d.cueId, d.conceptName);
-//		this.dispatchEvent(myAgent.getComponent(request_detector_name), ere);
-		enlistedDialog = d.conceptName;
-		//hook up dialog to cue - here, it's any "affirmative" response
 		pendingDialogs.put(d.acceptAnnotation, d);
-
-		// Setup timer (or tick count) to poke students if the enlisted request
-		// is not responded to yet!
 		Timer t = new Timer(introduction_cue_timeout, d.conceptName, this);
 		t.start();
 	}
 
 	private void processTutorTurns(List<String> tutorTurns)
 	{
-		lastTutorTurns = tutorTurns;
-		//TODONE: fire pp TutorTurnsEvent too
 		String[] turns = tutorTurns.toArray(new String[0]);
 		TutorTurnsEvent tte = new TutorTurnsEvent(source, turns);
 		
-		//gst : should it be here
-		if(turns.length == 0)
-		{
+		if(turns.length == 0) {
 			return;
 		}
 		
 		source.queueNewEvent(tte);
-		//PriorityEvent pete = PriorityEvent.makeBlackoutEvent("TUTOR_DIALOG", new MessageEvent(source, getAgent().getUsername(), join(turns), "TUTOR"), 1.0, 45, 10);
-		//((BlacklistSource)pete.getSource()).addExceptions("TUTOR_DIALOG");
 		PriorityEvent pete = new PriorityEvent(source, new MessageEvent(source, getAgent().getUsername(), join(turns), "TUTOR"), tutorMessagePriority, prioritySource, tutorTimeout);
 		pete.addCallback(new Callback()
 		{
@@ -585,13 +469,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 			}
 		});
 		source.pushProposal(pete);
-				
-		//TODONE: fire message event with expectation of callback.
-//		TutorTurnsEvent tte = new TutorTurnsEvent(this, tutorTurns.toArray(new String[0]));
-//		tte.setAcknoledgementExpected(true);
-//		this.dispatchEvent(myAgent.getComponent(tutoring_actor_name), tte);
-
-		// Waits for AcknowledgeMessage Event and then updates expectations
 	}
 
 	public void timedOut(String id)
@@ -609,66 +486,56 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		log(Logger.LOG_NORMAL, "Timeout for "+id+":"+d);
 		if (d != null)
 		{
-			// If it doesnt match for sometime , poke students once and then
-			// forget about it
-			String pokePrompt = request_poke_prompt_text;
-			//TODONE: Nudge participants if nobody's been responding (correctly, or at all)
-//			TutorTurnsEvent tte = new TutorTurnsEvent(this, new String[] { pokePrompt, d.cueText });
-//			this.dispatchEvent(myAgent.getComponent(tutoring_actor_name), tte);
-			sendTutorMessage(pokePrompt);
-			// Start another timer to wait request. If none, then cancel request
+			sendTutorMessage(request_poke_prompt_text);
 			Timer t = new Timer(introduction_cue_timeout2, "CANCEL:" + id, this);
 			t.start();
 			log(Logger.LOG_NORMAL, "Delaying dialog "+id+" once...");
 		}
 		else
 		{
-			if (id.startsWith("CANCEL:"))
+			if (isDialogTimedOutTwice(id))
 			{
-				String[] tokens = id.split(":");
-				Dialog d2 = proposedDialogs.get(tokens[1]);
-				
-				d2 = pendingDialogs.remove(d2.acceptAnnotation);
-				if (d2 != null)
-				{
-					//TODONE: continue dialog even if students haven't responded approrpriately.
-//					CancelRequestEvent cre = new CancelRequestEvent(this, tokens[1]);
-//					this.dispatchEvent(myAgent.getComponent(request_detector_name), cre);
-//
-//					// Lets just do this dialog and move on!
-//					TutorTurnsEvent tte = new TutorTurnsEvent(this, new String[] { goahead_prompt_text });
-//					this.dispatchEvent(myAgent.getComponent(tutoring_actor_name), tte);
-					
-					if(startAnyways)
-					{
-						sendTutorMessage(goahead_prompt_text);
-	
-						log(Logger.LOG_NORMAL, "Not delaying "+tokens[1]+" anymore - beginning dialog");
-						startDialog(d2);
-					}
-					else
-					{
-						sendTutorMessage(d2.cancelText);
-						prioritySource.setBlocking(false);
-					}
-				}
-				else
-					prioritySource.setBlocking(false);
+				killPendingDialog(id);
 			}
 		}
 	}
 
+	private boolean isDialogTimedOutTwice(String id) {
+		return id.startsWith("CANCEL:") ? true : false; 
+	}
+	
+	private void killPendingDialog(String id) {
+		String[] tokens = id.split(":");
+		Dialog dialog = proposedDialogs.get(tokens[1]);
+		
+		dialog = pendingDialogs.remove(dialog.acceptAnnotation);
+		if (dialog != null)
+		{
+			if(startAnyways)
+			{
+				sendTutorMessage(goahead_prompt_text);
+
+				log(Logger.LOG_NORMAL, "Not delaying "+tokens[1]+" anymore - beginning dialog");
+				startDialog(dialog);
+				return;
+			}
+			else
+			{
+				sendTutorMessage(dialog.cancelText);
+			}
+		}
+		
+		prioritySource.setBlocking(false);
+	}
+	
 	private void sendTutorMessage(String... promptStrings)
 	{
 		String combo = join(promptStrings);
 		
 		if(!combo.equals("")) {
 			PriorityEvent pete = new PriorityEvent(source, new MessageEvent(source, getAgent().getUsername(), combo, "TUTOR"), tutorMessagePriority , prioritySource, 45);
-			//PriorityEvent pete = PriorityEvent.makeBlackoutEvent("TUTOR_DIALOG", new MessageEvent(source, getAgent().getUsername(), combo, "TUTOR"), 1.0, 45, 10);
-			//((BlacklistSource)pete.getSource()).addExceptions("TUTOR_DIALOG");
 			source.pushProposal(pete);
 		}
-		
 	}
 
 	public String join(String... promptStrings)

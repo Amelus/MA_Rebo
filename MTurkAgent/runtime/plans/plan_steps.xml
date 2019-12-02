@@ -6,5 +6,6 @@
 
     <stage name="initiate" type="other" delay="0">
         <step type="dialogue" dialogue="REBO">FIRST_REBO_TALK</step>
+        <step type="logout">LOG_OUT</step>
     </stage>
 </plan>

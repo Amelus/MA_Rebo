@@ -218,7 +218,6 @@ public class PlanExecutor extends BasilicaAdapter implements TimeoutReceiver
 	{
 		log(Logger.LOG_NORMAL, "received step done event for " + dpe.getName());
 		stepDone();
-
 	}
 
 	/**
