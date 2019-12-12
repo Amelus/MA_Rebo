@@ -441,9 +441,10 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		Timer t = new Timer(introduction_cue_timeout, d.conceptName, this);
 		t.start();
 	}
-
+	
 	private void processTutorTurns(List<String> tutorTurns)
 	{
+		source.userMessages.handleToShortMessages(tutorTurns);
 		String[] turns = tutorTurns.toArray(new String[0]);
 		TutorTurnsEvent tte = new TutorTurnsEvent(source, turns);
 		
