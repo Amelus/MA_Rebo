@@ -5295,3 +5295,4 @@ zürnen
 /nicht gut/
 /nicht wirklich/
 /nichts gutes/
+/nicht [A-Za-z]* gut/
