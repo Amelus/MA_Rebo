@@ -259,8 +259,8 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 				isTutoring = false;
 			}
 		}
-
-		launchDialogOffer(d);	
+		
+		launchDialogOffer(d, ((InputCoordinator)dte.getSender()).user);	
 	}
 
 	private synchronized void handleRequestDetectedEvent(MessageEvent e)
@@ -433,13 +433,27 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	}
 
 
-	private void launchDialogOffer(Dialog d)
+	private void launchDialogOffer(Dialog d, String userName)
 	{
 		prioritySource.setBlocking(true);
-		sendTutorMessage(d.introText);
+		sendTutorMessage(selectIntroString(d.introText, userName));
 		pendingDialogs.put(d.acceptAnnotation, d);
 		Timer t = new Timer(introduction_cue_timeout, d.conceptName, this);
 		t.start();
+	}
+	
+	private String selectIntroString(String intro, String userName) {
+		String replacedText = null;
+		if(userName != null) {
+			replacedText = intro.replaceAll("\\[USERNAME\\]", userName);
+		} else {
+			replacedText = intro.replaceAll("\\[USERNAME\\]", "");
+		}
+		
+		String[] texts = null;
+		texts = replacedText.split(" \\| ");
+		
+		return texts[(int)(Math.random()*texts.length)];
 	}
 	
 	private void processTutorTurns(List<String> tutorTurns)

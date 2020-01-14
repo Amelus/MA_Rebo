@@ -26,6 +26,7 @@ import javax.swing.table.DefaultTableModel;
 import basilica2.agents.data.RollingWindow;
 import basilica2.agents.events.EchoEvent;
 import basilica2.agents.events.MessageEvent;
+import basilica2.agents.events.PresenceEvent;
 import basilica2.agents.events.priority.PriorityEvent;
 import basilica2.agents.events.priority.PrioritySource;
 import basilica2.agents.listeners.BasilicaListener;
@@ -50,6 +51,7 @@ public class InputCoordinator extends Component
     Set<PriorityEvent> proposals = new HashSet<PriorityEvent>();
     private OutputCoordinator outputCoordinator;
     public UserMessageHistory userMessages = new UserMessageHistory();
+    public String user = null;
     
     
     public InputCoordinator(Agent a, String n, String pf) 
@@ -154,6 +156,13 @@ public class InputCoordinator extends Component
             event = new EchoEvent(this, (MessageEvent)event);
         }
         
+        if(event instanceof PresenceEvent) {
+        	PresenceEvent tmpEvent = (PresenceEvent)event;
+        	if(tmpEvent.getUsername() != "Rebo") {
+        		user = tmpEvent.getUsername();
+        	}
+        }
+        
         userMessages.handleUserMessage(event);
         
         if(userMessages.multiMessageActive()) {
@@ -214,6 +223,7 @@ public class InputCoordinator extends Component
             preprocessedEvents.clear();
         }
     }
+    
 
 	private void pushEventsToOutputCoordinator()
 	{
