@@ -158,7 +158,7 @@ public class InputCoordinator extends Component
         
         if(event instanceof PresenceEvent) {
         	PresenceEvent tmpEvent = (PresenceEvent)event;
-        	if(tmpEvent.getUsername() != "Rebo") {
+        	if(!tmpEvent.getUsername().equals("Rebo")) {
         		user = tmpEvent.getUsername();
         	}
         }

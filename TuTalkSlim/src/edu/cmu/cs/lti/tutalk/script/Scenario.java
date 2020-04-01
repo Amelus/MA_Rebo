@@ -222,12 +222,7 @@ public class Scenario
 				// Add some default concepts
 				// dont_know
 				DictionaryConcept cdk = new DictionaryConcept("_dont_know_");
-				cdk.addPhrase("dont know");
-				cdk.addPhrase("not sure");
-				cdk.addPhrase("what");
-				cdk.addPhrase("you tell me");
-				cdk.addPhrase("how should i know");
-				cdk.addPhrase("confused");
+				cdk.addPhrase("dont know concept!");
 				sc.getConceptLibrary().addConcept(cdk);
 
 				Map<String, Goal> goals = new Hashtable<String, Goal>();
