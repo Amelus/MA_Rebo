@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="jgraph.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/JGraph/jgraph.jar!/"/>
+	</lib>
+	<lib name="resolver.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Xerces/resolver.jar!/"/>
+	</lib>
+	<lib name="serializer.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Xerces/serializer.jar!/"/>
+	</lib>
+	<lib name="xercesImpl.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Xerces/xercesImpl.jar!/"/>
+	</lib>
+	<lib name="xml-apis.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Xerces/xml-apis.jar!/"/>
+	</lib>
+	<lib name="agilo-client.jar" scope="COMPILE">
+		<srcroot url="file:///concertchat"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/agilo-client.jar!/"/>
+	</lib>
+	<lib name="agilo-common.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/agilo-common.jar!/"/>
+	</lib>
+	<lib name="base-chatblocks.jar" scope="COMPILE">
+		<srcroot url="file:///vmtClient"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/base-chatblocks.jar!/"/>
+	</lib>
+	<lib name="base-framework.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/base-framework.jar!/"/>
+	</lib>
+	<lib name="base-laf.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/base-laf.jar!/"/>
+	</lib>
+	<lib name="base-mathexpression.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/base-mathexpression.jar!/"/>
+	</lib>
+	<lib name="base-spellcheck.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/base-spellcheck.jar!/"/>
+	</lib>
+	<lib name="base-utils.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/base-utils.jar!/"/>
+	</lib>
+	<lib name="base-whiteboard.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/base-whiteboard.jar!/"/>
+	</lib>
+	<lib name="cc-client.jar" scope="COMPILE">
+		<srcroot url="file:///Users/dadamson/Downloads/ConcertChat_src/concertChat/cc-base/src"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-client.jar!/"/>
+	</lib>
+	<lib name="cc-common.jar" scope="COMPILE">
+		<srcroot url="file:///ConcertChatOriginal"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-common.jar!/"/>
+	</lib>
+	<lib name="cc-jdicbrowser.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-jdicbrowser.jar!/"/>
+	</lib>
+	<lib name="cc-replication.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-replication.jar!/"/>
+	</lib>
+	<lib name="cc-screenshotchat.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-screenshotchat.jar!/"/>
+	</lib>
+	<lib name="cc-tabbedchat.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-tabbedchat.jar!/"/>
+	</lib>
+	<lib name="cc-user.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-user.jar!/"/>
+	</lib>
+	<lib name="cc-virtualmeeting.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-virtualmeeting.jar!/"/>
+	</lib>
+	<lib name="cc-vncviewer.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-vncviewer.jar!/"/>
+	</lib>
+	<lib name="cc-webpagechat.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-webpagechat.jar!/"/>
+	</lib>
+	<lib name="cc-whiteboardchat.jar" scope="COMPILE">
+		<srcroot url="file:///ConcertChatOriginal"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/cc-whiteboardchat.jar!/"/>
+	</lib>
+	<lib name="jazzy-core.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/jazzy-core.jar!/"/>
+	</lib>
+	<lib name="jazzy-swing.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/jazzy-swing.jar!/"/>
+	</lib>
+	<lib name="jdic.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/jdic.jar!/"/>
+	</lib>
+	<lib name="log4j.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/ConcertChat/Libraries/log4j.jar!/"/>
+	</lib>
+	<lib name="Utilities.jar" scope="COMPILE">
+		<srcroot url="file:///Users/dadamson/Laboratory/basilica/911-Libraries/Utilities/src"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Utilities.jar!/"/>
+	</lib>
+	<lib name="jopt-simple-4.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/jopt/jopt-simple-4.3.jar!/"/>
+	</lib>
+	<lib name="smack.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/Jabber/smack.jar!/"/>
+	</lib>
+	<lib name="smackx-debug.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/Jabber/smackx-debug.jar!/"/>
+	</lib>
+	<lib name="smackx-jingle.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/Jabber/smackx-jingle.jar!/"/>
+	</lib>
+	<lib name="smackx.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/Jabber/smackx.jar!/"/>
+	</lib>
+	<lib name="commons-lang3-3.2.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/commons-lang3-3.2.1.jar!/"/>
+	</lib>
+	<lib name="mysql-connector-java-5.1.26-bin.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BaseAgent/lib/Environments/Moodle/mysql-connector-java-5.1.26-bin.jar!/"/>
+	</lib>
+	<levels>
+		<level name="Apache Commons" value="project"/>
+	</levels>
+</component>

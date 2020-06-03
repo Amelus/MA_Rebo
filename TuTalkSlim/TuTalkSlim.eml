@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="xercesImpl.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Xerces/xercesImpl.jar!/"/>
+	</lib>
+	<lib name="lingpipe-2.3.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/TuTalkSlim/lib/lingpipe-2.3.0.jar!/"/>
+	</lib>
+	<lib name="commons-lang3-3.2.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/TuTalkSlim/lib/commons-lang3-3.2.1.jar!/"/>
+	</lib>
+</component>

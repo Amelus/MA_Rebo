@@ -1,0 +1,9 @@
+<entry timestamp="2020-05-19#10:10:41" user="NewAgentRunner" level="INFO">Logger initialized</entry>
+<entry timestamp="2020-05-19#10:10:41" user="NewAgentRunner" level="NORMAL">AgentOperator NewAgentRunner created</entry>
+<entry timestamp="2020-05-19#10:10:41" user="NewAgentRunner" level="NORMAL">Operation Created</entry>
+<entry timestamp="2020-05-19#10:10:45" user="NewAgentRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2020-05-19#10:10:45" user="NewAgentRunner" level="NORMAL">Operation started</entry>
+<entry timestamp="2020-05-19#10:10:45" user="NewAgentRunner" level="NORMAL">launching hands-free!</entry>
+<entry timestamp="2020-05-19#10:10:45" user="NewAgentRunner" level="NORMAL">setting basilica2.agents.room_name to roomname</entry>
+<entry timestamp="2020-05-19#10:10:45" user="NewAgentRunner" level="NORMAL"><launching room=roomname/></entry>
+<entry timestamp="2020-05-19#10:10:45" user="AgentFactory" level="NORMAL">Making Agent from null</entry>

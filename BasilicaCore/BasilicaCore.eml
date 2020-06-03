@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="jgraph.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/JGraph/jgraph.jar!/"/>
+	</lib>
+	<lib name="resolver.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Xerces/resolver.jar!/"/>
+	</lib>
+	<lib name="serializer.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Xerces/serializer.jar!/"/>
+	</lib>
+	<lib name="xercesImpl.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Xerces/xercesImpl.jar!/"/>
+	</lib>
+	<lib name="xml-apis.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Xerces/xml-apis.jar!/"/>
+	</lib>
+	<lib name="Utilities.jar" scope="COMPILE">
+		<srcroot url="file:///Users/dadamson/Laboratory/basilica/911-Libraries/Utilities/src"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Utilities.jar!/"/>
+	</lib>
+</component>

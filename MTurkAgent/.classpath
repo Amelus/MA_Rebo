@@ -34,5 +34,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/TutorAgent"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/SocketIOClient"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/LightSideMessageAnnotator"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-lang3-3.2.1"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
