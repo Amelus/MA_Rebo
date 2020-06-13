@@ -2,6 +2,7 @@ package basilica2.socketchat;
 
 import java.net.URISyntaxException;
 import java.util.Iterator;
+import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -304,7 +305,7 @@ public class WebsocketChatClient extends Component implements ChatClient
 							perspective = jObject_.getString(key);
 						} catch (JSONException e) {
 							// TODO Auto-generated catch block
-							e.printStackTrace();
+							System.out.println("[WARN] No Perspective provided");
 						}
 
 						PresenceEvent pe = new PresenceEvent(WebsocketChatClient.this, key, PresenceEvent.PRESENT, value, perspective, (String)args[2]);
@@ -337,8 +338,13 @@ public class WebsocketChatClient extends Component implements ChatClient
 				public void call(Object... args)
 				{
 					String message = (String)args[1];
-					System.out.println("Perspective : " + (String)args[3]);
-					PresenceEvent pe = new PresenceEvent(WebsocketChatClient.this, (String)args[0], message.equals("join")?PresenceEvent.PRESENT:PresenceEvent.ABSENT, (String)args[2], (String)args[3]);
+					System.out.println("Perspective : " + args[3]);
+
+					String agentName = Objects.toString(args[0]);
+					String type = message.equals("join") ? PresenceEvent.PRESENT : PresenceEvent.ABSENT;
+					String agentId = Objects.toString(args[2]);
+					String agentPerspective = Objects.toString(args[3]);
+					PresenceEvent pe = new PresenceEvent(WebsocketChatClient.this, agentName, type, agentId, agentPerspective);
 					WebsocketChatClient.this.broadcast(pe);
 				}
 			}).on("updateready", new Emitter.Listener() { 
