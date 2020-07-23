@@ -71,6 +71,12 @@
 			<phrase>Was ist an deiner Lösung der Aufgabe besonders toll?</phrase>
 			<phrase>Was hat dich bei der Aufgabe besonders gefordert?</phrase>
 		</concept>
+
+		<concept label="fakeReflection">
+			<phrase>Wie genau meinst du das?</phrase>
+			<phrase>Ich glaube, du musst mir das etwas ausführlicher erklären.</phrase>
+			<phrase>Beschreibe das bitte ein wenig genauer.</phrase>
+		</concept>
 		
 		<concept label="positiveExp">
 			<phrase>Toll zu hören! | Was macht diese Aufgabe für dich intressant?</phrase>
@@ -148,6 +154,7 @@
 			<phrase>Bis bald!</phrase>
 			<phrase>Bis zum nächsten Mal!</phrase>
 		</concept>
+
 		<!-- these match against external (MessageAnnotator) annotations. -->
 		<concept label="pos_annotation" type="annotation">
 			<phrase>POSITIVE</phrase>
@@ -160,7 +167,11 @@
 		<concept label="planning_annotation" type="annotation">
 			<phrase>PLANNING</phrase>
 		</concept>
-		
+
+		<concept label="fake_reflect_annotation" type="annotation">
+			<phrase>FAKE_REFLECT</phrase>
+		</concept>
+
 		<concept label="unanticipated-response">
 			<phrase>anything else</phrase>
 		</concept>
@@ -175,21 +186,25 @@
 				<initiation>judgement</initiation>
 				<response push="goalPos">pos_annotation</response>
 				<response push="goalNeg">neg_annotation</response>
+				<response push="goalFake">fake_reflect_annotation</response>
 				<response push="goalNeutral">unanticipated-response</response>
 			</step>
 			
 			<step>
 				<initiation>emotions</initiation>
+				<response push="goalFake">fake_reflect_annotation</response>
 				<response>unanticipated-response</response>
 			</step>
 			
 			<step>
 				<initiation>learning</initiation>
+				<response push="goalFake">fake_reflect_annotation</response>
 				<response>unanticipated-response</response>
 			</step>
 
 			<step>
 				<initiation>planning</initiation>
+				<response push="goalFake">fake_reflect_annotation</response>
 				<response push="goalPlanning">planning_annotation</response>
 				<response push="goalPlanningNegativeResponse">neg_annotation</response>
 				<response push="planningNotCategorized">unanticipated-response</response>
@@ -208,6 +223,7 @@
 		<goal name="goalPos" difficulty="1">
 			<step>
 				<initiation>positiveExp</initiation>
+				<response push="goalFake">fake_reflect_annotation</response>
 				<response>unanticipated-response</response>
 			</step>
 		</goal>
@@ -215,6 +231,7 @@
 		<goal name="goalNeg" difficulty="1">
 			<step>
 				<initiation>negativeExp</initiation>
+				<response push="goalFake">fake_reflect_annotation</response>
 				<response push="goalNegAskFurther">unanticipated-response</response>
 			</step>
 		</goal>
@@ -222,7 +239,15 @@
 		<goal name="goalNegAskFurther">
 			<step>
 				<initiation>negativExpAskFurther</initiation>
+				<response push="goalFake">fake_reflect_annotation</response>
 				<response>unanticipated-response</response>
+			</step>
+		</goal>
+
+		<goal name="goalFake" difficulty="1" retry-until-cover="planning_annotation">
+			<step>
+				<initiation>fakeReflection</initiation>
+				<response push="goalPlanning">planning_annotation</response>
 			</step>
 		</goal>
 		
@@ -232,12 +257,14 @@
 				<response push="goalPos">pos_annotation</response>
 				<response push="goalNeg">neg_annotation</response>
 				<response push="goalNeutralSecond">unanticipated-response</response>
+				<response push="goalFake">fake_reflect_annotation</response>
 			</step>
 		</goal>
 
 		<goal name="goalNeutralSecond" difficulty="1">
 			<step>
 				<initiation>SecondNeutralExp</initiation>
+				<response push="goalFake">fake_reflect_annotation</response>
 				<response>unanticipated-response</response>
 			</step>
 		</goal>
@@ -252,6 +279,7 @@
 			<step>
 				<initiation>noPlanningRecognized</initiation>
 				<response push="planningNotCategorized">unanticipated-response</response>
+				<response push="goalFake">fake_reflect_annotation</response>
 			</step>
 		</goal>
 		
