@@ -43,11 +43,11 @@ public class ConceptLibrary {
     private Map<String, Concept> myConcepts;
 
     public ConceptLibrary() {
-        myConcepts = new Hashtable<String, Concept>();
+        myConcepts = new Hashtable<>();
     }
 
-    public void addConcept(Concept c) {
-        myConcepts.put(c.getLabel(), c);
+    public void addConcept(Concept concept) {
+        myConcepts.put(concept.getLabel(), concept);
     }
 
     public Concept getConcept(String l) {

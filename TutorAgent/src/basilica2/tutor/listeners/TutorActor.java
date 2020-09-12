@@ -56,6 +56,8 @@ import edu.cmu.cs.lti.tutalk.script.Scenario;
 import edu.cmu.cs.lti.tutalk.slim.EvaluatedConcept;
 import edu.cmu.cs.lti.tutalk.slim.FuzzyTurnEvaluator;
 import edu.cmu.cs.lti.tutalk.slim.TuTalkAutomata;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.xerces.parsers.DOMParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -71,6 +73,7 @@ import java.util.*;
  * @author rohitk --> dadamson --> gtomar
  */
 public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
+    private static final String UNANTICIPATED_RESPONSE = "unanticipated-response";
     private boolean isTutoring = false;
     private boolean expectingResponse = false;
     private boolean nullExpected = false;
@@ -150,7 +153,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
                 this.fakeReflectiveKeywords.add(scanner.nextLine());
             }
         } catch (FileNotFoundException fnfe) {
-            log(Logger.LOG_WARNING,"Keyword File could not be opened: " + fnfe.getMessage());
+            log(Logger.LOG_WARNING, "Keyword File could not be opened: " + fnfe.getMessage());
         }
     }
 
@@ -300,7 +303,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
             List<Response> expected = currentAutomata.getState().getExpected();
             Response response = expected.get(expected.size() - 1);
 
-            if (!response.getConcept().getLabel().equalsIgnoreCase("unanticipated-response")) {
+            if (!UNANTICIPATED_RESPONSE.equalsIgnoreCase(response.getConcept().getLabel())) {
                 log(Logger.LOG_ERROR, "Moving on without an Unanticipated-Response Handler. Could be weird!");
             }
             List<String> tutorTurns = currentAutomata.progress(response.getConcept());
@@ -309,25 +312,27 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
     }
 
     private boolean checkEventShouldBeHandled() {
-        return (expectingResponse && currentAutomata != null) ? true : false;
+        return expectingResponse && currentAutomata != null;
     }
 
     private boolean checkStudentEventShouldBeHandled(List<String> studentTurn) {
-        return (checkEventShouldBeHandled() && !studentTurn.isEmpty()) ? true : false;
+        return checkEventShouldBeHandled() && !studentTurn.isEmpty();
     }
 
-    private synchronized void handleStudentTurnsEvent(StudentTurnsEvent ste) {
-        if (checkStudentEventShouldBeHandled(ste.getStudentTurns())) {
-            String studentTurn = "";
-            for (String turn : ste.getStudentTurns()) {
-                studentTurn += turn + " | ";
+    private synchronized void handleStudentTurnsEvent(StudentTurnsEvent studentTurnsEvent) {
+        if (checkStudentEventShouldBeHandled(studentTurnsEvent.getStudentTurns())) {
+            StringBuilder studentTurn = new StringBuilder();
+            for (String turn : studentTurnsEvent.getStudentTurns()) {
+                studentTurn.append(turn).append(" | ");
             }
-            List<EvaluatedConcept> matchingConcepts = currentAutomata.evaluateTuteeTurn(studentTurn, ste.getAnnotations());
+            List<EvaluatedConcept> matchingConcepts =
+                    currentAutomata.evaluateTuteeTurn(studentTurn.toString(), studentTurnsEvent.getAnnotations());
+
             if (!matchingConcepts.isEmpty()) {
                 System.out.println(matchingConcepts.get(0).getClass().getSimpleName());
                 System.out.println(matchingConcepts.get(0).concept.getClass().getSimpleName());
                 Concept concept = matchingConcepts.get(0).concept;
-                if (concept.getLabel().equalsIgnoreCase("unanticipated-response")) {
+                if (UNANTICIPATED_RESPONSE.equalsIgnoreCase(concept.getLabel())) {
                     if (!nullExpected) {
                         noMatchingResponseCount++;
 
@@ -339,9 +344,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
                         return;
                     }
                 } else {
-                    for (String contributor : ste.getContributors()) {
-                        answerers.add(contributor);
-                    }
+                    answerers.addAll(studentTurnsEvent.getContributors());
                 }
 
                 moveOn(concept);
@@ -359,27 +362,26 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
     private void messageAccepted() {
         if (currentAutomata != null) {
             List<Response> expected = currentAutomata.getState().getExpected();
-            if (expected.size() != 0) {
+            if (CollectionUtils.isNotEmpty(expected)) {
                 expectingResponse = true;
                 nullExpected = false;
                 noMatchingResponseCount = 0;
 
-                if (expected.size() == 1) {
-                    if (expected.get(0).getConcept().getLabel().equalsIgnoreCase("unanticipated-response")) {
-                        nullExpected = true;
-                    }
+                if (expected.size() == 1
+                        && UNANTICIPATED_RESPONSE.equalsIgnoreCase(expected.get(0).getConcept().getLabel())) {
+                    nullExpected = true;
                 }
-            } else {
-                answerers = new ArrayList<String>();
-
-                DoneTutoringEvent dte = new DoneTutoringEvent(source, currentConcept);
-                prioritySource.setBlocking(false);
-                source.queueNewEvent(dte);
-
-                currentAutomata = null;
-                currentConcept = null;
-                isTutoring = false;
             }
+        } else {
+            answerers = new ArrayList<>();
+
+            DoneTutoringEvent dte = new DoneTutoringEvent(source, currentConcept);
+            prioritySource.setBlocking(false);
+            source.queueNewEvent(dte);
+
+            currentAutomata = null;
+            currentConcept = null;
+            isTutoring = false;
         }
     }
 
@@ -393,14 +395,14 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
     }
 
     private String selectIntroString(String intro, String userName) {
-        String replacedText = null;
+        String replacedText;
         if (userName != null) {
             replacedText = intro.replaceAll("\\[USERNAME\\]", userName);
         } else {
             replacedText = intro.replaceAll("\\[USERNAME\\]", "");
         }
 
-        String[] texts = null;
+        String[] texts;
         texts = replacedText.split(" \\| ");
 
         return texts[(int) (Math.random() * texts.length)];
@@ -409,12 +411,12 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
     private void processTutorTurns(List<String> tutorTurns) {
         source.userMessages.analyizeMessages(tutorTurns, this.fakeReflectiveKeywords);
         String[] turns = tutorTurns.toArray(new String[0]);
-        TutorTurnsEvent tte = new TutorTurnsEvent(source, turns);
 
         if (turns.length == 0) {
             return;
         }
 
+        TutorTurnsEvent tte = new TutorTurnsEvent(source, turns);
         source.queueNewEvent(tte);
         PriorityEvent pete = new PriorityEvent(source, new MessageEvent(source, getAgent().getUsername(), join(turns), "TUTOR"), tutorMessagePriority, prioritySource, tutorTimeout);
         pete.addCallback(new Callback() {
@@ -454,7 +456,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
     }
 
     private boolean isDialogTimedOutTwice(String id) {
-        return id.startsWith("CANCEL:") ? true : false;
+        return id.startsWith("CANCEL:");
     }
 
     private void killPendingDialog(String id) {
@@ -480,16 +482,16 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver {
     private void sendTutorMessage(String... promptStrings) {
         String combo = join(promptStrings);
 
-        if (!combo.equals("")) {
+        if (!StringUtils.isBlank(combo)) {
             PriorityEvent pete = new PriorityEvent(source, new MessageEvent(source, getAgent().getUsername(), combo, "TUTOR"), tutorMessagePriority, prioritySource, 45);
             source.pushProposal(pete);
         }
     }
 
     public String join(String... promptStrings) {
-        String combo = "";
+        StringBuilder combo = new StringBuilder();
         for (String text : promptStrings) {
-            combo += "|" + text;
+            combo.append("|").append(text);
         }
         return combo.substring(1);
     }

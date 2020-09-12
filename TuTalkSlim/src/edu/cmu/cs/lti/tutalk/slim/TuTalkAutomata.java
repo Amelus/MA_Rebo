@@ -146,14 +146,14 @@ public class TuTalkAutomata {
 
     public List<EvaluatedConcept> evaluateTuteeTurn(String turn, Collection<String> annotations) 
     {
-        List<Concept> cs = new ArrayList<Concept>();
+        List<Concept> concepts = new ArrayList<>();
         List<Response> expected = currentState.getExpected();
         for (int i = 0; i < expected.size(); i++) 
         {
-            cs.add(expected.get(i).getConcept());
+            concepts.add(expected.get(i).getConcept());
         }
-        cs.add(currentScenario.getConceptLibrary().getConcept("_dont_know_"));
-        return evaluator.evaluateTurn(turn, cs, annotations);
+        concepts.add(currentScenario.getConceptLibrary().getConcept("_dont_know_"));
+        return evaluator.evaluateTurn(turn, concepts, annotations);
     }
     
     public List<EvaluatedConcept> evaluateTuteeTurn(String turn) 

@@ -85,4 +85,7 @@
 		<srcroot url="file:///Users/dadamson/Laboratory/basilica/911-Libraries/Utilities/src"/>
 		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/BasilicaCore/lib/OtherLibraries/Utilities.jar!/"/>
 	</lib>
+	<levels>
+		<level name="commons-collections4-4.2" value="project"/>
+	</levels>
 </component>

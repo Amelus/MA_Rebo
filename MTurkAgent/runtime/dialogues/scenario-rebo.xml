@@ -244,7 +244,7 @@
 			</step>
 		</goal>
 
-		<goal name="goalFake" difficulty="1" retry-until-cover="planning_annotation">
+		<goal name="goalFake" difficulty="1">
 			<step>
 				<initiation>fakeReflection</initiation>
 				<response push="goalPlanning">planning_annotation</response>
