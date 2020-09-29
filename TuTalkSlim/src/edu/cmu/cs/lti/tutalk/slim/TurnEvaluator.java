@@ -40,7 +40,9 @@ import java.util.*;
  * @author rohitk
  */
 public class TurnEvaluator {
-    protected double MATCH_THRESHOLD = 0.5;
+
+    private static final int WORD_THRESHOLD = 5;
+    double MATCH_THRESHOLD = 0.5;
 
 
     public List<EvaluatedConcept> evaluateTurn(String turn, List<Concept> validConcepts, Collection<String> annotations) {
@@ -50,8 +52,11 @@ public class TurnEvaluator {
             return matched;
         }
 
-        if (StringUtils.splitByWholeSeparator(turn, " ").length <= 3) {
-            Optional<Concept> optionalConcept = validConcepts.stream().filter(concept -> "fake_reflect_annotation".equalsIgnoreCase(concept.getLabel())).findFirst();
+        if (StringUtils.splitByWholeSeparator(turn.trim(), " ").length <= WORD_THRESHOLD) {
+            Optional<Concept> optionalConcept = validConcepts.stream()
+                    .filter(concept -> StringUtils.contains(concept.getLabel(), "fake"))
+                    .findFirst();
+
             if (optionalConcept.isPresent()) {
                 matched.add(new EvaluatedConcept(optionalConcept.get(), 1.0));
                 return matched;
