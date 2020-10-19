@@ -32,16 +32,18 @@
 package edu.cmu.cs.lti.tutalk.slim;
 
 import edu.cmu.cs.lti.tutalk.script.Concept;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author rohitk
  */
 public class TurnEvaluator {
 
-    private static final int WORD_THRESHOLD = 5;
+    private static final int WORD_THRESHOLD = 6;
     double MATCH_THRESHOLD = 0.5;
 
 
@@ -52,21 +54,14 @@ public class TurnEvaluator {
             return matched;
         }
 
-        if (StringUtils.splitByWholeSeparator(turn.trim(), " ").length <= WORD_THRESHOLD) {
-            Optional<Concept> optionalConcept = validConcepts.stream()
-                    .filter(concept -> StringUtils.contains(concept.getLabel(), "fake"))
-                    .findFirst();
+        boolean unsufficientWords = hasNotEnoughWords(turn);
 
-            if (optionalConcept.isPresent()) {
-                matched.add(new EvaluatedConcept(optionalConcept.get(), 1.0));
-                return matched;
-            }
-        }
+        List<Concept> filteredConcepts = getFilteredConcepts(validConcepts, unsufficientWords);
 
         boolean unAnticipatedValid = false;
         Concept unAnticipatedConcept = null;
 
-        for (Concept concept : validConcepts) {
+        for (Concept concept : filteredConcepts) {
             double matchValue = concept.match(turn, annotations);
 
             if (matchValue > MATCH_THRESHOLD) {
@@ -79,6 +74,14 @@ public class TurnEvaluator {
             }
         }
 
+        if (unsufficientWords && matched.isEmpty()) {
+            Optional<Concept> fakeLength = filteredConcepts.stream()
+                    .filter(concept -> StringUtils.contains(concept.getLabel(), "length"))
+                    .findFirst();
+
+            fakeLength.ifPresent(concept -> matched.add(new EvaluatedConcept(concept, 1.0)));
+        }
+
         if (unAnticipatedValid && matched.isEmpty()) {
             matched.add(new EvaluatedConcept(unAnticipatedConcept, 1.0));
         }
@@ -89,5 +92,32 @@ public class TurnEvaluator {
         System.out.println(matched);
 
         return matched;
+    }
+
+    private List<Concept> getFilteredConcepts(List<Concept> validConcepts, boolean unsufficientWords) {
+        List<Concept> filteredConcepts;
+
+        if (unsufficientWords) {
+            filteredConcepts = validConcepts.stream()
+                    .filter(this::isFakeConcept)
+                    .collect(Collectors.toList());
+        } else {
+            filteredConcepts = validConcepts.stream()
+                    .filter(concept -> !isFakeConcept(concept))
+                    .collect(Collectors.toList());
+        }
+
+        if (CollectionUtils.isEmpty(filteredConcepts)) {
+            filteredConcepts = validConcepts;
+        }
+        return filteredConcepts;
+    }
+
+    private boolean isFakeConcept(Concept concept) {
+        return StringUtils.contains(concept.getLabel(), "fake");
+    }
+
+    private boolean hasNotEnoughWords(String turn) {
+        return StringUtils.splitByWholeSeparator(turn.trim(), " ").length <= WORD_THRESHOLD;
     }
 }

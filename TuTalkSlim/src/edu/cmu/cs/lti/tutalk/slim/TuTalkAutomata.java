@@ -1,21 +1,21 @@
 /*
  *  Copyright (c), 2009 Carnegie Mellon University.
  *  All rights reserved.
- *  
+ *
  *  Use in source and binary forms, with or without modifications, are permitted
  *  provided that that following conditions are met:
- *  
+ *
  *  1. Source code must retain the above copyright notice, this list of
  *  conditions and the following disclaimer.
- *  
+ *
  *  2. Binary form must reproduce the above copyright notice, this list of
  *  conditions and the following disclaimer in the documentation and/or
  *  other materials provided with the distribution.
- *  
+ *
  *  Permission to redistribute source and binary forms, with or without
  *  modifications, for any purpose must be obtained from the authors.
  *  Contact Rohit Kumar (rohitk@cs.cmu.edu) for such permission.
- *  
+ *
  *  THIS SOFTWARE IS PROVIDED BY CARNEGIE MELLON UNIVERSITY ``AS IS'' AND
  *  ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
  *  THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
@@ -27,64 +27,53 @@
  *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *  
+ *
  */
 package edu.cmu.cs.lti.tutalk.slim;
+
+import edu.cmu.cs.lti.tutalk.script.*;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import edu.cmu.cs.lti.tutalk.script.Concept;
-import edu.cmu.cs.lti.tutalk.script.Goal;
-import edu.cmu.cs.lti.tutalk.script.Response;
-import edu.cmu.cs.lti.tutalk.script.ResponseExpected;
-import edu.cmu.cs.lti.tutalk.script.Scenario;
-
 /**
- *
  * @author rohitk
  */
 public class TuTalkAutomata {
 
     private Scenario currentScenario = null;
     private ExecutionState currentState = null;
-    private String tutorId,  tuteeId;
+    private String tutorId, tuteeId;
     private TurnEvaluator evaluator;
     private ReplacementVariables templater;
 
-    public TuTalkAutomata(String tutorId, String tuteeId) 
-    {
+    public TuTalkAutomata(String tutorId, String tuteeId) {
         tutorId = tutorId;
         tuteeId = tuteeId;
         evaluator = new TurnEvaluator();
         templater = new ReplacementVariables();
     }
 
-    public void addReplacementVariable(String pKey, String pValue) 
-    {
+    public void addReplacementVariable(String pKey, String pValue) {
         templater.addReplacementVariable(pKey, pValue);
     }
 
-    public void resetReplacementVariables() 
-    {
+    public void resetReplacementVariables() {
         templater.resetReplacementVariables();
     }
 
-    public void setEvaluator(TurnEvaluator t) 
-    {
+    public void setEvaluator(TurnEvaluator t) {
         evaluator = t;
     }
 
-    public void setScenario(Scenario s) 
-    {
+    public void setScenario(Scenario s) {
         currentScenario = s;
     }
 
-    public List<String> start() 
-    {
-        if (currentScenario != null) 
-        {
+    public List<String> start() {
+        if (currentScenario != null) {
             currentState = new ExecutionState();
             currentState.push(currentScenario.getStartGoal());
         }
@@ -92,133 +81,96 @@ public class TuTalkAutomata {
         return progress();
     }
 
-    public List<String> progress() 
-    {
-        List<Concept> executionTrail = new ArrayList<Concept>();
-        if (currentScenario != null) 
-        {
-            do 
-            {
+    public List<String> progress() {
+        List<Concept> executionTrail = new ArrayList<>();
+        if (currentScenario != null) {
+            do {
                 Goal goal = currentState.getCurrentGoal();
-                if (goal != null) 
-                {
+                if (goal != null) {
                     Concept c = goal.execute(currentState);
-                    if (c != null) 
-                    {
-                        if (c instanceof ResponseExpected) 
-                        {
+                    if (c != null) {
+                        if (c instanceof ResponseExpected) {
                             currentState.setExpected(((ResponseExpected) c).getValidResponses());
                             break;
-                        } 
-                        else 
-                        {
+                        } else {
                             executionTrail.add(c);
                         }
-                    } 
-                    else 
-                    {
-                        if (currentState.getTodos().isEmpty()) 
-                        {
+                    } else {
+                        if (currentState.getTodos().isEmpty()) {
                             break;
                         }
                     }
-                } 
-                else 
-                {
+                } else {
                     break;
                 }
-            } 
+            }
             while (true);
         }
 
-        List<String> tutorTurns = new ArrayList<String>();
-        if (!executionTrail.isEmpty()) 
-        {
-            for (Concept c : executionTrail) 
-            {
-            	if(!c.getText().equalsIgnoreCase("")) {
-            		tutorTurns.add(templater.renderTemplate(c.getText()));
-            	}
-            } 
+        return getTutorTurns(executionTrail);
+    }
+
+    private List<String> getTutorTurns(List<Concept> executionTrail) {
+        List<String> tutorTurns = new ArrayList<>();
+        if (!executionTrail.isEmpty()) {
+            for (Concept c : executionTrail) {
+                if (!c.getText().equalsIgnoreCase(StringUtils.EMPTY)) {
+                    tutorTurns.add(templater.renderTemplate(c.getText()));
+                }
+            }
         }
         return tutorTurns;
     }
 
-    public List<EvaluatedConcept> evaluateTuteeTurn(String turn, Collection<String> annotations) 
-    {
+    public List<EvaluatedConcept> evaluateTuteeTurn(String turn, Collection<String> annotations) {
         List<Concept> concepts = new ArrayList<>();
         List<Response> expected = currentState.getExpected();
-        for (int i = 0; i < expected.size(); i++) 
-        {
-            concepts.add(expected.get(i).getConcept());
+        for (Response response : expected) {
+            concepts.add(response.getConcept());
         }
         concepts.add(currentScenario.getConceptLibrary().getConcept("_dont_know_"));
         return evaluator.evaluateTurn(turn, concepts, annotations);
     }
-    
-    public List<EvaluatedConcept> evaluateTuteeTurn(String turn) 
-    {
-        return evaluateTuteeTurn(turn, new ArrayList<String>());
+
+    public List<EvaluatedConcept> evaluateTuteeTurn(String turn) {
+        return evaluateTuteeTurn(turn, new ArrayList<>());
     }
 
-    public List<String> progress(Concept inputConcept) 
-    {
-        List<Concept> executionTrail = new ArrayList<Concept>();
-        if (currentScenario != null) 
-        {
-            do 
-            {
+    public List<String> progress(Concept inputConcept) {
+        List<Concept> executionTrail = new ArrayList<>();
+        if (currentScenario != null) {
+            do {
                 Goal goal = currentState.getCurrentGoal();
-                if (goal != null) 
-                {
+                if (goal != null) {
                     Concept c = goal.execute(inputConcept, currentState);
-                    if (c != null) 
-                    {
-                        if (c instanceof ResponseExpected) 
-                        {
+                    if (c != null) {
+                        if (c instanceof ResponseExpected) {
                             currentState.setExpected(((ResponseExpected) c).getValidResponses());
                             break;
-                        } 
-                        else 
-                        {
+                        } else {
                             executionTrail.add(c);
                         }
-                    } 
-                    else 
-                    {
+                    } else {
                         break;
                     }
-                } 
-                else 
-                {
+                } else {
                     break;
                 }
             } while (true);
         }
 
-        List<String> tutorTurns = new ArrayList<String>();
-        if (!executionTrail.isEmpty()) 
-        {
-            for (Concept c : executionTrail) 
-            {
-            	if(!c.getText().equalsIgnoreCase("")) {
-            		tutorTurns.add(templater.renderTemplate(c.getText()));
-            	}
-            }
-        }
-
+        List<String> tutorTurns = getTutorTurns(executionTrail);
         List<String> moreTurns = progress();
+
         tutorTurns.addAll(moreTurns);
 
         return tutorTurns;
     }
 
-    public void reset() 
-    {
+    public void reset() {
     }
 
-    public ExecutionState getState() 
-    {
+    public ExecutionState getState() {
         return currentState;
     }
 }

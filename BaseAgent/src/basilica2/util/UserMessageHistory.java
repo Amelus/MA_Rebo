@@ -2,13 +2,12 @@ package basilica2.util;
 
 import basilica2.agents.events.MessageEvent;
 import edu.cmu.cs.lti.basilica2.core.Event;
-import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
+import ratte.texttools;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Objects;
 
 public class UserMessageHistory {
 
@@ -73,24 +72,18 @@ public class UserMessageHistory {
         return false;
     }
 
-    public void analyizeMessages(List<String> tutorTurns, List<String> fakeReflectiveKeywords) {
+    public void analyizeMessages(List<String> tutorTurns) {
         if (hasTooShortAnswers()) {
             tutorTurns.add(0, remind_user_to_write_whole_sentences);
         }
-        if (hasFakeReflectiveKeywords(fakeReflectiveKeywords)) {
+        /*if (tutorTurns.contains())) {
             //tutorTurns.add(0, remind_user_to_write_to_be_precise);
         }
-    }
+        texttools tool = new texttools();
+        for (MessageEvent msg : messages) {
+            tool.set_text(msg.getText());
 
-    private boolean hasFakeReflectiveKeywords(List<String> fakeReflectiveKeywords) {
-        if (CollectionUtils.isNotEmpty(messages) && CollectionUtils.isNotEmpty(fakeReflectiveKeywords)) {
-            return messages.stream()
-                    .filter(Objects::nonNull)
-                    .filter(msg -> StringUtils.isNotBlank(msg.getText()))
-                    .anyMatch(msg -> fakeReflectiveKeywords.stream()
-                            .anyMatch( keyword -> StringUtils.contains(msg.getText().toLowerCase(), keyword)));
-        }
-        return false;
+        }*/
     }
 
     private int countWordsofString(String input) {

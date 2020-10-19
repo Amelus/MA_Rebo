@@ -11,4 +11,7 @@
 	<lib name="commons-lang3-3.2.1.jar" scope="COMPILE">
 		<relative-module-cls project-related="jar://$PROJECT_DIR$/MA_Rebo/TuTalkSlim/lib/commons-lang3-3.2.1.jar!/"/>
 	</lib>
+	<levels>
+		<level name="commons-collections4-4.2" value="project"/>
+	</levels>
 </component>

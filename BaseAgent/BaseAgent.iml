@@ -398,5 +398,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" exported="" name="commons-lang3-3.2.1" level="project" />
     <orderEntry type="library" name="commons-collections4-4.2" level="project" />
+    <orderEntry type="library" name="Ratte" level="project" />
   </component>
 </module>

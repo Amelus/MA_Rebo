@@ -5,5 +5,6 @@
 	<classpathentry exported="true" kind="lib" path="/BasilicaCore/lib/OtherLibraries/Xerces/xercesImpl.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/lingpipe-2.3.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/commons-lang3-3.2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-collections4-4.2"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
