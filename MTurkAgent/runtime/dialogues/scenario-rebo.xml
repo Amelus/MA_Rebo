@@ -179,6 +179,10 @@
 			<phrase>Danke das war's für heute, viel Spaß bei deiner nächsten Aufgabe!</phrase>
 		</concept>
 
+		<concept label="feedback">
+			<phrase>Das Gespräch war aus meiner Sicht</phrase>
+		</concept>
+
 		<concept label="goodbye">
 			<phrase>Bis zum nächsten Mal :)</phrase>
 			<phrase>Schönen Tag noch und bis bald!</phrase>
@@ -285,7 +289,11 @@
 				<initiation>closing</initiation>
 				<response>unanticipated-response</response>
 			</step>
-			
+
+			<step>
+				<initiation>feedback</initiation>
+			</step>
+
 			<step>
 				<initiation>goodbye</initiation>
 			</step>
