@@ -1,490 +1,493 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE scenario SYSTEM "TuTalkScenario.dtd">
 <scenario default-language="en" scenario-name="rebo-example">
-	<configuration>
-		
-		<!-- It *is* possible to hook up a LightSide classifier to TuTalk, 
-		such that the predicted labels are treated as concepts. 
-		but not today. -->
-			
-		<!-- 	
-		<module kind="model" name="animals"
-			classname="edu.cmu.cs.lti.tutalk.module.SidePredictor">
-			<param key="path" value="models/animals.ser" />
-		</module> 
-		-->
-
-	</configuration>
-
-	<!-- I'm not entirely sure what these are used for. -->
-	<transitions>
-		<transition ack-type="agree" floor-status="neutral">
-			<tphrase> yes </tphrase>
-			<tphrase> okay </tphrase>
-		</transition>
-	
-		<transition ack-type="none">
-			<tphrase> moving on... </tphrase>
-		</transition>
-	</transitions>
-	
-	<!-- 'Concepts' define things that students might say,
-	     AND things that the tutor might say back. 
-	     Tutor concepts should take the form of phrase lists.
-		 Student concepts can be phrase lists, 
-		 regular expressions, or lists of annotations,
-	     but only one of these at a time. -->
-		
-	<concepts>
-		<concept label="judgement">
-			<phrase>Wenn du dir selber eine Schulnote 1-5 geben würdest, welche wäre es und warum?</phrase>
-			<phrase>Wie ist es dir bei dieser Aufgabe gegangen? Alles gut gelaufen?</phrase>
-			<phrase>Was gefällt dir an deinem Ergebnis und was nicht?</phrase>
-			<phrase>Wie gut erfüllt dein Ergebnis die gestellte Aufgabe?</phrase>
-			<phrase>Wie bist du mit deinem Ergebnis zufrieden?</phrase>
-			<phrase>Bist du mit dem Ergebnis der Aufgabe zufrieden? Warum/Warum nicht?</phrase>
-			<phrase>Wie ist das Lernen zur heutigen Übung gelaufen, hast du schon alles gut verstanden?</phrase>
-			<phrase>Welches Wissen konntest du heute gut anwenden?</phrase>
-		</concept>
-
-		<concept label="positiveExp">
-			<phrase>Toll zu hören! | Was macht diese Aufgabe für dich interessant?</phrase>
-			<phrase>Was hat dir dabei am besten gefallen?</phrase>
-		</concept>
-
-		<concept label="negativeExp">
-			<phrase>Oje! | Was war denn das Problem?</phrase>
-			<phrase>Was war denn das Problem?</phrase>
-			<phrase>Wobei hattest du die meisten Schwierigkeiten?</phrase>
-		</concept>
-
-		<concept label="negativExpAskFurther">
-			<phrase>Hat es trotzdem Spaß gemacht?| Erkläre mir, was dir gefallen hat und was nicht!</phrase>
-		</concept>
-
-		<concept label="fakeJudgement">
-			<phrase>Du hast dir also Mühe gegeben, sehr cool! | Hast du auch alles umgesetzt, was du erreichen wolltest?</phrase>
-		</concept>
-		
-		<concept label="emotions">
-			<phrase>Hat dir diese Aufgabe Spaß gemacht? Warum / Warum nicht?</phrase>
-			<phrase>Wie hast du dich während der Durchführung der Aufgaben gefühlt?</phrase>
-			<phrase>Was hat dir besonders viel Spaß bei der Aufgabe gemacht und was nicht? Warum?</phrase>
-			<phrase>Worauf bist du bei der Lösung der Aufgabe besonders stolz?</phrase>
-			<phrase>Was hat dir an der Aufgabe besonders gefallen?</phrase>
-			<phrase>Was hat dich an der Aufgabe interessiert?</phrase>
-		</concept>
-
-		<concept label="positiveEmotion">
-			<phrase>Hoffe dass es dir weiterhin dabei so gut geht :)</phrase>
-			<phrase>Läuft bei dir :D</phrase>
-			<phrase>Es ist schon cool, wenn einem die Ausbildung Spaß macht!</phrase>
-			<phrase>Taugt mir, dass dir deine Ausbildung Spaß macht! :D</phrase>
-		</concept>
-
-		<concept label="yesEmotionExp">
-			<phrase>Cool, dass es dir Spaß gemacht hat! Was hat dir denn daran gefallen?</phrase>
-		</concept>
-
-		<concept label="noEmotionExp">
-			<phrase>Schade. Warum hat es dir denn nicht gefallen?</phrase>
-		</concept>
-
-		<concept label="negativeEmotionReaction">
-			<phrase>Das nächste Mal wird's bestimmt besser laufen!</phrase>
-			<phrase>Oje! Ich hoffe, die nächste Aufgabe liegt dir wieder mehr </phrase>
-			<phrase>Bei der nächsten Aufgabe hast du hoffentlich wieder mehr Spaß!</phrase>
-		</concept>
-		
-		<concept label="learning">
-			<phrase>Welchen Tipp könntest du einem jüngeren Lehrling geben, der einen solchen Auftrag zum ersten Mal ausführt?</phrase>
-			<phrase>Was hast du für dich aus der Aufgabe gelernt?</phrase>
-			<phrase>Was konntest du von dieser Aufgabe mitnehmen?</phrase>
-			<phrase>Was würdest du sagen hast du durch diese Aufgabe dazugelernt? </phrase>
-		</concept>
-
-		<concept label="learningRecognized">
-			<phrase>Richtig nice! :D</phrase>
-			<phrase>Klingt sehr gut!</phrase>
-		</concept>
-
-		<concept label="negativeLearningRecognized">
-			<phrase>Schade :/ | Was war denn heute neu für dich?</phrase>
-		</concept>
-
-		<concept label="fakeLearning">
-			<phrase>Was hast du denn konkret dazu gelernt?</phrase>
-		</concept>
-		
-		<concept label="fakeLearning2">
-			<phrase>Wo konntest du denn genau dein Wissen erweitern?</phrase>
-		</concept>
-
-
-		<concept label="yesLearningExp">
-			<phrase>Das freut mich! | Was hast du denn Neues gelernt?</phrase>
-			<phrase>Toll! | Wo konntest du denn dein Wissen erweitern?</phrase>
-		</concept>
-
-		<concept label="noLearningExp">
-			<phrase>Überleg noch mal | Hast du nicht vielleicht etwas dazugelernt?</phrase>
-		</concept>
-
-		<concept label="planning">
-			<phrase>Worauf wirst du beim nächsten Mal besonders achten, wenn du einen ähnlichen Auftrag bekommst?</phrase>
-			<phrase>Wofür kannst du das Erlernte sonst noch anwenden?</phrase>
-			<phrase>Wo könntest du Teile der Aufgabe in Zukunft wieder verwenden?</phrase>
-			<phrase>Was wirst du das nächste Mal besser machen?</phrase>
-			<phrase>Welche Fähigkeiten, die du hier geübt hast, wirst du in der Zukunft wieder brauchen?</phrase>
-			<phrase>Was wirst du beim nächsten Mal anders machen und was wirst du gleich machen, wenn du eine ähnliche Aufgabe zu erledigen hast?</phrase>
-		</concept>
-		
-		<concept label="planningRecognized">
-			<phrase>Das klingt nach einem Plan!</phrase>
-			<phrase>Klingt gut!</phrase>
-		</concept>
-		
-		<concept label="noPlanningRecognized">
-			<phrase>Wenn du die gleiche Aufgabe morgen nochmals machen würdest, was wäre dann anders als heute?</phrase>
-		</concept>
-
-		<concept label="fakePlanning">
-			<phrase>Was genau meinst du damit?</phrase>
-			<phrase>Wo möchtest du das nächste Mal genauer sein?</phrase>
-		</concept>
-
-		<concept label="fakePlanning2">
-			<phrase>Ist genaues messen etwas, das dir manchmal schwer fällt?</phrase>
-		</concept>
-
-		<concept label="fakeReflection">
-			<phrase>Wie genau meinst du das?</phrase>
-			<phrase>Ich glaube, du musst mir das etwas ausführlicher erklären.</phrase>
-			<phrase>Beschreibe das bitte ein wenig genauer.</phrase>
-			<phrase>Ich brauche da schon bisschen mehr Infos.</phrase>
-			<phrase>Etwas mehr Details wenn ich bitten darf.😉</phrase>
-			<phrase>Das ist mir bisschen zu wenig Info, erklär mir das doch bitte etwas genauer.</phrase>
-			<phrase>Um zu verstehen, was du dir dabei denkst, brauche ich ein bisserl mehr Text.😉</phrase>
-			<phrase>Erklär mir das bitte etwas genauer.</phrase>
-		</concept>
-
-		<concept label="closing">
-			<phrase>Danke, dass du das mit mir besprochen hast!</phrase>
-			<phrase>Schön, dass wir uns unterhalten haben.</phrase>
-			<phrase>Vielen Dank für deine Antworten!</phrase>
-			<phrase>Das war es schon wieder, besten Dank für deine Antworten!</phrase>
-			<phrase>Super, danke fürs Mitmachen.</phrase>
-			<phrase>Danke! Das war's für heute :D</phrase>
-			<phrase>Spitze, danke für deine Teilnahme!</phrase>
-			<phrase>Danke das war's für heute, viel Spaß bei deiner nächsten Aufgabe!</phrase>
-		</concept>
-
-		<concept label="feedback">
-			<phrase>Das Gespräch war aus meiner Sicht</phrase>
-		</concept>
-
-		<concept label="goodbye">
-			<phrase>Bis zum nächsten Mal :)</phrase>
-			<phrase>Schönen Tag noch und bis bald!</phrase>
-			<phrase>Und Tschüß :-) </phrase>
-			<phrase>Danke und bis zum nächsten Mal ;)</phrase>
-			<phrase>Schönen Tag noch :)</phrase>
-			<phrase>Danke, tschüss!</phrase>
-		</concept>
-
-		<!-- these match against external (MessageAnnotator) annotations. -->
-		<concept label="fake_yes_annotation" type="annotation">
-			<phrase>YES</phrase>
-		</concept>
-		
-		<concept label="fake_no_annotation" type="annotation">
-			<phrase>NO</phrase>
-		</concept>
-
-		<concept label="pos_annotation" type="annotation">
-			<phrase>POSITIVE</phrase>
-		</concept>
-
-		<concept label="neg_annotation" type="annotation">
-			<phrase>NEGATIVE</phrase>
-		</concept>
-		
-		<concept label="planning_annotation" type="annotation">
-			<phrase>PLANNING</phrase>
-		</concept>
-
-		<concept label="fake_judgement_annotation" type="annotation">
-			<phrase>FAKE_JUDGEMENT</phrase>
-		</concept>
-
-		<concept label="fake_learning_annotation" type="annotation">
-			<phrase>FAKE_LEARNING</phrase>
-		</concept>
-
-		<concept label="fake_learning_annotation2" type="annotation">
-			<phrase>FAKE_LEARNING2</phrase>
-		</concept>
-
-		<concept label="fake_planning_annotation" type="annotation">
-			<phrase>FAKE_PLANNING</phrase>
-		</concept>
-
-		<concept label="fake_planning_annotation2" type="annotation">
-			<phrase>FAKE_PLANNING2</phrase>
-		</concept>
-
-		<concept label="fake_length" type="model" />
-
-		<concept label="unanticipated-response">
-			<phrase>anything else</phrase>
-		</concept>
-	</concepts>
-
-	
-	<!-- This is the meat of the hierarchical dialogue - 
-		 one main goal with multiple steps, and subgoals that it may reference. -->
-	<script>
-		<goal name="start" difficulty="1">
-			<step>
-				<initiation>judgement</initiation>
-				<response push="goalPosJudgement">pos_annotation</response>
-				<response push="goalNegJudgement">neg_annotation</response>
-				<response push="goalFakeJudgement">fake_judgement_annotation</response>
-				<response push="goalFakeJudgementLength">fake_length</response>
-				<response>unanticipated-response</response>
-			</step>
-			
-			<step>
-				<initiation>emotions</initiation>
-				<response push="goalYesEmotions">fake_yes_annotation</response>
-				<response push="goalNoEmotions">fake_no_annotation</response>
-				<response push="goalPosEmotions">pos_annotation</response>
-				<response push="goalNegEmotions">neg_annotation</response>
-				<response push="goalFakeEmotionsLength">fake_length</response>
-				<response>unanticipated-response</response>
-			</step>
-			
-			<step>
-				<initiation>learning</initiation>
-				<response push="goalYesLearning">fake_yes_annotation</response>
-				<response push="goalNoLearning">fake_no_annotation</response>
-				<response push="goalLearning">planning_annotation</response>
-				<response push="goalLearningNegativeResponse">neg_annotation</response>
-				<response push="goalFakeLearning">fake_learning_annotation</response>
-				<response push="goalFakeLearning2">fake_learning_annotation2</response>
-				<response push="goalFakeLearningLength">fake_length</response>
-				<response>unanticipated-response</response>
-			</step>
-
-			<step>
-				<initiation>planning</initiation>
-				<response push="goalPlanning">planning_annotation</response>
-				<response push="goalNoPlanningRecognized">unanticipated-response</response>
-				<response push="goalFakePlanning">fake_planning_annotation</response>
-				<response push="goalFakePlanning2">fake_planning_annotation2</response>
-				<response push="goalFakePlanningLength">fake_length</response>
-			</step>
-			
-			<step>
-				<initiation>closing</initiation>
-				<response>unanticipated-response</response>
-			</step>
-
-			<step>
-				<initiation>feedback</initiation>
-			</step>
-
-			<step>
-				<initiation>goodbye</initiation>
-			</step>
-		</goal>
-
-		<!-- Judgement reactions -->
-
-		<goal name="goalPosJudgement" difficulty="1">
-			<step>
-				<initiation>positiveExp</initiation>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalNegJudgement" difficulty="1">
-			<step>
-				<initiation>negativeExp</initiation>
-				<response push="goalNegJudgementAskFurther">unanticipated-response</response>
-			</step>
-		</goal>
-		
-		<goal name="goalNegJudgementAskFurther">
-			<step>
-				<initiation>negativExpAskFurther</initiation>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalFakeJudgement" difficulty="1">
-			<step>
-				<initiation>fakeJudgement</initiation>
-				<response push="goalPosJudgement">pos_annotation</response>
-				<response push="goalNegJudgement">neg_annotation</response>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalFakeJudgementLength" difficulty="1">
-			<step>
-				<initiation>fakeReflection</initiation>
-				<response push="goalPosJudgement">pos_annotation</response>
-				<response push="goalNegJudgement">neg_annotation</response>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<!-- Emotions reactions -->
-
-		<goal name="goalPosEmotions" difficulty="1">
-			<step>
-				<initiation>positiveEmotion</initiation>
-			</step>
-		</goal>
-
-		<goal name="goalNegEmotions" difficulty="1">
-			<step>
-				<initiation>negativeExp</initiation>
-				<response push="goalNegEmotionReaction">unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalYesEmotions" difficulty="1">
-			<step>
-				<initiation>yesEmotionExp</initiation>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalNoEmotions" difficulty="1">
-			<step>
-				<initiation>noEmotionExp</initiation>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalNegEmotionReaction" difficulty="1">
-			<step>
-				<initiation>negativeEmotionReaction</initiation>
-			</step>
-		</goal>
-
-		<goal name="goalFakeEmotionsLength" difficulty="1">
-			<step>
-				<initiation>fakeReflection</initiation>
-				<response push="goalPosEmotions">pos_annotation</response>
-				<response push="goalNegEmotions">neg_annotation</response>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-
-		<!-- Learning reactions -->
-		<goal name="goalYesLearning" difficulty="1">
-			<step>
-				<initiation>yesLearningExp</initiation>
-				<response push="goalLearning">planning_annotation</response>
-				<response push="goalLearningNegativeResponse">neg_annotation</response>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalNoLearning" difficulty="1">
-			<step>
-				<initiation>noLearningExp</initiation>
-				<response push="goalLearning">planning_annotation</response>
-				<response push="goalLearningNegativeResponse">neg_annotation</response>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalLearning" difficulty="1">
-			<step>
-				<initiation>learningRecognized</initiation>
-			</step>
-		</goal>
-
-		<goal name="goalLearningNegativeResponse" difficulty="1">
-			<step>
-				<initiation>negativeLearningRecognized</initiation>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-		
-		<goal name="goalFakeLearning" difficulty="1">
-			<step>
-				<initiation>fakeLearning</initiation>
-				<response push="goalLearning">planning_annotation</response>
-				<response push="goalLearningNegativeResponse">neg_annotation</response>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalFakeLearning2" difficulty="1">
-			<step>
-				<initiation>fakeLearning2</initiation>
-				<response push="goalLearning">planning_annotation</response>
-				<response push="goalLearningNegativeResponse">neg_annotation</response>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalFakeLearningLength" difficulty="1">
-			<step>
-				<initiation>fakeReflection</initiation>
-				<response push="goalLearning">planning_annotation</response>
-				<response push="goalLearningNegativeResponse">neg_annotation</response>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-
-		<!-- Planning reactions -->
-
-		<goal name="goalPlanning" difficulty="1">
-			<step>
-				<initiation>planningRecognized</initiation>
-			</step>
-		</goal>
-		
-		<goal name="goalNoPlanningRecognized" difficulty="1">
-			<step>
-				<initiation>noPlanningRecognized</initiation>
-				<response>unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalFakePlanning" difficulty="1">
-			<step>
-				<initiation>fakePlanning</initiation>
-				<response push="goalPlanning">planning_annotation</response>
-				<response push="goalNoPlanningRecognized">unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalFakePlanning2" difficulty="1">
-			<step>
-				<initiation>fakePlanning2</initiation>
-				<response push="goalPlanning">planning_annotation</response>
-				<response push="goalNoPlanningRecognized">unanticipated-response</response>
-			</step>
-		</goal>
-
-		<goal name="goalFakePlanningLength" difficulty="1">
-			<step>
-				<initiation>fakeReflection</initiation>
-				<response push="goalPlanning">planning_annotation</response>
-				<response push="goalNoPlanningRecognized">unanticipated-response</response>
-			</step>
-		</goal>
-
-
-	</script>
-
+    <configuration>
+
+        <!-- It *is* possible to hook up a LightSide classifier to TuTalk,
+        such that the predicted labels are treated as concepts.
+        but not today. -->
+
+        <!--
+        <module kind="model" name="animals"
+            classname="edu.cmu.cs.lti.tutalk.module.SidePredictor">
+            <param key="path" value="models/animals.ser" />
+        </module>
+        -->
+
+    </configuration>
+
+    <!-- I'm not entirely sure what these are used for. -->
+    <transitions>
+        <transition ack-type="agree" floor-status="neutral">
+            <tphrase>yes</tphrase>
+            <tphrase>okay</tphrase>
+        </transition>
+
+        <transition ack-type="none">
+            <tphrase>moving on...</tphrase>
+        </transition>
+    </transitions>
+
+    <!-- 'Concepts' define things that students might say,
+         AND things that the tutor might say back.
+         Tutor concepts should take the form of phrase lists.
+         Student concepts can be phrase lists,
+         regular expressions, or lists of annotations,
+         but only one of these at a time. -->
+
+    <concepts>
+        <concept label="judgement">
+            <phrase>Wenn du dir selber eine Schulnote 1-5 geben würdest, welche wäre es und warum?</phrase>
+            <phrase>Wie ist es dir bei dieser Aufgabe gegangen? Alles gut gelaufen?</phrase>
+            <phrase>Was gefällt dir an deinem Ergebnis und was nicht?</phrase>
+            <phrase>Wie gut erfüllt dein Ergebnis die gestellte Aufgabe?</phrase>
+            <phrase>Wie bist du mit deinem Ergebnis zufrieden?</phrase>
+            <phrase>Bist du mit dem Ergebnis der Aufgabe zufrieden? Warum/Warum nicht?</phrase>
+            <phrase>Wie ist das Lernen zur heutigen Übung gelaufen, hast du schon alles gut verstanden?</phrase>
+            <phrase>Welches Wissen konntest du heute gut anwenden?</phrase>
+        </concept>
+
+        <concept label="positiveExp">
+            <phrase>Toll zu hören! | Was macht diese Aufgabe für dich interessant?</phrase>
+            <phrase>Was hat dir dabei am besten gefallen?</phrase>
+        </concept>
+
+        <concept label="negativeExp">
+            <phrase>Oje! | Was war denn das Problem?</phrase>
+            <phrase>Was war denn das Problem?</phrase>
+            <phrase>Wobei hattest du die meisten Schwierigkeiten?</phrase>
+        </concept>
+
+        <concept label="negativExpAskFurther">
+            <phrase>Hat es trotzdem Spaß gemacht?| Erkläre mir, was dir gefallen hat und was nicht!</phrase>
+        </concept>
+
+        <concept label="fakeJudgement">
+            <phrase>Du hast dir also Mühe gegeben, sehr cool! | Hast du auch alles umgesetzt, was du erreichen wolltest?
+            </phrase>
+        </concept>
+
+        <concept label="emotions">
+            <phrase>Hat dir diese Aufgabe Spaß gemacht? Warum / Warum nicht?</phrase>
+            <phrase>Wie hast du dich während der Durchführung der Aufgaben gefühlt?</phrase>
+            <phrase>Was hat dir besonders viel Spaß bei der Aufgabe gemacht und was nicht? Warum?</phrase>
+            <phrase>Worauf bist du bei der Lösung der Aufgabe besonders stolz?</phrase>
+            <phrase>Was hat dir an der Aufgabe besonders gefallen?</phrase>
+            <phrase>Was hat dich an der Aufgabe interessiert?</phrase>
+        </concept>
+
+        <concept label="positiveEmotion">
+            <phrase>Hoffe dass es dir weiterhin dabei so gut geht :)</phrase>
+            <phrase>Läuft bei dir :D</phrase>
+            <phrase>Es ist schon cool, wenn einem die Ausbildung Spaß macht!</phrase>
+            <phrase>Taugt mir, dass dir deine Ausbildung Spaß macht! :D</phrase>
+        </concept>
+
+        <concept label="yesEmotionExp">
+            <phrase>Cool, dass es dir Spaß gemacht hat! Was hat dir denn daran gefallen?</phrase>
+        </concept>
+
+        <concept label="noEmotionExp">
+            <phrase>Schade. Warum hat es dir denn nicht gefallen?</phrase>
+        </concept>
+
+        <concept label="negativeEmotionReaction">
+            <phrase>Das nächste Mal wird's bestimmt besser laufen!</phrase>
+            <phrase>Oje! Ich hoffe, die nächste Aufgabe liegt dir wieder mehr</phrase>
+            <phrase>Bei der nächsten Aufgabe hast du hoffentlich wieder mehr Spaß!</phrase>
+        </concept>
+
+        <concept label="learning">
+            <phrase>Welchen Tipp könntest du einem jüngeren Lehrling geben, der einen solchen Auftrag zum ersten Mal
+                ausführt?
+            </phrase>
+            <phrase>Was hast du für dich aus der Aufgabe gelernt?</phrase>
+            <phrase>Was konntest du von dieser Aufgabe mitnehmen?</phrase>
+            <phrase>Was würdest du sagen hast du durch diese Aufgabe dazugelernt?</phrase>
+        </concept>
+
+        <concept label="learningRecognized">
+            <phrase>Richtig nice! :D</phrase>
+            <phrase>Klingt sehr gut!</phrase>
+        </concept>
+
+        <concept label="negativeLearningRecognized">
+            <phrase>Schade :/ | Was war denn heute neu für dich?</phrase>
+        </concept>
+
+        <concept label="fakeLearning">
+            <phrase>Was hast du denn konkret dazu gelernt?</phrase>
+        </concept>
+
+        <concept label="fakeLearning2">
+            <phrase>Wo konntest du denn genau dein Wissen erweitern?</phrase>
+        </concept>
+
+
+        <concept label="yesLearningExp">
+            <phrase>Das freut mich! | Was hast du denn Neues gelernt?</phrase>
+            <phrase>Toll! | Wo konntest du denn dein Wissen erweitern?</phrase>
+        </concept>
+
+        <concept label="noLearningExp">
+            <phrase>Überleg noch mal | Hast du nicht vielleicht etwas dazugelernt?</phrase>
+        </concept>
+
+        <concept label="planning">
+            <phrase>Worauf wirst du beim nächsten Mal besonders achten, wenn du einen ähnlichen Auftrag bekommst?
+            </phrase>
+            <phrase>Wofür kannst du das Erlernte sonst noch anwenden?</phrase>
+            <phrase>Wo könntest du Teile der Aufgabe in Zukunft wieder verwenden?</phrase>
+            <phrase>Was wirst du das nächste Mal besser machen?</phrase>
+            <phrase>Welche Fähigkeiten, die du hier geübt hast, wirst du in der Zukunft wieder brauchen?</phrase>
+            <phrase>Was wirst du beim nächsten Mal anders machen und was wirst du gleich machen, wenn du eine ähnliche
+                Aufgabe zu erledigen hast?
+            </phrase>
+        </concept>
+
+        <concept label="planningRecognized">
+            <phrase>Das klingt nach einem Plan!</phrase>
+            <phrase>Klingt gut!</phrase>
+        </concept>
+
+        <concept label="noPlanningRecognized">
+            <phrase>Wenn du die gleiche Aufgabe morgen nochmals machen würdest, was wäre dann anders als heute?</phrase>
+        </concept>
+
+        <concept label="fakePlanning">
+            <phrase>Was genau meinst du damit?</phrase>
+            <phrase>Wo möchtest du das nächste Mal genauer sein?</phrase>
+        </concept>
+
+        <concept label="fakePlanning2">
+            <phrase>Ist genaues messen etwas, das dir manchmal schwer fällt?</phrase>
+        </concept>
+
+        <concept label="fakeReflection">
+            <phrase>Wie genau meinst du das?</phrase>
+            <phrase>Ich glaube, du musst mir das etwas ausführlicher erklären.</phrase>
+            <phrase>Beschreibe das bitte ein wenig genauer.</phrase>
+            <phrase>Ich brauche da schon bisschen mehr Infos.</phrase>
+            <phrase>Etwas mehr Details wenn ich bitten darf.😉</phrase>
+            <phrase>Das ist mir bisschen zu wenig Info, erklär mir das doch bitte etwas genauer.</phrase>
+            <phrase>Um zu verstehen, was du dir dabei denkst, brauche ich ein bisserl mehr Text.😉</phrase>
+            <phrase>Erklär mir das bitte etwas genauer.</phrase>
+        </concept>
+
+        <concept label="closing">
+            <phrase>Danke, dass du das mit mir besprochen hast!</phrase>
+            <phrase>Schön, dass wir uns unterhalten haben.</phrase>
+            <phrase>Vielen Dank für deine Antworten!</phrase>
+            <phrase>Das war es schon wieder, besten Dank für deine Antworten!</phrase>
+            <phrase>Super, danke fürs Mitmachen.</phrase>
+            <phrase>Danke! Das war's für heute :D</phrase>
+            <phrase>Spitze, danke für deine Teilnahme!</phrase>
+            <phrase>Danke das war's für heute, viel Spaß bei deiner nächsten Aufgabe!</phrase>
+        </concept>
+
+        <concept label="feedback">
+            <phrase>Das Gespräch war aus meiner Sicht</phrase>
+        </concept>
+
+        <concept label="goodbye">
+            <phrase>Bis zum nächsten Mal :)</phrase>
+            <phrase>Schönen Tag noch und bis bald!</phrase>
+            <phrase>Und Tschüß :-)</phrase>
+            <phrase>Danke und bis zum nächsten Mal ;)</phrase>
+            <phrase>Schönen Tag noch :)</phrase>
+            <phrase>Danke, tschüss!</phrase>
+        </concept>
+
+        <!-- these match against external (MessageAnnotator) annotations. -->
+        <concept label="fake_yes_annotation" type="annotation">
+            <phrase>YES</phrase>
+        </concept>
+
+        <concept label="fake_no_annotation" type="annotation">
+            <phrase>NO</phrase>
+        </concept>
+
+        <concept label="pos_annotation" type="annotation">
+            <phrase>POSITIVE</phrase>
+        </concept>
+
+        <concept label="neg_annotation" type="annotation">
+            <phrase>NEGATIVE</phrase>
+        </concept>
+
+        <concept label="planning_annotation" type="annotation">
+            <phrase>PLANNING</phrase>
+        </concept>
+
+        <concept label="fake_judgement_annotation" type="annotation">
+            <phrase>FAKE_JUDGEMENT</phrase>
+        </concept>
+
+        <concept label="fake_learning_annotation" type="annotation">
+            <phrase>FAKE_LEARNING</phrase>
+        </concept>
+
+        <concept label="fake_learning_annotation2" type="annotation">
+            <phrase>FAKE_LEARNING2</phrase>
+        </concept>
+
+        <concept label="fake_planning_annotation" type="annotation">
+            <phrase>FAKE_PLANNING</phrase>
+        </concept>
+
+        <concept label="fake_planning_annotation2" type="annotation">
+            <phrase>FAKE_PLANNING2</phrase>
+        </concept>
+
+        <concept label="fake_length" type="model"/>
+
+        <concept label="unanticipated-response">
+            <phrase>anything else</phrase>
+        </concept>
+    </concepts>
+
+
+    <!-- This is the meat of the hierarchical dialogue -
+         one main goal with multiple steps, and subgoals that it may reference. -->
+    <script>
+        <goal name="start" difficulty="1">
+            <step>
+                <initiation>judgement</initiation>
+                <response push="goalPosJudgement">pos_annotation</response>
+                <response push="goalNegJudgement">neg_annotation</response>
+                <response push="goalFakeJudgement">fake_judgement_annotation</response>
+                <response push="goalFakeJudgementLength">fake_length</response>
+                <response>unanticipated-response</response>
+            </step>
+
+            <step>
+                <initiation>emotions</initiation>
+                <response push="goalYesEmotions">fake_yes_annotation</response>
+                <response push="goalNoEmotions">fake_no_annotation</response>
+                <response push="goalPosEmotions">pos_annotation</response>
+                <response push="goalNegEmotions">neg_annotation</response>
+                <response push="goalFakeEmotionsLength">fake_length</response>
+                <response>unanticipated-response</response>
+            </step>
+
+            <step>
+                <initiation>learning</initiation>
+                <response push="goalYesLearning">fake_yes_annotation</response>
+                <response push="goalNoLearning">fake_no_annotation</response>
+                <response push="goalLearning">planning_annotation</response>
+                <response push="goalLearningNegativeResponse">neg_annotation</response>
+                <response push="goalFakeLearning">fake_learning_annotation</response>
+                <response push="goalFakeLearning2">fake_learning_annotation2</response>
+                <response push="goalFakeLearningLength">fake_length</response>
+                <response>unanticipated-response</response>
+            </step>
+
+            <step>
+                <initiation>planning</initiation>
+                <response push="goalPlanning">planning_annotation</response>
+                <response push="goalNoPlanningRecognized">unanticipated-response</response>
+                <response push="goalFakePlanning">fake_planning_annotation</response>
+                <response push="goalFakePlanning2">fake_planning_annotation2</response>
+                <response push="goalFakePlanningLength">fake_length</response>
+            </step>
+
+            <step>
+                <initiation>closing</initiation>
+                <response>unanticipated-response</response>
+            </step>
+
+            <step>
+                <initiation>feedback</initiation>
+            </step>
+
+            <step>
+                <initiation>goodbye</initiation>
+            </step>
+        </goal>
+
+        <!-- Judgement reactions -->
+
+        <goal name="goalPosJudgement" difficulty="1">
+            <step>
+                <initiation>positiveExp</initiation>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalNegJudgement" difficulty="1">
+            <step>
+                <initiation>negativeExp</initiation>
+                <response push="goalNegJudgementAskFurther">unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalNegJudgementAskFurther">
+            <step>
+                <initiation>negativExpAskFurther</initiation>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalFakeJudgement" difficulty="1">
+            <step>
+                <initiation>fakeJudgement</initiation>
+                <response push="goalPosJudgement">pos_annotation</response>
+                <response push="goalNegJudgement">neg_annotation</response>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalFakeJudgementLength" difficulty="1">
+            <step>
+                <initiation>fakeReflection</initiation>
+                <response push="goalPosJudgement">pos_annotation</response>
+                <response push="goalNegJudgement">neg_annotation</response>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <!-- Emotions reactions -->
+
+        <goal name="goalPosEmotions" difficulty="1">
+            <step>
+                <initiation>positiveEmotion</initiation>
+            </step>
+        </goal>
+
+        <goal name="goalNegEmotions" difficulty="1">
+            <step>
+                <initiation>negativeExp</initiation>
+                <response push="goalNegEmotionReaction">unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalYesEmotions" difficulty="1">
+            <step>
+                <initiation>yesEmotionExp</initiation>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalNoEmotions" difficulty="1">
+            <step>
+                <initiation>noEmotionExp</initiation>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalNegEmotionReaction" difficulty="1">
+            <step>
+                <initiation>negativeEmotionReaction</initiation>
+            </step>
+        </goal>
+
+        <goal name="goalFakeEmotionsLength" difficulty="1">
+            <step>
+                <initiation>fakeReflection</initiation>
+                <response push="goalPosEmotions">pos_annotation</response>
+                <response push="goalNegEmotions">neg_annotation</response>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+
+        <!-- Learning reactions -->
+        <goal name="goalYesLearning" difficulty="1">
+            <step>
+                <initiation>yesLearningExp</initiation>
+                <response push="goalLearning">planning_annotation</response>
+                <response push="goalLearningNegativeResponse">neg_annotation</response>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalNoLearning" difficulty="1">
+            <step>
+                <initiation>noLearningExp</initiation>
+                <response push="goalLearning">planning_annotation</response>
+                <response push="goalLearningNegativeResponse">neg_annotation</response>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalLearning" difficulty="1">
+            <step>
+                <initiation>learningRecognized</initiation>
+            </step>
+        </goal>
+
+        <goal name="goalLearningNegativeResponse" difficulty="1">
+            <step>
+                <initiation>negativeLearningRecognized</initiation>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalFakeLearning" difficulty="1">
+            <step>
+                <initiation>fakeLearning</initiation>
+                <response push="goalLearning">planning_annotation</response>
+                <response push="goalLearningNegativeResponse">neg_annotation</response>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalFakeLearning2" difficulty="1">
+            <step>
+                <initiation>fakeLearning2</initiation>
+                <response push="goalLearning">planning_annotation</response>
+                <response push="goalLearningNegativeResponse">neg_annotation</response>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalFakeLearningLength" difficulty="1">
+            <step>
+                <initiation>fakeReflection</initiation>
+                <response push="goalLearning">planning_annotation</response>
+                <response push="goalLearningNegativeResponse">neg_annotation</response>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+
+        <!-- Planning reactions -->
+
+        <goal name="goalPlanning" difficulty="1">
+            <step>
+                <initiation>planningRecognized</initiation>
+            </step>
+        </goal>
+
+        <goal name="goalNoPlanningRecognized" difficulty="1">
+            <step>
+                <initiation>noPlanningRecognized</initiation>
+                <response>unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalFakePlanning" difficulty="1">
+            <step>
+                <initiation>fakePlanning</initiation>
+                <response push="goalPlanning">planning_annotation</response>
+                <response push="goalNoPlanningRecognized">unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalFakePlanning2" difficulty="1">
+            <step>
+                <initiation>fakePlanning2</initiation>
+                <response push="goalPlanning">planning_annotation</response>
+                <response push="goalNoPlanningRecognized">unanticipated-response</response>
+            </step>
+        </goal>
+
+        <goal name="goalFakePlanningLength" difficulty="1">
+            <step>
+                <initiation>fakeReflection</initiation>
+                <response push="goalPlanning">planning_annotation</response>
+                <response push="goalNoPlanningRecognized">unanticipated-response</response>
+            </step>
+        </goal>
+    </script>
 </scenario>

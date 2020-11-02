@@ -38,6 +38,14 @@ For more information about the scenario manipulation have a look at "MTurkAgent/
 * "BaseAgent\src\basilica2\util\UserMessageHistory.java"
 * "TutorAgent\src\basilica2\tutor\listeners\TutorActor.java"
 
+## Deployment
+
+Run the Ant task "create_run_jar" (availble from MA_Rebo\build.xml) to create the ReboAgent runnable in 
+MTurkAgent\runtime.
+Everything inside MTurkAgent\runtime needs to be put inside the "mturkagent" directory in 
+[Rebo Server](https://github.com/Amelus/Rebo_Server) project and pushed to your GitHub repo.
+On the remote server checkout or pull the project and follow the instructions from README there. 
+
 ## Troubleshooting
 
 In case Rebo just logs in and out again, remove "Rebo_roomname.planstatus.txt" from "MTurkAgent/runtime/planstatus"

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project MTurkAgent with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR file Export Wizard-->
+    <!--ANT 1.7 is required-->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}"/>
+    <property name="dir.jarfile" value="${dir.workspace}/MTurkAgent/runtime"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/ReboAgent.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="basilica2.myagent.operation.NewAgentRunner"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ jgraph.jar resolver.jar xml-apis.jar serializer.jar xercesImpl.jar Utilities.jar agilo-client.jar agilo-common.jar base-chatblocks.jar base-framework.jar base-laf.jar base-mathexpression.jar base-spellcheck.jar base-utils.jar base-whiteboard.jar cc-client.jar cc-common.jar cc-jdicbrowser.jar cc-replication.jar cc-screenshotchat.jar cc-tabbedchat.jar cc-user.jar cc-virtualmeeting.jar cc-vncviewer.jar cc-webpagechat.jar cc-whiteboardchat.jar jazzy-core.jar jazzy-swing.jar jdic.jar log4j.jar jopt-simple-4.3.jar smack.jar smackx-debug.jar smackx.jar smackx-jingle.jar commons-lang3-3.2.1.jar mysql-connector-java-5.1.26-bin.jar Ratte.jar lingpipe-2.3.0.jar commons-lang3-3.2.1.jar commons-collections4-4.2.jar annotations-13.0.jar engine.io-client-1.0.0.jar json-org.jar jsoup-1.8.1.jar kotlin-stdlib-1.3.41.jar kotlin-stdlib-common-1.3.41.jar okhttp-4.0.1.jar okio-2.3.0.jar socket.io-client-1.0.0.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="${dir.workspace}/MTurkAgent/bin"/>
+            <fileset dir="${dir.workspace}/BaseAgent/bin"/>
+            <fileset dir="${dir.workspace}/BasilicaCore/bin"/>
+            <zipfileset dir="${dir.workspace}/BasilicaCore/lib/OtherLibraries/JGraph" includes="jgraph.jar"/>
+            <zipfileset dir="${dir.workspace}/BasilicaCore/lib/OtherLibraries/Xerces" includes="resolver.jar"/>
+            <zipfileset dir="${dir.workspace}/BasilicaCore/lib/OtherLibraries/Xerces" includes="xml-apis.jar"/>
+            <zipfileset dir="${dir.workspace}/BasilicaCore/lib/OtherLibraries/Xerces" includes="serializer.jar"/>
+            <zipfileset dir="${dir.workspace}/BasilicaCore/lib/OtherLibraries/Xerces" includes="xercesImpl.jar"/>
+            <zipfileset dir="${dir.workspace}/BasilicaCore/lib/OtherLibraries" includes="Utilities.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="agilo-client.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="agilo-common.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="base-chatblocks.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="base-framework.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="base-laf.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="base-mathexpression.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="base-spellcheck.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="base-utils.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="base-whiteboard.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-client.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-common.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-jdicbrowser.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-replication.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-screenshotchat.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-tabbedchat.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-user.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-virtualmeeting.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-vncviewer.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-webpagechat.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="cc-whiteboardchat.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="jazzy-core.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="jazzy-swing.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="jdic.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/ConcertChat/Libraries" includes="log4j.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/jopt" includes="jopt-simple-4.3.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/Jabber" includes="smack.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/Jabber" includes="smackx-debug.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/Jabber" includes="smackx.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/Jabber" includes="smackx-jingle.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib" includes="commons-lang3-3.2.1.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib/Environments/Moodle" includes="mysql-connector-java-5.1.26-bin.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib" includes="Ratte.jar"/>
+            <fileset dir="${dir.workspace}/TuTalkSlim/build/classes"/>
+            <zipfileset dir="${dir.workspace}/TuTalkSlim/lib" includes="lingpipe-2.3.0.jar"/>
+            <zipfileset dir="${dir.workspace}/TuTalkSlim/lib" includes="commons-lang3-3.2.1.jar"/>
+            <zipfileset dir="${dir.workspace}/BaseAgent/lib" includes="commons-collections4-4.2.jar"/>
+            <fileset dir="${dir.workspace}/TutorAgent/bin"/>
+            <fileset dir="${dir.workspace}/SocketIOClient/bin"/>
+            <zipfileset dir="${dir.workspace}/SocketIOClient/lib" includes="annotations-13.0.jar"/>
+            <zipfileset dir="${dir.workspace}/SocketIOClient/lib" includes="engine.io-client-1.0.0.jar"/>
+            <zipfileset dir="${dir.workspace}/SocketIOClient/lib" includes="json-org.jar"/>
+            <zipfileset dir="${dir.workspace}/SocketIOClient/lib" includes="jsoup-1.8.1.jar"/>
+            <zipfileset dir="${dir.workspace}/SocketIOClient/lib" includes="kotlin-stdlib-1.3.41.jar"/>
+            <zipfileset dir="${dir.workspace}/SocketIOClient/lib" includes="kotlin-stdlib-common-1.3.41.jar"/>
+            <zipfileset dir="${dir.workspace}/SocketIOClient/lib" includes="okhttp-4.0.1.jar"/>
+            <zipfileset dir="${dir.workspace}/SocketIOClient/lib" includes="okio-2.3.0.jar"/>
+            <zipfileset dir="${dir.workspace}/SocketIOClient/lib" includes="socket.io-client-1.0.0.jar"/>
+            <fileset dir="${dir.workspace}/LightSideMessageAnnotator/bin"/>
+            <fileset dir="${dir.workspace}/BaseAgent/src"/>
+            <fileset dir="${dir.workspace}/BasilicaCore/src"/>
+        </jar>
+    </target>
+</project>
