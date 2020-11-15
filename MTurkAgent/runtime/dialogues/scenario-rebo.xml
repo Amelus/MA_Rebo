@@ -36,6 +36,14 @@
          but only one of these at a time. -->
 
     <concepts>
+
+        <concept label="description">
+            <phrase>Erkläre mir genau, über welche Arbeit wir uns heute unterhalten und wie du sie gemacht hast.</phrase>
+            <phrase>Und was hast du heute alles so gemacht? Erkläre es mir mal Schritt für Schritt.</phrase>
+            <phrase>Beschreib mir mal, wie du bei der Bearbeitung dieser Aufgabe vorgegangen bist!</phrase>
+            <phrase>Erzähl mal: was hast du bei dieser Aufgabe alles so gemacht? Schritt für Schritt ... </phrase>
+        </concept>
+
         <concept label="judgement">
             <phrase>Wenn du dir selber eine Schulnote 1-5 geben würdest, welche wäre es und warum?</phrase>
             <phrase>Wie ist es dir bei dieser Aufgabe gegangen? Alles gut gelaufen?</phrase>
@@ -98,8 +106,7 @@
         </concept>
 
         <concept label="learning">
-            <phrase>Welchen Tipp könntest du einem jüngeren Lehrling geben, der einen solchen Auftrag zum ersten Mal
-                ausführt?
+            <phrase>Welchen Tipp könntest du einem jüngeren Lehrling geben, der einen solchen Auftrag zum ersten Mal ausführt?
             </phrase>
             <phrase>Was hast du für dich aus der Aufgabe gelernt?</phrase>
             <phrase>Was konntest du von dieser Aufgabe mitnehmen?</phrase>
@@ -134,15 +141,12 @@
         </concept>
 
         <concept label="planning">
-            <phrase>Worauf wirst du beim nächsten Mal besonders achten, wenn du einen ähnlichen Auftrag bekommst?
-            </phrase>
+            <phrase>Worauf wirst du beim nächsten Mal besonders achten, wenn du einen ähnlichen Auftrag bekommst?</phrase>
             <phrase>Wofür kannst du das Erlernte sonst noch anwenden?</phrase>
             <phrase>Wo könntest du Teile der Aufgabe in Zukunft wieder verwenden?</phrase>
             <phrase>Was wirst du das nächste Mal besser machen?</phrase>
             <phrase>Welche Fähigkeiten, die du hier geübt hast, wirst du in der Zukunft wieder brauchen?</phrase>
-            <phrase>Was wirst du beim nächsten Mal anders machen und was wirst du gleich machen, wenn du eine ähnliche
-                Aufgabe zu erledigen hast?
-            </phrase>
+            <phrase>Was wirst du beim nächsten Mal anders machen und was wirst du gleich machen, wenn du eine ähnliche Aufgabe zu erledigen hast?</phrase>
         </concept>
 
         <concept label="planningRecognized">
@@ -252,6 +256,12 @@
     <script>
         <goal name="start" difficulty="1">
             <step>
+                <initiation>description</initiation>
+                <response push="goalFakeDescriptionLength">fake_length</response>
+                <response>unanticipated-response</response>
+            </step>
+
+            <step>
                 <initiation>judgement</initiation>
                 <response push="goalPosJudgement">pos_annotation</response>
                 <response push="goalNegJudgement">neg_annotation</response>
@@ -302,6 +312,13 @@
 
             <step>
                 <initiation>goodbye</initiation>
+            </step>
+        </goal>
+
+        <goal name="goalFakeDescriptionLength">
+            <step>
+                <initiation>fakeReflection</initiation>
+                <response>unanticipated-response</response>
             </step>
         </goal>
 
@@ -384,6 +401,8 @@
         <goal name="goalFakeEmotionsLength" difficulty="1">
             <step>
                 <initiation>fakeReflection</initiation>
+                <response push="goalYesEmotions">fake_yes_annotation</response>
+                <response push="goalNoEmotions">fake_no_annotation</response>
                 <response push="goalPosEmotions">pos_annotation</response>
                 <response push="goalNegEmotions">neg_annotation</response>
                 <response>unanticipated-response</response>
